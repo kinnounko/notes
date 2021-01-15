@@ -2,7 +2,7 @@
 tags: [french]
 title: Etudier un article de presse
 created: '2021-01-15T07:38:29.952Z'
-modified: '2021-01-15T08:58:13.501Z'
+modified: '2021-01-15T08:58:56.452Z'
 ---
 
 # Etudier un article de presse 
@@ -28,6 +28,9 @@ Article choisi:
 *“Personne n'est au-dessus de la loi”, a jugé Tim Cook, mardi 12 janvier.*
 
 L’article commence par une citation de Tim Cook, le PDG d’Apple. Cette citation est implicitement accusatrice et nous fait penser directement à Trump. C’est comme si la citation accuse Trump de casser la loi et donc montre le point de vue du article.
+
+
+testing 
  
 
 
