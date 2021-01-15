@@ -1,6 +1,8 @@
 ---
-type: Journal
-modified: 2021-01-15T07:55:16+01:00
+tags: [english]
+title: film photography oral
+created: '2021-01-15T07:03:36.183Z'
+modified: '2021-01-15T08:33:13.954Z'
 ---
 
 # IGCSE oral
@@ -19,4 +21,6 @@ modified: 2021-01-15T07:55:16+01:00
 
 ##### Examiner Questions
 
-*
+* What is your personal experience with analog photography? 
+* How did analog photography affect digital photography? 
+* 
