@@ -1,4 +1,10 @@
+---
+type: Journal
+modified: 2021-01-15T07:55:16+01:00
+---
+
 # IGCSE oral
+
 ### Analog Photography
 
 ##### Presentation
@@ -13,4 +19,4 @@
 
 ##### Examiner Questions
 
-* 
+*
