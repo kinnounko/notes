@@ -3,3 +3,4 @@ paper.log
 paper.synctex.gz
 *.toc
 *.aux
+*.fdb_latexmk
