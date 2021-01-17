@@ -1,6 +1,6 @@
 ---
 tags: [english]
-title: film photography oral
+title: Analog photography oral
 created: '2021-01-15T07:03:36.183Z'
 modified: '2021-01-15T08:33:13.954Z'
 ---
@@ -9,7 +9,7 @@ modified: '2021-01-15T08:33:13.954Z'
 
 ### Analog Photography
 
-##### Presentation
+#### Presentation
 
 * After being invented in 1885, film became the standard for the next century (and a bit more) to come
 * Black and white film was the first to appear
@@ -19,7 +19,7 @@ modified: '2021-01-15T08:33:13.954Z'
 * Interest from a new generation has however revived the art, Kodak and Fujifilm have started manufacturing a larger quantity of film... Social media has played a large role in this revive
 
 
-##### Examiner Questions
+#### Examiner Questions
 
 * What is your personal experience with analog photography? 
 * How did analog photography affect digital photography? 
