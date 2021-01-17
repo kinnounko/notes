@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc} % International characters
+\usepackage[T1]{fontenc} % Font encoding for international characters
+% \usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage{lmodern} % Use Latin Modern font
+% \usepackage{libertine} % Use LLibertine font
+% \usepackage{libertinust1math}% Use LLibertine math font
+\usepackage{geometry} % Setting page geometry (margins)
+\usepackage{blindtext} % Lorem ipsum
+\usepackage{textcomp} % For the trademark symbol
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables for horizontal lines
+\usepackage{siunitx} % Allows for properly formatted numbers with \num{number}, units with \si{unit} and both with \si{number}{unit}
+\usepackage{microtype} % A few refinements to typography that are hardly noticeable
+\usepackage[normalem]{ulem} %Strikethrough text
+\usepackage{setspace} % Set spacing
+
+%Tables
+\usepackage{float} % image positioning
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabu}
+
+%Graphs
+\usepackage{pgfplots} %Graph
+\pgfplotsset{compat=1.5}
+
+% Package must come last
+\usepackage[bookmarks=true]{hyperref} % Hyperrefs for bookmarks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\usepackage{bookmark} % Adds metadata to PDF for bookmarking
+
+% Package settings & macros
+
+\renewcommand{\contentsname}{Contents} % Contents heading
+
+\urldef{\usePercentage}\url{%} % Using the percent symbol in documents: \usePercentage
