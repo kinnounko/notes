@@ -9,14 +9,14 @@ modified: '2021-01-18T11:42:06.781Z'
 
 ## Lab about limiting reagents
 
-$\ce{ZnO}$:  
-  6.O1g before 
-  4.10g after
-1. Mass of ZnO used:
+$\ce{ZnO}$ (zinc oxide):  
+  $6.01g$ before 
+  $4.10g$ after
+1. Mass of $\ce{ZnO}$ used:
   $$6.11 g - 4.10 g = 2.01 g$$
-2. Molar mass of ZnO:
+2. Molar mass of $\ce{ZnO}$:
   $$65.38 g/mol + 15.99 g/mol = 81.38 g/mol$$
-3. How many moles of zinc reacted with the HCl?
+3. How many moles of zinc reacted with the $\ce{HCl}$?
   $$2.01 g \div 81.38 g/mol = 0.0246 mol$$
 4. Balance the equation for this experiment
   $$\ce{ZnO(aq) + 2 HCl(aq) -> ZnCl2(aq) + H2O(l)}$$
