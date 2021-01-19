@@ -2,7 +2,7 @@
 tags: [english]
 title: Directed writing
 created: '2021-01-19T13:13:08.943Z'
-modified: '2021-01-19T13:34:39.439Z'
+modified: '2021-01-19T13:46:28.101Z'
 ---
 
 # Directed writing
@@ -15,6 +15,12 @@ Nowadays, young people spend all their time doing useless tasks and spreading fa
 
 ## Playing with point of view
 
-Arguing for: "I never want to be famous, for any reason":
+1. Arguing for: "I never want to be famous, for any reason":
 
-I would never want to be famous. The responsibilities would be too weighing, and constantly being in the limelight would only incite pressure in me. Imagine having a board of people watching your every move - or a crowd of individuals incessantly taking pictures of you. Privacy would become obsolete for you and never could you go back to your former peaceful life. 
+I would never want to be famous. The responsibilities would be too weighing, and constantly being in the limelight would only incite pressure in me. Imagine having a board of people watching your every move - or a crowd of paparazzis incessantly taking pictures of you. Privacy would become obsolete for you and never could you go back to your former peaceful life. 
+
+2. Arguing for an opposite point of view: "I would want to be the lead scientist in the team that foudn the covid-19 vaccine"
+
+Imagine being regarded as someone who saved the world, brought an end to one of the deadliest pandemics in human history. The amount of praise, awards and commendations you would receive would be a great prize for the amount of work you had just completed for the good of humanity. Your name would go down in history and people all around the world would commend you.
+
+
