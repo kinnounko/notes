@@ -2,7 +2,7 @@
 tags: [english]
 title: Directed writing
 created: '2021-01-19T13:13:08.943Z'
-modified: '2021-01-19T14:12:44.425Z'
+modified: '2021-01-19T14:13:58.876Z'
 ---
 
 # Directed writing
@@ -25,7 +25,7 @@ I would never want to be famous. The responsibilities would be too weighing, and
 | :------------- | 
 
 
-2. Arguing for an opposite point of view: "I would want to be the lead scientist in the team that foudn the covid-19 vaccine"
+2. Arguing for an opposite point of view: "I would want to be the lead scientist in the team that found the covid-19 vaccine"
 
 Imagine being regarded as someone who saved the world, brought an end to one of the deadliest pandemics in human history. The amount of praise, awards and commendations you would receive would be a great prize for the amount of work you had just completed for the good of humanity. Your name would go down in history and people all around the world would commend you.
 
