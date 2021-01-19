@@ -4,3 +4,4 @@ paper.synctex.gz
 *.toc
 *.aux
 *.fdb_latexmk
+venv/
