@@ -2,7 +2,7 @@
 tags: [english]
 title: Analog photography oral
 created: '2021-01-15T07:03:36.183Z'
-modified: '2021-01-15T08:33:13.954Z'
+modified: '2021-01-19T13:13:05.197Z'
 ---
 
 # IGCSE oral
