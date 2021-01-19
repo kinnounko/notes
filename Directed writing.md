@@ -2,7 +2,7 @@
 tags: [english]
 title: Directed writing
 created: '2021-01-19T13:13:08.943Z'
-modified: '2021-01-19T14:04:52.000Z'
+modified: '2021-01-19T14:07:55.669Z'
 ---
 
 # Directed writing
@@ -32,5 +32,4 @@ Imagine being regarded as someone who saved the world, brought an end to one of 
 
 ## Borrowing tone
 
-Children nowadays, seem to be quite set on what they want to be when they're older. These goals can however, seem pretty unrealistic. With large influences such as Billie Eilish or Lionel Messi, young people seem to have set their sights on what they want to be when they're older. Some parents, worried about their childrens ambitious dreams,still seem favor the traditional professions for their children. 
-
+Children nowadays, seem to be quite set on what they want to be when they're older. These goals can however, seem pretty unrealistic. With large influences such as Billie Eilish or Lionel Messi, young people seem to have set their sights on what they want to be when they're older. Some parents, worried about their childrens ambitious dreams, still seem favor the traditional professions for their children, for good reason! These dreams are but that, dreams. The success rate in a career of fame is extremely low and fame, earned or not, does not deliver many concrete advantages as opposed to a professional job. 
