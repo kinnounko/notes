@@ -40,7 +40,7 @@
 %      DOCUMENT BODY
 % =========================
 
-\pagenumbering{gobble}
+\pagenumbering{roman}
 
 \begin{center}
 \pdfbookmark{\contentsname}{Contents}
@@ -59,12 +59,18 @@
 
 \pagenumbering{arabic}
 
+% Sections of essay
+
 \include{sections/Introduction}
 
 
-% Just testing sections.. 
-\newpage
-\include{sections/Implementation}
+% \newpage
+\include{sections/Background}
+
+
+\include{sections/Computational approach}
+
+\include{sections/Analysis of results.tex}
 
 
 \end{document}
