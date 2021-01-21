@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{borisgourevitch2013}{online}{}
+      \name{author}{1}{}{%
+        {{hash=748392646142f945237c2e7c44ee10c0}{%
+           family={Gourévitch},
+           familyi={G\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{fullhash}{748392646142f945237c2e7c44ee10c0}
+      \strng{bibnamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{François Viete}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://www.pi314.net/fr/viete.php
+      \endverb
+      \verb{url}
+      \verb http://www.pi314.net/fr/viete.php
+      \endverb
+    \endentry
     \entry{Kreminski}{article}{}
       \name{author}{1}{}{%
         {{hash=5a398f7bf0039f87cf378c8c1410a8fd}{%

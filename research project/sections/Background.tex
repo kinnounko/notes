@@ -46,15 +46,18 @@ and $OH$ respectively.
 
 Let $A_{n}$ equal the area of the polygon with $n$ sides as such: \\
 $A_{n} = \frac{OH \cdot BD \cdot n}{2}$ \\
-$A_{n} = \frac{R \cos{\alpha} \cdot 2 R \sin{\alpha} \cdot n}{2} = n R^2 \sin{\alpha} \cos{\alpha}$
+$= \frac{R \cos{\alpha} \cdot 2 R \sin{\alpha} \cdot n}{2} = n R^2 \sin{\alpha} \cos{\alpha}$
 
 And if n is multiplied by 2, the angle $\angle \alpha$ is divided by 2, 
 and the new area becomes: 
 
 $A_{2n} = 2n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}$
 
-So
+So it can be written that, by definition,
 
+$\frac{A_{n}}{A_{2n}} = \frac{n R^2 \sin{\alpha} \cos{\alpha}}{2 n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}} = \frac{\sin{2 \alpha}}{2 \sin{\alpha}}$
+
+Which through the trigonometric identity... // todo
 
 
 
@@ -99,5 +102,5 @@ So
 \label{fig:image1}
 \caption{Circle with 1 segment from a $n$-gon with point $H$ and 2 
 segments from an $2n$-gon, one of which on point $H'$, inscribed in 
-a circle of radius $OB$}
+a circle of radius $OB$, adapted from \cite{borisgourevitch2013}}
 \end{figure}
