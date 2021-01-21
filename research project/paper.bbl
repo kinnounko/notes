@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Kreminski}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5a398f7bf0039f87cf378c8c1410a8fd}{%
+           family={Kreminski},
+           familyi={K\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Association of America}%
+      }
+      \strng{namehash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \strng{fullhash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \strng{bibnamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \strng{authorbibnamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \strng{authornamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \strng{authorfullhash}{5a398f7bf0039f87cf378c8c1410a8fd}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025570X, 19300980}
+      \field{journaltitle}{Mathematics Magazine}
+      \field{number}{3}
+      \field{title}{$\pi$ to Thousands of Digits from Vieta's Formula}
+      \field{volume}{81}
+      \field{year}{2008}
+      \field{pages}{201}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/27643107
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/27643107
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

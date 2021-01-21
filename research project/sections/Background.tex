@@ -5,13 +5,99 @@
 For the sake of this paper, two different methods with similar 
 convergence rates but different approaches have been chosen for 
 comparison, the process for the original discovery of these methods
-will be explained.
+will be explained. The two mathematicians in question are Madhava 
+of Sangamagramma of Medieval India and the French mathematician 
+Viète. 
+
 
 
 \subsubsection{Madhava's method}
 
-Madhava, known by other famous mathematicians of his time, as having 
-discovered 
+Madhava, 
 
 
 \subsubsection{Viète's method}
+
+The French mathematician, François Viète, approached the value of 
+$\pi$ from a geometric standpoint, finding the following formula:
+
+$$\pi = 2 \frac{2}{\sqrt{2}} \frac{2}{\sqrt{2 + \sqrt{2}}} \frac{2}{\sqrt{2 + \sqrt{2 + \sqrt{2}}}} \dots$$
+
+% $$\pi = \frac{2}{\prod_{k = 0}^{\infty} U_{k}}$$    symbolic
+He was able to calculate $\pi$ to a place of 9 decimal points, in 
+the year 1593 \cite{Kreminski}, using his method. His method consists 
+of finding the area of a polygon of $n$ sides in a circle of constant 
+radius. As the value of $n$ is increased, the area of the $n$-gon 
+tends toward the area of a circle. The geometric origin of this formula 
+can be found using simple right-angle trigonometry, by first finding 
+the lengths $OH$ and subsequently $BD$ in Figure 1 (\ref{fig:image1}).
+
+With the radius $R = OB$,
+
+$OH = R \cos{\alpha}$ 
+
+and
+
+$BD = 2BH = 2 R \sin{\alpha}$
+
+Since the equation for the area of a polygon is defined as $A = \frac{p \cdot a}{2}$, 
+where $p$ is the perimeter of the polygon and $a$ is the apothem, in this case $BD \cdot n$ 
+and $OH$ respectively. 
+
+Let $A_{n}$ equal the area of the polygon with $n$ sides as such: \\
+$A_{n} = \frac{OH \cdot BD \cdot n}{2}$ \\
+$A_{n} = \frac{R \cos{\alpha} \cdot 2 R \sin{\alpha} \cdot n}{2} = n R^2 \sin{\alpha} \cos{\alpha}$
+
+And if n is multiplied by 2, the angle $\angle \alpha$ is divided by 2, 
+and the new area becomes: 
+
+$A_{2n} = 2n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}$
+
+So
+
+
+
+
+
+\begin{figure}[!h]
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\definecolor{qqqqzz}{rgb}{0,0,0.6}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+\clip(-8.372520930232552,-8.50470697674418) rectangle (7.69259534883721,7.028316279069767);
+\draw [shift={(-0.03355999206952884,0)},line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:1.3302325581395344) arc (0:44.77428433325932:1.3302325581395344) -- cycle;
+\draw [line width=0.8pt,color=qqqqzz] (0,0) circle (6cm);
+\draw [line width=1pt] (4.242640687119286,4.242640687119285)-- (6,0);
+\draw [line width=1pt] (6,0)-- (4.242640687119286,-4.242640687119285);
+\draw [line width=1pt] (4.242640687119286,-4.242640687119285)-- (4.242640687119286,4.242640687119285);
+\draw [line width=1pt] (-6,0)-- (6,0);
+\draw [line width=1pt] (-4.275936263984878,-4.209081736713964)-- (4.242640687119286,4.242640687119285);
+\draw [line width=1pt] (-4.242640687119285,4.242640687119286)-- (4.242640687119286,-4.242640687119285);
+\draw [line width=1pt] (-0.03355999206952884,0)-- (5.121320343559643,2.1213203435596424);
+\draw [line width=1pt] (-4.242640687119285,4.242640687119286)-- (-4.275936263984878,-4.209081736713964);
+\begin{scriptsize}
+\draw [fill=xdxdff] (4.242640687119286,4.242640687119285) circle (2.5pt);
+\draw[color=xdxdff] (4.4772465116279085,4.623665116279071) node {$B$};
+\draw [fill=xdxdff] (-4.242640687119285,4.242640687119286) circle (2.5pt);
+\draw[color=xdxdff] (-4.295311627906972,4.623665116279071) node {$A$};
+\draw [fill=xdxdff] (-4.275936263984878,-4.209081736713964) circle (2.5pt);
+\draw[color=xdxdff] (-4.336241860465112,-4.55) node {$C$};
+\draw [fill=xdxdff] (6,0) circle (2.5pt);
+\draw[color=xdxdff] (6.237246511627907,0.3873860465116302) node {$E$};
+\draw [fill=xdxdff] (4.242640687119286,-4.242640687119285) circle (2.5pt);
+\draw[color=xdxdff] (4.3772465116279085,-4.5) node {$D$};
+\draw[color=black] (5.3595720930232575,2.3111069767441874) node {$H'$};
+\draw [fill=xdxdff] (5.12,2.12) circle (2.5pt);
+\draw[color=black] (3.947479069767444,-0.615404651162788) node {$H$};
+\draw [fill=xdxdff] (4.242640687119286,0) circle (2.5pt);
+\draw [fill=xdxdff] (0,0) circle (2.5pt);
+\draw[color=uuuuuu] (0.00003720930232879,-0.3464558139534907) node {$O$};
+\draw[color=qqwuqq] (1.5325953488372117,0.3873860465116302) node {$\alpha$};
+\end{scriptsize}
+\end{tikzpicture}
+\label{fig:image1}
+\caption{Circle with 1 segment from a $n$-gon with point $H$ and 2 
+segments from an $2n$-gon, one of which on point $H'$, inscribed in 
+a circle of radius $OB$}
+\end{figure}

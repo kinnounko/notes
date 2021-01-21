@@ -1,0 +1,9 @@
+PWD /home/octothorpe/version_control/notes/research project/sections
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/octothorpe/version_control/notes/research project/sections/Background.tex
+OUTPUT /home/octothorpe/version_control/notes/research project/sections/Background.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

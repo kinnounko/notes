@@ -4,11 +4,16 @@
 
 % Packages
 \usepackage{packages}
+\addbibresource{sources.bib}
+
 
 % Document Settings
 \geometry{margin=1in}
 \setlength{\parskip}{1ex}
 \setlength{\parindent}{0pt}
+
+
+\newcommand{\degre}{\ensuremath{^\circ}}
 
 % =========================================
 %             DOCUMENT
@@ -68,9 +73,11 @@
 \include{sections/Background}
 
 
-\include{sections/Computational approach}
+\include{sections/Computational_approach}
 
-\include{sections/Analysis of results.tex}
+\include{sections/Analysis_of_results}
+
+\printbibliography[heading=bibintoc, title=Works Cited]
 
 
 \end{document}
