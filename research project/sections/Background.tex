@@ -25,14 +25,15 @@ $$\pi = 2 \frac{2}{\sqrt{2}} \frac{2}{\sqrt{2 + \sqrt{2}}} \frac{2}{\sqrt{2 + \s
 
 % $$\pi = \frac{2}{\prod_{k = 0}^{\infty} U_{k}}$$    symbolic
 He was able to calculate $\pi$ to a place of 9 decimal points, in 
-the year 1593 \cite{Kreminski}, using his method. His method consists 
-of finding the area of a polygon of $n$ sides in a circle of constant 
-radius. As the value of $n$ is increased, the area of the $n$-gon 
+the year 1593 \cite{Kreminski}, using his method. His method is reminiscent 
+of Archimedes' method, but differs in that it consists of finding 
+the area of a polygon of $n$ sides in a circle of constant 
+radius, rather than the circumference. As the value of $n$ is increased, the area of the $n$-gon 
 tends toward the area of a circle. The geometric origin of this formula 
 can be found using simple right-angle trigonometry, by first finding 
-the lengths $OH$ and subsequently $BD$ in Figure 1 (\ref{fig:image1}).
+the lengths $OH$ and subsequently $BD$ in \ref{fig:image1}.
 
-With the radius $R = OB$,
+With the radius of the circle with center $R = OB$,
 
 $OH = R \cos{\alpha}$ 
 
@@ -42,9 +43,8 @@ $BD = 2BH = 2 R \sin{\alpha}$
 
 Since the equation for the area of a polygon is defined as $A = \frac{p \cdot a}{2}$, 
 where $p$ is the perimeter of the polygon and $a$ is the apothem, in this case $BD \cdot n$ 
-and $OH$ respectively. 
-
-Let $A_{n}$ equal the area of the polygon with $n$ sides as such: \\
+and $OH$ respectively, let $A_{n}$ equal the area of 
+the polygon with $n$ sides such that: \\
 $A_{n} = \frac{OH \cdot BD \cdot n}{2}$ \\
 $= \frac{R \cos{\alpha} \cdot 2 R \sin{\alpha} \cdot n}{2} = n R^2 \sin{\alpha} \cos{\alpha}$
 
@@ -53,13 +53,24 @@ and the new area becomes:
 
 $A_{2n} = 2n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}$
 
-So it can be written that, by definition,
+So it can be written that, by definition, the ratio of 
+the area of an $n$-gon
 
 $\frac{A_{n}}{A_{2n}} = \frac{n R^2 \sin{\alpha} \cos{\alpha}}{2 n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}} = \frac{\sin{2 \alpha}}{2 \sin{\alpha}}$
 
-Which through the trigonometric identity... // todo
+Which through the trigonometric identity $\sin{2 \alpha} = 2\sin{\alpha} \cos{\alpha}$ can 
+be simplified to:
 
+$\frac{A_{n}}{A_{2n}} = \frac{2\sin{\alpha} \cos{\alpha} }{2\sin{\alpha}}  = \cos{\alpha}$
 
+It can be then written that, through a new variable $P$, \\
+$P = \frac{A_{n}}{A_{2n}} \frac{A_{2n}}{A_{4n}} \frac{A_{4n}}{A_{8n}} \dots \frac{A_{(k-2)n}}{A_{kn}} \frac{A_{kn}}{A}$ \\
+where $A$ is the area of the circle of radius $R$ 
+in \ref{fig:image1}. 
+
+So $P = \frac{A_{n}}{A}$, since the values $A_{kn}$ cancel, and 
+followingly, it is true that $P = \frac{A_{n}}{A} \Leftrightarrow A = \frac{A_{n}}{P}$. Since 
+the area of a circle is defined by $A = \pi R^2$, the value of $R$ being constant in this case, 
 
 
 \begin{figure}[!h]

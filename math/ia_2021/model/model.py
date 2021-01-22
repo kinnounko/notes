@@ -62,6 +62,6 @@ if __name__ == "__main__":
     filter_df.to_csv("test.csv")
 
     print(filter_df)
-
-    plt.scatter(filter_df['earthquake magnitude'], filter_df['0'], marker="x")
+    
+    plt.scatter(filter_df['earthquake magnitude'], filter_df['maximum water height (m)'], marker="x")
     plt.show()
