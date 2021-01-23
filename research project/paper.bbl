@@ -19,6 +19,53 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{amermathmonthly}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55a718488fd513ab72b005964e3e21f5}{%
+           family={Borwein},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=465459a60be216ac6c8b7b3e382af9fa}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Scott\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=465459a60be216ac6c8b7b3e382af9fa}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Scott\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Association of America}%
+      }
+      \strng{namehash}{2e241668cc385c2aba30d81022f731f2}
+      \strng{fullhash}{2e241668cc385c2aba30d81022f731f2}
+      \strng{bibnamehash}{2e241668cc385c2aba30d81022f731f2}
+      \strng{authorbibnamehash}{2e241668cc385c2aba30d81022f731f2}
+      \strng{authornamehash}{2e241668cc385c2aba30d81022f731f2}
+      \strng{authorfullhash}{2e241668cc385c2aba30d81022f731f2}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In celebration of both a special “big” π Day (3/14/15) and the 2015 centennial of the Mathematical Association of America, we review the illustrious history of the constant π in the pages of the American Mathematical Monthly.}
+      \field{issn}{00029890, 19300972}
+      \field{journaltitle}{The American Mathematical Monthly}
+      \field{number}{3}
+      \field{title}{I Prefer Pi: A Brief History and Anthology of Articles in the American Mathematical Monthly}
+      \field{volume}{122}
+      \field{year}{2015}
+      \field{pages}{198\bibrangedash 199}
+      \range{pages}{2}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/10.4169/amer.math.monthly.122.03.195
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/10.4169/amer.math.monthly.122.03.195
+      \endverb
+    \endentry
     \entry{borisgourevitch2013}{online}{}
       \name{author}{1}{}{%
         {{hash=748392646142f945237c2e7c44ee10c0}{%
