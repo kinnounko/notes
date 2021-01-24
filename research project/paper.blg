@@ -1,19 +1,19 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[97] biber:322> INFO - === Sat Jan 23, 2021, 00:50:26
-[114] Biber.pm:415> INFO - Reading 'paper.bcf'
+[98] biber:322> INFO - === Sun Jan 24, 2021, 16:02:37
+[115] Biber.pm:415> INFO - Reading 'paper.bcf'
 [200] Biber.pm:943> INFO - Found 3 citekeys in bib section 0
-[218] Biber.pm:4256> INFO - Processing section 0
-[218] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[219] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[231] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[232] bibtex.pm:1653> INFO - LaTeX decoding ...
-[239] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[274] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
-[289] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[290] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[290] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[290] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[299] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[301] bbl.pm:755> INFO - Output to paper.bbl
-[301] Biber.pm:128> INFO - WARNINGS: 1
+[232] Biber.pm:4256> INFO - Processing section 0
+[233] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[233] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[250] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[251] bibtex.pm:1653> INFO - LaTeX decoding ...
+[258] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[299] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
+[314] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[314] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[314] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[314] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[323] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[326] bbl.pm:755> INFO - Output to paper.bbl
+[326] Biber.pm:128> INFO - WARNINGS: 1

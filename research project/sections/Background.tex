@@ -10,8 +10,8 @@ the infinite series definition of an inverse trigonometric function
 and one where the value is derived using geometry, by mathematician 
 Viète. These two mathematical methods were chosen as they are both 
 represent a first occurence in mathematics: Madhava was the first to 
-find the series notation of the $\arctan$ function and Viète was one 
-of the first mathematicians to use an infinite series in calculation.
+find the series notation of the arctangent function and Viète was one 
+of the first mathematicians to use infinite series in his calculation.
 
 
 \subsubsection{Madhava-Gregory-Leibniz method}
@@ -60,11 +60,11 @@ and the new area becomes:
 $A_{2n} = 2n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}$
 
 So it can be written that, by definition, the ratio of 
-the area of an $n$-gon
+the area of an $n$-gon to one of a $2n$-gon is
 
 $\frac{A_{n}}{A_{2n}} = \frac{n R^2 \sin{\alpha} \cos{\alpha}}{2 n R^2 \sin{\frac{\alpha}{2}} \cos{\frac{\alpha}{2}}} = \frac{\sin{2 \alpha}}{2 \sin{\alpha}}$
 
-Which through the trigonometric identity $\sin{2 \alpha} = 2\sin{\alpha} \cos{\alpha}$ can 
+Which through the trigonometric identity $\sin{2 \theta} = 2\sin{\theta} \cos{\theta}$ can 
 be simplified to:
 
 $\frac{A_{n}}{A_{2n}} = \frac{2\sin{\alpha} \cos{\alpha} }{2\sin{\alpha}}  = \cos{\alpha}$
@@ -85,12 +85,21 @@ aproaches that of a circle, and therefore, the value of $\pi$.
 $\frac{A_{n}}{\cos{\alpha} \cos{\frac{\alpha}{2}} \cos{\frac{\alpha}{4}} \dots}
 \to_{k \to \infty} \pi$
 
-There is however, a neater expression for this same formula. 
-To simplify to it, firstly we let $U_{0} = \cos{\alpha}$. Then, we 
-define $U_{1} = cos{\frac{\alpha}{2}}$, following the formula stated 
-before. 
+Where the value of $A_{n}$ is the area of the first polygon, with $n=4$ sides, and as such 
+$A_{n} = 4 \sin{45} \cos{45} = 2$. We can define: \\
+$U_{0} = \cos{a} = \cos{45} = \frac{1}{\sqrt{2}}$ \\
+$U_{1} = cos{\frac{\alpha}{2}}$ \\
+Which we can, through the trigonometric identity 
+$\cos^2{\theta} = \frac{1}{2} + \frac{1}{2} \cos{2\theta}$, simplify as
+$U_{1} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{0}}$ \\
+So it can be said that $U_{n} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{n - 1}}$, which leads to 
+a fully defined expression for the value of pi: 
 
-TODO... finish
+$\pi = \frac{2}{\prod\limits_{k=0}^\infty U_{k}}, U_{0} = \frac{1}{\sqrt{2}}, U_{n} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{n - 1}}$ \footnotemark
+
+These expressions, when under a single expression result in the aforementioned formula with nested roots.  
+
+\footnotetext{where $\prod$ signifies a product. Similar expression to $\sum$ }
 
 
 \begin{figure}[!ht]
