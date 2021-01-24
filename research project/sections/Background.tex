@@ -1,9 +1,10 @@
-\section{Theoretical approach}
+\section{Background Information}
 
 \subsection{Focus on two methods}
 
-For the sake of this paper, two different methods with similar 
-convergence rates but different approaches have been chosen for 
+For the sake of this paper, one by French mathematician François Viète,
+and another supposedly discovered by Madhava of Sangamagrama, and rediscovered 
+by Swiss mathematician Leibniz. Two methods with different approaches have been chosen for 
 comparison, the process for the original discovery of these methods
 will be explained. The two methods in question are one based on 
 the infinite series definition of an inverse trigonometric function 
@@ -11,7 +12,9 @@ and one where the value is derived using geometry, by mathematician
 Viète. These two mathematical methods were chosen as they are both 
 represent a first occurence in mathematics: Madhava was the first to 
 find the series notation of the arctangent function and Viète was one 
-of the first mathematicians to use infinite series in his calculation.
+of the first mathematicians to use infinite series in his calculation. Furthermore, 
+a research based on computational speed of two different kinds approaches to 
+the constant $\pi$ has not been done to date.  
 
 
 \subsubsection{Madhava-Gregory-Leibniz method}
@@ -24,16 +27,16 @@ TODO... finish
 
 \subsubsection{Viète's method}
 
-The French mathematician, François Viète, approached the value of 
-$\pi$ from a geometric standpoint, finding the following formula:
+François Viète, having approached the value of 
+$\pi$ from a geometric standpoint, found the following formula:
 
 $$\pi = 2 \frac{2}{\sqrt{2}} \frac{2}{\sqrt{2 + \sqrt{2}}} \frac{2}{\sqrt{2 + \sqrt{2 + \sqrt{2}}}} \dots$$
 
 % $$\pi = \frac{2}{\prod_{k = 0}^{\infty} U_{k}}$$    symbolic
 He was able to calculate $\pi$ to a place of 9 decimal points, in 
 the year 1593 \cite{Kreminski}, using his method. His method is reminiscent 
-of Archimedes' method, but differs in that it consists of finding 
-the area of a polygon of $n$ sides in a circle of constant 
+of Archimedes' method, where the length of a side is calculated \cite{archimedespi}, 
+but differs in that it consists of finding the area of a polygon of $n$ sides in a circle of constant 
 radius, rather than the circumference. As the value of $n$ is increased, the area of the $n$-gon 
 tends toward the area of a circle. The geometric origin of this formula 
 can be found using simple right-angle trigonometry, by first finding 
@@ -76,7 +79,7 @@ in \ref{fig:image1}.
 
 So $P = \frac{A_{n}}{A}$, since the values $A_{kn}$ cancel, and 
 followingly, it is true that $P = \frac{A_{n}}{A} \Leftrightarrow A = \frac{A_{n}}{P}$. The 
-value of $R$ being constant in this case, and since the area of a circle is defined 
+value of $R = 1$ in this case, and since the area of a circle is defined 
 by $A = \pi R^2$, therefore: \\
 $\pi = \frac{A_{n}}{P}$ \\
 By definition, we can say that as the value $k$ approaches infinity, the area of the $kn$-gon 
@@ -97,7 +100,8 @@ a fully defined expression for the value of pi:
 
 $\pi = \frac{2}{\prod\limits_{k=0}^\infty U_{k}}, U_{0} = \frac{1}{\sqrt{2}}, U_{n} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{n - 1}}$ \footnotemark
 
-These expressions, when under a single expression result in the aforementioned formula with nested roots.  
+These expressions, when under a single expression result in the aforementioned 
+formula with nested roots.  
 
 \footnotetext{where $\prod$ signifies a product. Similar expression to $\sum$ }
 
@@ -142,5 +146,5 @@ These expressions, when under a single expression result in the aforementioned f
 \label{fig:image1}
 \caption{Circle with 1 segment from a $n$-gon with point $H$ and 2 
 segments from an $2n$-gon, one of which on point $H'$, inscribed in 
-a circle of radius $OB$, adapted from \cite{borisgourevitch2013}}
+a circle of radius $OB$, adapted from Boris Gourévitch \cite{borisgourevitch2013}}
 \end{figure}

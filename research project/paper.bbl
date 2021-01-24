@@ -55,8 +55,12 @@
       \field{journaltitle}{The American Mathematical Monthly}
       \field{number}{3}
       \field{title}{I Prefer Pi: A Brief History and Anthology of Articles in the American Mathematical Monthly}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
       \field{volume}{122}
       \field{year}{2015}
+      \field{urldateera}{ce}
       \field{pages}{198\bibrangedash 199}
       \range{pages}{2}
       \verb{urlraw}
@@ -86,7 +90,11 @@
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{title}{François Viete}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
       \field{year}{2013}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb http://www.pi314.net/fr/viete.php
       \endverb
@@ -119,8 +127,12 @@
       \field{journaltitle}{Mathematics Magazine}
       \field{number}{3}
       \field{title}{$\pi$ to Thousands of Digits from Vieta's Formula}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
       \field{volume}{81}
       \field{year}{2008}
+      \field{urldateera}{ce}
       \field{pages}{201}
       \range{pages}{1}
       \verb{urlraw}
@@ -128,6 +140,42 @@
       \endverb
       \verb{url}
       \verb http://www.jstor.org/stable/27643107
+      \endverb
+    \endentry
+    \entry{archimedespi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c4e36ddf547520e63124194c6d4b6e73}{%
+           family={LOTSPEICH},
+           familyi={L\bibinitperiod},
+           given={RICHARD},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Council of Teachers of Mathematics}%
+      }
+      \strng{namehash}{c4e36ddf547520e63124194c6d4b6e73}
+      \strng{fullhash}{c4e36ddf547520e63124194c6d4b6e73}
+      \strng{bibnamehash}{c4e36ddf547520e63124194c6d4b6e73}
+      \strng{authorbibnamehash}{c4e36ddf547520e63124194c6d4b6e73}
+      \strng{authornamehash}{c4e36ddf547520e63124194c6d4b6e73}
+      \strng{authorfullhash}{c4e36ddf547520e63124194c6d4b6e73}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00255769}
+      \field{journaltitle}{The Mathematics Teacher}
+      \field{number}{3}
+      \field{title}{Archimedes' Pi—an Introduction to Iteration}
+      \field{volume}{81}
+      \field{year}{1988}
+      \field{pages}{208}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/27965770
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/27965770
       \endverb
     \endentry
   \enddatalist

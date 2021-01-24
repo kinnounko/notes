@@ -1,7 +1,25 @@
 \section{Computational approach}
 
-\subsection{Implementing}
-
 \subsection{The variables}
+The dependent variable of this experiment is the time taken $t$ by the program 
+to approximate a given number $n$ of correct decimal value of the constant $\pi$.
 
-\subsection{How timing was measured}
+The value $n$ will be altered in order to avoid possible similar convergence rates 
+at a small amount of decimal places, and multiple trials will be run to decrease 
+margin of error. Other variables of the experiment will be controlled. For example, the experiment 
+will be run on a same isolated system, a virtual machine, with a minimal amount of 
+processes running to avoid any possible variance in results. 
+
+
+\subsection{Implementing in Python}
+
+The main source for data in this experiment is primary. A Python application 
+was programmed (see appendix) in order to run the two methods aforementioned, and manage 
+the collection of data. 
+
+The program made assigns the time before the execution of the method to a variable \verb|t1| 
+with the \verb|time.time()| function. At each iteration of the method, the number of valid decimal 
+places of the resultant approximation are counted and once a specified threshold is reached, 
+a new \verb|t2| time variable is assigned and the time taken, defined by the difference between 
+\verb|t2| and \verb|t1| is stored. This process is repeated for all specified decimal accuracies and 
+for both methods.
