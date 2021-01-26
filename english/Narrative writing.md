@@ -2,7 +2,7 @@
 tags: [english]
 title: Narrative writing
 created: '2021-01-26T13:07:11.880Z'
-modified: '2021-01-26T13:34:22.490Z'
+modified: '2021-01-26T13:38:47.261Z'
 ---
 
 # Narrative writing 
@@ -42,6 +42,10 @@ However after the door is opened, the stranger sees the weapon in the father's h
 * Dialogue to be added
 * Genre: ? 
 
-The lake had just frozen in the morning; but I didn't hvae anyone to skate with. Friends had left for vacation and the only people left in the neighborhood were the elderly and a newly moved in family. I had only heard of their move to our small neighborhood, but had never seen the family itself or their move. 
+The lake had just frozen in the morning; but I didn't have anyone to skate with. Friends had left for vacation and the only people left in the neighborhood were the elderly and a newly moved in family. I had only heard of their move to our small neighborhood, but had never seen the family itself or their move. 
+
+Changing point of view to the third person:
+
+The lake had frozen in the morning in the small suburban neigborhood, but the boy didn't have anyone to skate with. His friends had left town for tropical locations and the only people left in his neighborhood were the elderly and a newly moved in, mysterious family. Their move was only heard of by the boy, he had never seen their faces nor their move to the town.  
 
 
