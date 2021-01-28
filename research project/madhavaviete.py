@@ -21,13 +21,17 @@ def print_as_text(pi):
             print(RED +  pi_string[i] + RESET, end="")
     print("\n")
 
+
 def decimal_is_correct(pi, decvalue):
     pi_string = str(pi)
     print(pi_string)
     if pi_string[decvalue] == PI_CONST[decvalue]:
         return True
-    else: 
+    elif pi_string == "0.0":
         return False
+    else:
+        return False
+
 
 def madhavaleibniz(iter):
     piapprox = 0
@@ -35,6 +39,7 @@ def madhavaleibniz(iter):
 
     t1 = time.time()
     while not decimal_is_correct(piapprox * mp.sqrt(12), 10):
+        #for i in range(iter):
         # This is a direct mirror of the summation from the formula
         piapprox += mp.power(-3, -i) / (2*i+1)
         i += 1
@@ -45,8 +50,6 @@ def madhavaleibniz(iter):
 
     # Return the time spent (t2-t1) and number of iterations
     return t2-t1
-
-
 
 
 def viete(iter):
@@ -69,7 +72,7 @@ def viete(iter):
     return t2-t1
 
 if __name__ == "__main__":
-    iter = 100
+    iter = 10
     trials = 3 
 
     print("time: ", madhavaleibniz(iter))
