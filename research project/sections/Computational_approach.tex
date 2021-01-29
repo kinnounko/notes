@@ -21,9 +21,8 @@ with the \verb|time.time()| Python function. At each iteration of the method, th
 places of the resultant approximation are counted and once a specified threshold is reached, 
 a new \verb|t2| time variable is assigned and the time taken, defined by the difference between 
 \verb|t2| and \verb|t1|, is stored. This process is repeated for all specified decimal accuracies and 
-for both methods.
+for both methods. The times recorded were stored in a \verb|.csv| file for further analysis. 
 
 The \verb|mpmath| library was used for the floating point operations required 
-for comparaison between approximated values and the constant $\pi$ that wouldn't 
-have been possible using standard Python libraries \cite{mpmath}. The times recorded 
-are stored in a \verb|.csv| file for further analysis. 
+for comparison between approximated values and the constant $\pi$ that wouldn't 
+have been possible using standard Python libraries \cite{mpmath}. 

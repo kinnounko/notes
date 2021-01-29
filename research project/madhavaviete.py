@@ -62,25 +62,18 @@ def viete(decimals):
 
 
 if __name__ == "__main__":
-    decimals = [1, 10, 20, 30, 40, 50, 60]
+    decimals = [i for i in range(0, 65, 5)]
     trials = 100
+
+    # Exporting data for plotting and analysis
     f = open(r'out.csv', 'w')
     fieldnames = ['decimals', 'viete', 'madhava']
     writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writerow({'decimals':'decimals', 'viete':'viete', 'madhava':'madhava'})
+    writer.writerow({'decimals':'decimals', 'viete':'viete', 
+    'madhava':'madhava'})
 
     for dec in decimals:
-        print("decimal ", dec)
+        for t in range(trials):
+            writer.writerow({'decimals':dec, 'viete':viete(dec), 
+            'madhava':madhavaleibniz(dec)})
 
-        writer.writerow({'decimals':dec, 'viete':viete(dec), 'madhava':madhavaleibniz(dec)})
-
-        print()
-
-    
-
-    '''
-    with open('flip_file.csv', 'w') as f:
-        writer = csv.writer(f)
-        writer.writerows(m)
-        writer.writerows(v)
-    '''

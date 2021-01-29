@@ -1,13 +1,114 @@
 \section{Analysis of the results}
+\newcolumntype{C}{>{\Centering\arraybackslash\hspace{0pt}}X}
 
 \subsection{Presentation of the data}
 
 \subsubsection{Tabular presentation}
 
+The arithmetic mean of the 100 trials was caluclated and the data points 
+in the table shown below were found (rounded to 3 s.f.):
+\begin{table}[h]
+    \noindent% <-- important
+    \setlength\tabcolsep{3pt} % default: 6pt
+    \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
+    \toprule
+    Decimal place & Average time for approximation using Viete's method, in milliseconds (ms) & Average time for approximation using Madhava's method method, in milliseconds (ms) \\ 
+    \midrule
+    5  & 0.760  & 0.592   \\
+    10 & 1.29  & 1.31    \\
+    15 & 2.05  & 1.9     \\
+    20 & 2.64  & 2.68    \\
+    25 & 3.09  & 3.21    \\
+    30 & 3.82  & 3.9     \\
+    35 & 4.44  & 4.55    \\
+    40 & 5.08  & 5.26    \\
+    45 & 5.71  & 5.84    \\
+    50 & 6.37  & 6.58    \\
+    55 & 7.02  & 7.27    \\
+    60 & 7.72  & 8.00   
+    \end{tabularx}
+\end{table}
+
+\pgfplotstableread{
+    X Y
+    5 0.7601666451
+    10 1.288158894
+    15 2.050116062 
+    20 2.63982296 
+    25 3.091802597
+    30 3.819538355 
+    35 4.442822933
+    40 5.081979036 
+    45 5.706284046 
+    50 6.370962858 
+    55 7.020516396 
+    60 7.723451853   
+}\vietetable
+
+\pgfplotstableread{
+    X Y
+    5 0.5919837952 
+    10 1.307063103  
+    15 1.902475357  
+    20 2.679748535  
+    25 3.212277889  
+    30 3.904948235  
+    35 4.547913074  
+    40 5.255579948  
+    45 5.837199688  
+    50 6.578524113  
+    55 7.270073891  
+    60 8.004565239  
+
+}\madhavatable
+
 \subsubsection{Graphical presentation}
 
 To better show the trend in the data collected, the data 
 has been presented in a chart below. 
+
+\begin{tikzpicture}[scale=1.2]
+    \begin{axis}[
+        title={Comparing the time taken for approximating the value of $\pi$},
+        xlabel={Decimal places},
+        ylabel={Time taken [ms]},
+        xmin=0, xmax=60,
+        ymin=0, ymax=10,
+        ytick={0,2,4,6,8,10},
+        xtick={0,20,40,60},
+        legend pos=north west,
+        ymajorgrids=true,
+        grid style=dashed,
+    ]
+    
+    \addplot[
+        only marks,
+        color=blue,
+        mark=*,
+        ] table {\vietetable};
+        \legend{Viète's method}
+        
+    \addplot [thin, blue] table[
+        y={create col/linear regression={y=Y}}
+    ] % compute a linear regression from the input table
+    {\vietetable};
+    \addlegendentry{best fit}
+
+    \addplot[
+        only marks,
+        color=red,
+        mark=*,
+        ] table {\madhavatable};
+        \legend{Madhava's method}
+        
+    \addplot [thin, red] table[
+        y={create col/linear regression={y=Y}}
+    ] % compute a linear regression from the input table
+    {\madhavatable};
+    \addlegendentry{best fit}
+
+    \end{axis}
+\end{tikzpicture}
 
 \subsection{Analysis}
 
