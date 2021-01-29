@@ -13,17 +13,16 @@ processes running to avoid any possible variance in results.
 
 \subsection{Implementing in Python}
 
-The main source for data in this experiment is primary. A Python application 
-was programmed (see appendix) in order to run the two methods aforementioned, and manage 
-the collection of data. 
+A Python application was programmed (see appendix) in order to run the two 
+methods aforementioned, and manage the collection of data. 
 
 The program made assigns the time before the execution of the method to a variable \verb|t1| 
-with the \verb|time.time()| function. At each iteration of the method, the number of valid decimal 
+with the \verb|time.time()| Python function. At each iteration of the method, the number of valid decimal 
 places of the resultant approximation are counted and once a specified threshold is reached, 
 a new \verb|t2| time variable is assigned and the time taken, defined by the difference between 
-\verb|t2| and \verb|t1| is stored. This process is repeated for all specified decimal accuracies and 
+\verb|t2| and \verb|t1|, is stored. This process is repeated for all specified decimal accuracies and 
 for both methods.
 
 The \verb|mpmath| library was used for the floating point operations required 
 for comparaison between approximated values and the constant $\pi$ that wouldn't 
-have been possible using standard Python libraries \cite{mpmath}. The 
+have been possible using standard Python libraries \cite{mpmath}. The n 
