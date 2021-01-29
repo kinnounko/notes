@@ -1,20 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[89] biber:322> INFO - === Fri Jan 29, 2021, 12:30:30
-[104] Biber.pm:415> INFO - Reading 'paper.bcf'
-[184] Biber.pm:943> INFO - Found 6 citekeys in bib section 0
-[200] Biber.pm:4256> INFO - Processing section 0
-[201] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[201] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[212] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[213] bibtex.pm:1653> INFO - LaTeX decoding ...
-[224] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[266] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
-[272] Utils.pm:293> WARN - month field 'December' in entry 'mpmath' is not an integer - this will probably not sort properly.
-[289] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[289] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[289] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[289] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[299] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[303] bbl.pm:755> INFO - Output to paper.bbl
-[303] Biber.pm:128> INFO - WARNINGS: 2
+[100] biber:322> INFO - === Fri Jan 29, 2021, 20:05:53
+[117] Biber.pm:415> INFO - Reading 'paper.bcf'
+[205] Biber.pm:943> INFO - Found 6 citekeys in bib section 0
+[224] Biber.pm:4256> INFO - Processing section 0
+[225] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[225] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[237] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[238] bibtex.pm:1653> INFO - LaTeX decoding ...
+[250] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[298] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
+[304] Utils.pm:293> WARN - month field 'December' in entry 'mpmath' is not an integer - this will probably not sort properly.
+[323] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[324] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[324] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[324] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[336] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[339] bbl.pm:755> INFO - Output to paper.bbl
+[339] Biber.pm:128> INFO - WARNINGS: 2
