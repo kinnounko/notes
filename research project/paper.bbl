@@ -70,6 +70,41 @@
       \verb http://www.jstor.org/stable/10.4169/amer.math.monthly.122.03.195
       \endverb
     \endentry
+    \entry{galperin_2003}{article}{}
+      \name{author}{1}{}{%
+        {{hash=22e376a42914fb4efdaf197e165ab5c0}{%
+           family={Galperin},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{fullhash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{bibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authorbibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authornamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authorfullhash}{22e376a42914fb4efdaf197e165ab5c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Regular and Chaotic Dynamics}
+      \field{number}{4}
+      \field{title}{PLAYING POOL WITH $\pi$ (THE NUMBER $\pi$ FROM A BILLIARD POINT OF VIEW)}
+      \field{volume}{8}
+      \field{year}{2003}
+      \field{pages}{375\bibrangedash 393}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1070/rd2003v008n04abeh000252
+      \endverb
+      \verb{urlraw}
+      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \endverb
+      \verb{url}
+      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \endverb
+    \endentry
     \entry{borisgourevitch2013}{online}{}
       \name{author}{1}{}{%
         {{hash=748392646142f945237c2e7c44ee10c0}{%
@@ -176,6 +211,36 @@
       \endverb
       \verb{url}
       \verb http://www.jstor.org/stable/27965770
+      \endverb
+    \endentry
+    \entry{mpmath}{manual}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=1cd2f71317215f5336dbc31416e0bbd7}{%
+           family={Johansson},
+           familyi={J\bibinitperiod},
+           given={Fredrik},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{28f71dfe0a6c1fa496caae913a24df48}
+      \strng{fullhash}{28f71dfe0a6c1fa496caae913a24df48}
+      \strng{bibnamehash}{28f71dfe0a6c1fa496caae913a24df48}
+      \strng{authorbibnamehash}{28f71dfe0a6c1fa496caae913a24df48}
+      \strng{authornamehash}{28f71dfe0a6c1fa496caae913a24df48}
+      \strng{authorfullhash}{28f71dfe0a6c1fa496caae913a24df48}
+      \field{sortinit}{m}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{mpmath: a {P}ython library for arbitrary-precision floating-point arithmetic (version 0.18)}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://mpmath.org/
+      \endverb
+      \verb{url}
+      \verb http://mpmath.org/
       \endverb
     \endentry
   \enddatalist
