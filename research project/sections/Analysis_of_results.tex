@@ -65,9 +65,11 @@ in the table shown below were found (rounded to 3 s.f.):
 \subsubsection{Graphical presentation}
 
 To better show the trend in the data collected, the data 
-has been presented in a chart below. 
+has been presented in a chart below. The blue markers and line of best-fit 
+respresent the results received from Viète's method while the red represent 
 
-\begin{tikzpicture}[scale=1.2]
+
+\begin{tikzpicture}[scale=1.1]
     \begin{axis}[
         title={Comparing the time taken for approximating the value of $\pi$},
         xlabel={Decimal places},
@@ -79,6 +81,7 @@ has been presented in a chart below.
         legend pos=north west,
         ymajorgrids=true,
         grid style=dashed,
+        scale=1.2
     ]
     
     \addplot[
@@ -92,20 +95,22 @@ has been presented in a chart below.
         y={create col/linear regression={y=Y}}
     ] % compute a linear regression from the input table
     {\vietetable};
-    \addlegendentry{best fit}
+    \addlegendentry{best fit line}
+
+
 
     \addplot[
         only marks,
         color=red,
         mark=*,
         ] table {\madhavatable};
-        \legend{Madhava's method}
+        \addlegendentry{Madhava's method}
         
     \addplot [thin, red] table[
         y={create col/linear regression={y=Y}}
     ] % compute a linear regression from the input table
     {\madhavatable};
-    \addlegendentry{best fit}
+    \addlegendentry{best fit line}
 
     \end{axis}
 \end{tikzpicture}
