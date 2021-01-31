@@ -161,6 +161,32 @@
       \field{pages}{67\bibrangedash 70}
       \range{pages}{4}
     \endentry
+    \entry{edwards_1994}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3e6c797eae21f6cff0edbb98a5c99102}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={C.\bibnamedelimi Henry},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \strng{fullhash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \strng{bibnamehash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \strng{authorbibnamehash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \strng{authornamehash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \strng{authorfullhash}{3e6c797eae21f6cff0edbb98a5c99102}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The historical development of the calculus}
+      \field{year}{1994}
+      \field{pages}{247}
+      \range{pages}{1}
+    \endentry
     \entry{raju_2007}{book}{}
       \name{author}{1}{}{%
         {{hash=17a403f43f4e4c11919993f602160b44}{%
@@ -179,8 +205,8 @@
       \strng{authorbibnamehash}{17a403f43f4e4c11919993f602160b44}
       \strng{authornamehash}{17a403f43f4e4c11919993f602160b44}
       \strng{authorfullhash}{17a403f43f4e4c11919993f602160b44}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Cultural foundations of mathematics: the nature of mathematical proof and the transmission of the calculus from India to Europe in the 16th c. CE}
@@ -203,8 +229,8 @@
       \strng{authorbibnamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authornamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authorfullhash}{5a398f7bf0039f87cf378c8c1410a8fd}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0025570X, 19300980}
@@ -243,8 +269,8 @@
       \strng{authorbibnamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authornamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authorfullhash}{c4e36ddf547520e63124194c6d4b6e73}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00255769}
@@ -276,8 +302,8 @@
       \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
