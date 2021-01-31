@@ -25,9 +25,8 @@ def decimal_is_correct(pi, decvalue):
         return False
 
 
-# Function that approximates pi using the Madhava-Leibniz 
-# method
-def madhavaleibniz(decimals):
+# Function that approximates pi using Madhava's method
+def madhava(decimals):
     piapprox = 0
     i = 0 
 
@@ -75,5 +74,5 @@ if __name__ == "__main__":
     for dec in decimals:
         for t in range(trials):
             writer.writerow({'decimals':dec, 'viete':viete(dec), 
-            'madhava':madhavaleibniz(dec)})
+            'madhava':madhava(dec)})
 

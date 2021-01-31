@@ -161,6 +161,31 @@
       \field{pages}{67\bibrangedash 70}
       \range{pages}{4}
     \endentry
+    \entry{raju_2007}{book}{}
+      \name{author}{1}{}{%
+        {{hash=17a403f43f4e4c11919993f602160b44}{%
+           family={Raju},
+           familyi={R\bibinitperiod},
+           given={C.\bibnamedelimi K.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Pearson Longman, Project of history of Indian Science, philosophy}%
+        {culture}%
+      }
+      \strng{namehash}{17a403f43f4e4c11919993f602160b44}
+      \strng{fullhash}{17a403f43f4e4c11919993f602160b44}
+      \strng{bibnamehash}{17a403f43f4e4c11919993f602160b44}
+      \strng{authorbibnamehash}{17a403f43f4e4c11919993f602160b44}
+      \strng{authornamehash}{17a403f43f4e4c11919993f602160b44}
+      \strng{authorfullhash}{17a403f43f4e4c11919993f602160b44}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cultural foundations of mathematics: the nature of mathematical proof and the transmission of the calculus from India to Europe in the 16th c. CE}
+      \field{year}{2007}
+    \endentry
     \entry{Kreminski}{article}{}
       \name{author}{1}{}{%
         {{hash=5a398f7bf0039f87cf378c8c1410a8fd}{%
@@ -178,8 +203,8 @@
       \strng{authorbibnamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authornamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authorfullhash}{5a398f7bf0039f87cf378c8c1410a8fd}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0025570X, 19300980}
@@ -218,8 +243,8 @@
       \strng{authorbibnamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authornamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authorfullhash}{c4e36ddf547520e63124194c6d4b6e73}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00255769}
@@ -251,8 +276,8 @@
       \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
@@ -285,8 +310,8 @@
       \strng{authorbibnamehash}{28f71dfe0a6c1fa496caae913a24df48}
       \strng{authornamehash}{28f71dfe0a6c1fa496caae913a24df48}
       \strng{authorfullhash}{28f71dfe0a6c1fa496caae913a24df48}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}

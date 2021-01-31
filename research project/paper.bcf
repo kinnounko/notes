@@ -2186,12 +2186,13 @@
     <bcf:citekey order="2">amermathmonthly</bcf:citekey>
     <bcf:citekey order="3">oconnor_robertson_2000</bcf:citekey>
     <bcf:citekey order="4">rc_gupta_mgseries</bcf:citekey>
-    <bcf:citekey order="5">Kreminski</bcf:citekey>
-    <bcf:citekey order="6">archimedespi</bcf:citekey>
-    <bcf:citekey order="7">borisgourevitch2013</bcf:citekey>
+    <bcf:citekey order="5">raju_2007</bcf:citekey>
+    <bcf:citekey order="6">Kreminski</bcf:citekey>
+    <bcf:citekey order="7">archimedespi</bcf:citekey>
     <bcf:citekey order="8">borisgourevitch2013</bcf:citekey>
-    <bcf:citekey order="9">mpmath</bcf:citekey>
+    <bcf:citekey order="9">borisgourevitch2013</bcf:citekey>
     <bcf:citekey order="10">mpmath</bcf:citekey>
+    <bcf:citekey order="11">mpmath</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
