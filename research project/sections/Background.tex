@@ -60,7 +60,7 @@ Which in form of an infinite sum can be expressed as:
 $\frac{\pi}{4} = \sum\limits_{n=0}^\infty \frac{(-1)^n}{2n +1}$
 
 Which has come to be known as the Leibniz formula for $\pi$, after the German mathematician 
-who discovered the same formula two decades later \cite{edwards_1994}
+who discovered the same formula two decades later. \cite{edwards_1994}
 
 However, the method with a faster convergence can be found in a further commentary describing the findings of Madhava that states  
 a method for the calculation of the circumference $c$ of a circle of diameter $d$ exists. 
@@ -73,11 +73,19 @@ when these "are divided in order by the odd numbers, beginning with 1", and afte
 even terms are subtracted from sum of the odd", one is left with the circumference of the 
 circle (translation from C. K. Raju). \cite{raju_2007} 
 
-This can be expressed in mathematical terms as such: 
+This can be expressed in mathematical terms as such, where we let $c$ be the circumference of 
+a circle of diameter $d$: 
 
+$c = \sqrt{12 d^2} - \frac{\sqrt{12 d^2}}{3 \cdot 3} + \frac{\sqrt{12 d^2}}{3^2 \cdot 5} - \frac{\sqrt{12 d^2}}{3^3 \cdot 7} + \dots$
 
+And since $c = \pi d$, for a circle of diameter 1, $c = \pi$, all $d$ terms cancel and 
+the expression can be factorized as: 
 
+$c = \pi = \sqrt{12} ( 1 - \frac{1}{3 \cdot 3} + \frac{1}{3^2 \cdot 5} - \frac{1}{3^3 \cdot 7} + \dots )$
 
+Or as an infinite sum:
+
+$\pi = \sqrt{12} \sum\limits_{n=0}^\infty \frac{(-3)^{-n}}{2n+1}$
 
 \subsubsection{A geometric method: Viète's method}
 
@@ -149,9 +157,6 @@ So it can be said that $U_{n} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{n - 1}}$, whi
 a fully defined expression for the value of pi, using an infinite product: 
 
 $\pi = \frac{2}{\prod\limits_{k=0}^\infty U_{k}}, U_{0} = \frac{1}{\sqrt{2}}, U_{n} = \sqrt{\frac{1}{2} + \frac{1}{2} U_{n - 1}}$ \footnotemark
-
-These expressions, when under a single expression result in the aforementioned 
-formula with nested roots.  
 
 \footnotetext{where $\prod$ signifies a product. Similar expression to $\sum$ }
 
