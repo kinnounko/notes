@@ -18,7 +18,42 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{none/global//global/global}
+    \entry{galperin_2003}{article}{}
+      \name{author}{1}{}{%
+        {{hash=22e376a42914fb4efdaf197e165ab5c0}{%
+           family={Galperin},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{fullhash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{bibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authorbibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authornamehash}{22e376a42914fb4efdaf197e165ab5c0}
+      \strng{authorfullhash}{22e376a42914fb4efdaf197e165ab5c0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Regular and Chaotic Dynamics}
+      \field{number}{4}
+      \field{title}{PLAYING POOL WITH $\pi$ (THE NUMBER $\pi$ FROM A BILLIARD POINT OF VIEW)}
+      \field{volume}{8}
+      \field{year}{2003}
+      \field{pages}{375\bibrangedash 393}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1070/rd2003v008n04abeh000252
+      \endverb
+      \verb{urlraw}
+      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \endverb
+      \verb{url}
+      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \endverb
+    \endentry
     \entry{amermathmonthly}{article}{}
       \name{author}{3}{}{%
         {{hash=55a718488fd513ab72b005964e3e21f5}{%
@@ -46,8 +81,8 @@
       \strng{authorbibnamehash}{2e241668cc385c2aba30d81022f731f2}
       \strng{authornamehash}{2e241668cc385c2aba30d81022f731f2}
       \strng{authorfullhash}{2e241668cc385c2aba30d81022f731f2}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In celebration of both a special “big” π Day (3/14/15) and the 2015 centennial of the Mathematical Association of America, we review the illustrious history of the constant π in the pages of the American Mathematical Monthly.}
@@ -70,72 +105,61 @@
       \verb http://www.jstor.org/stable/10.4169/amer.math.monthly.122.03.195
       \endverb
     \endentry
-    \entry{galperin_2003}{article}{}
-      \name{author}{1}{}{%
-        {{hash=22e376a42914fb4efdaf197e165ab5c0}{%
-           family={Galperin},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
+    \entry{oconnor_robertson_2000}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=0b2e614b681eed1504fdf8548db5e78a}{%
+           family={O'Connor},
+           familyi={O\bibinitperiod},
+           given={J\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=38d8d75893cbc96955e1d383533a42e3}{%
+           family={Robertson},
+           familyi={R\bibinitperiod},
+           given={E\bibnamedelima F},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
       }
-      \strng{namehash}{22e376a42914fb4efdaf197e165ab5c0}
-      \strng{fullhash}{22e376a42914fb4efdaf197e165ab5c0}
-      \strng{bibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
-      \strng{authorbibnamehash}{22e376a42914fb4efdaf197e165ab5c0}
-      \strng{authornamehash}{22e376a42914fb4efdaf197e165ab5c0}
-      \strng{authorfullhash}{22e376a42914fb4efdaf197e165ab5c0}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \strng{namehash}{62b358362fa3de4ac01ad294231353cf}
+      \strng{fullhash}{62b358362fa3de4ac01ad294231353cf}
+      \strng{bibnamehash}{62b358362fa3de4ac01ad294231353cf}
+      \strng{authorbibnamehash}{62b358362fa3de4ac01ad294231353cf}
+      \strng{authornamehash}{62b358362fa3de4ac01ad294231353cf}
+      \strng{authorfullhash}{62b358362fa3de4ac01ad294231353cf}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Regular and Chaotic Dynamics}
-      \field{number}{4}
-      \field{title}{PLAYING POOL WITH $\pi$ (THE NUMBER $\pi$ FROM A BILLIARD POINT OF VIEW)}
-      \field{volume}{8}
-      \field{year}{2003}
-      \field{pages}{375\bibrangedash 393}
-      \range{pages}{19}
-      \verb{doi}
-      \verb 10.1070/rd2003v008n04abeh000252
-      \endverb
+      \field{month}{11}
+      \field{title}{Madhava of Sangamagramma}
+      \field{year}{2000}
       \verb{urlraw}
-      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \verb https://web.archive.org/web/20060514012903/http://www-gap.dcs.st-and.ac.uk/~history/Biographies/Madhava.html
       \endverb
       \verb{url}
-      \verb http://rcd.ics.org.ru/upload/iblock/007/RCD080402.pdf
+      \verb https://web.archive.org/web/20060514012903/http://www-gap.dcs.st-and.ac.uk/~history/Biographies/Madhava.html
       \endverb
     \endentry
-    \entry{borisgourevitch2013}{online}{}
+    \entry{rc_gupta_mgseries}{book}{}
       \name{author}{1}{}{%
-        {{hash=748392646142f945237c2e7c44ee10c0}{%
-           family={Gourévitch},
+        {{hash=6fb05dfdba24af1215bbf39bad25bdcc}{%
+           family={Gupta},
            familyi={G\bibinitperiod},
-           given={Boris},
-           giveni={B\bibinitperiod}}}%
+           given={R\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \strng{namehash}{748392646142f945237c2e7c44ee10c0}
-      \strng{fullhash}{748392646142f945237c2e7c44ee10c0}
-      \strng{bibnamehash}{748392646142f945237c2e7c44ee10c0}
-      \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
-      \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
-      \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \strng{namehash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \strng{fullhash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \strng{bibnamehash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \strng{authorbibnamehash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \strng{authornamehash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \strng{authorfullhash}{6fb05dfdba24af1215bbf39bad25bdcc}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{title}{François Viete}
-      \field{urlday}{24}
-      \field{urlmonth}{1}
-      \field{urlyear}{2020}
-      \field{year}{2013}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.pi314.net/fr/viete.php
-      \endverb
-      \verb{url}
-      \verb http://www.pi314.net/fr/viete.php
-      \endverb
+      \field{title}{The Madhava-Gregory series}
+      \field{year}{1973}
+      \field{pages}{67\bibrangedash 70}
+      \range{pages}{4}
     \endentry
     \entry{Kreminski}{article}{}
       \name{author}{1}{}{%
@@ -154,8 +178,8 @@
       \strng{authorbibnamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authornamehash}{5a398f7bf0039f87cf378c8c1410a8fd}
       \strng{authorfullhash}{5a398f7bf0039f87cf378c8c1410a8fd}
-      \field{sortinit}{K}
-      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0025570X, 19300980}
@@ -194,8 +218,8 @@
       \strng{authorbibnamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authornamehash}{c4e36ddf547520e63124194c6d4b6e73}
       \strng{authorfullhash}{c4e36ddf547520e63124194c6d4b6e73}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00255769}
@@ -211,6 +235,38 @@
       \endverb
       \verb{url}
       \verb http://www.jstor.org/stable/27965770
+      \endverb
+    \endentry
+    \entry{borisgourevitch2013}{online}{}
+      \name{author}{1}{}{%
+        {{hash=748392646142f945237c2e7c44ee10c0}{%
+           family={Gourévitch},
+           familyi={G\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{fullhash}{748392646142f945237c2e7c44ee10c0}
+      \strng{bibnamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
+      \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{François Viete}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.pi314.net/fr/viete.php
+      \endverb
+      \verb{url}
+      \verb http://www.pi314.net/fr/viete.php
       \endverb
     \endentry
     \entry{mpmath}{manual}{}
@@ -229,8 +285,8 @@
       \strng{authorbibnamehash}{28f71dfe0a6c1fa496caae913a24df48}
       \strng{authornamehash}{28f71dfe0a6c1fa496caae913a24df48}
       \strng{authorfullhash}{28f71dfe0a6c1fa496caae913a24df48}
-      \field{sortinit}{m}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
