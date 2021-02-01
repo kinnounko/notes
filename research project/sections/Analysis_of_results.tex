@@ -7,6 +7,7 @@
 
 The arithmetic mean of a decimal place was caluclated for 100 trials and the data points 
 in the table shown below were found (rounded to 3 s.f.):
+
 \begin{table}[h]
     \noindent% <-- important
     \setlength\tabcolsep{3pt} % default: 6pt
@@ -65,7 +66,7 @@ in the table shown below were found (rounded to 3 s.f.):
 \subsubsection{Graphical presentation}
 
 To better show the trend in the data collected, the data 
-has been presented in a chart below. The blue markers and line of best-fit 
+has been presented in a scatter chart below. The blue markers and line of best-fit 
 respresent the results received from Viète's method while the red represent those 
 from Madhava's method. 
 
@@ -116,9 +117,24 @@ from Madhava's method.
     \end{axis}
 \end{tikzpicture}
 
-\subsection{Analysis}
+\subsection{Observations and analysis}
 
 The results gathered from this experiment show linear relationship between the amount of decimal 
 places approximated and the time required for this approximation. The two lines of best fit for 
-the two methods show similarities but also differences. Firstly, from 5 to 20 decimal places, 
-Madhava's 
+the two methods show similarities but also differences. It can be firstly noted that Madhava's 
+method is faster than the other until the decimal 20, when the two best fit lines diverge. This 
+can be explained as due to the convergence rates of the two methods, which can be seen in (Figure 3) 
+\ref{fig:comparaison}. In the beginning of this curve representing the convergence of Viète's method, 
+it cna be seen that it does not follow an \textit{alternating} method, like the one formulated by 
+Madhava. Madhava's method is what is called an alternating series, in this case one that converges 
+to the value $\pi$ \footnote{Note: not all alternating series converge}
+
+
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{image.png}
+    \caption{Comparison of historical methods of approximating the value of $\pi$. This image demonstrates
+    their convergence rates. The line labelled Madhava in dark blue is the method used in this paper. 
+    From (Wikimedia Commons) \cite{infinite_series_comparaison}}
+    \label{fig:comparaison}
+  \end{figure}

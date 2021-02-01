@@ -381,6 +381,34 @@
       \verb http://mpmath.org/
       \endverb
     \endentry
+    \entry{infinite_series_comparaison}{online}{}
+      \name{author}{1}{}{%
+        {{hash=93d707cc77f037fd02e1c8cfa75317cf}{%
+           family={Commons},
+           familyi={C\bibinitperiod},
+           given={Wikimedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{fullhash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{bibnamehash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{authorbibnamehash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{authornamehash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \strng{authorfullhash}{93d707cc77f037fd02e1c8cfa75317cf}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{File: \ttfamily{Comparison\_pi\_infinite\_series.svg}}
+      \field{title}{Comparison pi infinite series}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://upload.wikimedia.org/wikipedia/commons/f/f5/Comparison_pi_infinite_series.svg
+      \endverb
+      \verb{url}
+      \verb https://upload.wikimedia.org/wikipedia/commons/f/f5/Comparison_pi_infinite_series.svg
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

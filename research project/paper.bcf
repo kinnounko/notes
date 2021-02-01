@@ -2195,7 +2195,9 @@
     <bcf:citekey order="11">borisgourevitch2013</bcf:citekey>
     <bcf:citekey order="12">borisgourevitch2013</bcf:citekey>
     <bcf:citekey order="13">mpmath</bcf:citekey>
-    <bcf:citekey order="14">mpmath</bcf:citekey>
+    <bcf:citekey order="14">infinite_series_comparaison</bcf:citekey>
+    <bcf:citekey order="15">infinite_series_comparaison</bcf:citekey>
+    <bcf:citekey order="16">mpmath</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

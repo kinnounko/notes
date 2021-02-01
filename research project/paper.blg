@@ -1,21 +1,21 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[101] biber:322> INFO - === Mon Feb  1, 2021, 21:18:21
+[101] biber:322> INFO - === Mon Feb  1, 2021, 23:03:30
 [117] Biber.pm:415> INFO - Reading 'paper.bcf'
-[203] Biber.pm:943> INFO - Found 11 citekeys in bib section 0
-[222] Biber.pm:4256> INFO - Processing section 0
-[222] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[222] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[235] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[203] Biber.pm:943> INFO - Found 12 citekeys in bib section 0
+[220] Biber.pm:4256> INFO - Processing section 0
+[221] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[221] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[234] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
 [236] bibtex.pm:1653> INFO - LaTeX decoding ...
-[254] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[297] Utils.pm:293> WARN - month field 'Nov' in entry 'oconnor_robertson_2000' is not an integer - this will probably not sort properly.
-[331] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
+[255] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[294] Utils.pm:293> WARN - month field 'Nov' in entry 'oconnor_robertson_2000' is not an integer - this will probably not sort properly.
+[328] Utils.pm:293> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
 [338] Utils.pm:293> WARN - month field 'December' in entry 'mpmath' is not an integer - this will probably not sort properly.
-[361] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[361] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[361] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[361] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[374] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[379] bbl.pm:755> INFO - Output to paper.bbl
-[380] Biber.pm:128> INFO - WARNINGS: 3
+[365] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[365] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[365] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[366] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[382] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[388] bbl.pm:755> INFO - Output to paper.bbl
+[389] Biber.pm:128> INFO - WARNINGS: 3
