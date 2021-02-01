@@ -24,8 +24,12 @@ in his treatise \textit{Yukti-Bhasa} written in the Malayalam language \cite{oco
 Madhava's infinite series expansion of the inverse tangent function can also be 
 found in this treatise. R. C. Gupta, in his translation, describes this expansion as one 
 where the arc $\theta$ is equal to the sum of a first term, "the product of the given sine 
-and radius of the desired arc divided by the cosine of the arc" \footnotemark, followed by terms that "are 
-obtained by a process of iteration": . \cite{rc_gupta_mgseries}
+and radius of the desired arc divided by the cosine of the arc"\footnotemark, followed by terms that "are 
+obtained by a process of iteration": in which the original term is multiplied by the 
+square of the sine and divided by the square of the cosine. Thereafter, each term is 
+divided by an odd number in order (1, 3, 5, 7, \dots). It is then said that the arc can 
+be found by "adding and subtracting respectively the terms of odd rank and those of even rank",  
+definition of an alternating series. \cite{rc_gupta_mgseries}
 
 \footnotetext{Note: the old Indian meaning for the sine of $\theta$ is $r \sin{\theta}$, where $r$ is the radius. The same applies for the cosine.} 
 
@@ -99,7 +103,7 @@ but differs in that it consists of finding the area of a polygon of $n$ sides in
 radius, rather than the circumference. As the value of $n$ is increased, the area of the $n$-gon 
 tends toward the area of a circle. The geometric origin of this formula 
 can be found using simple right-angle trigonometry, by first finding 
-the lengths $OH$ and subsequently $BD$ in (Figure 1 ) \ref{fig:image1}.
+the lengths $OH$ and subsequently $BD$ in (Figure 2) \ref{fig:image1}.
 % $$\pi = \frac{2}{\prod_{k = 0}^{\infty} U_{k}}$$    symbolic
 With the radius of the circle with center $R = OB$,
 
@@ -163,13 +167,48 @@ $\pi = \frac{2}{\prod\limits_{k=0}^\infty U_{k}}, U_{0} = \frac{1}{\sqrt{2}}, U_
 
 
 
-\begin{figure}
 
-[number line here]
+
+
+
+\begin{figure}[h]
+
+    \begin{tikzpicture}
+        \draw[latex-latex] (-0.5,0) -- (4.5,0);% the x-axis
+        \foreach \x in  {0,...,4} % tick marks
+          \draw (\x,0) -- (\x,-3pt);
+        \foreach \x in {0,...,4} % the numbers
+          \node [below] at (\x,-0.1) {$\x$};
+        \node [below] at (3.14,0.5) {$\pi$};
+        \draw (3.14,0) -- (3.14,3pt);
+
+        \draw[->, dotted] (3.14,0) -- (3.14,-3);% the x-axis
+
+        \draw[xshift=-1cm, dotted] (1,-0.7) node[circle,fill,inner sep=1pt](a){} -- (5,-0.7) 
+node[circle,fill,inner sep=1pt,label=right:$+\frac{4}{1}$](b){};
+
+\draw[xshift=-1cm, dotted] (3.67,-1.1) node[circle,fill,inner sep=1pt, label=left:$-\frac{4}{3}$](c){} -- (5,-1.1) 
+node[circle,fill,inner sep=1pt](d){};
+
+\draw[xshift=-1cm, dotted] (3.67,-1.5) node[circle,fill,inner sep=1pt](e){} -- (4.46,-1.5) 
+node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{5}$](f){};
+
+\draw[xshift=-1cm, dotted] (3.89,-1.9) node[circle,fill,inner sep=1pt, label=left:$-\frac{4}{7}$](g){} -- (4.46,-1.9) 
+node[circle,fill,inner sep=1pt](h){};
+
+\draw[xshift=-1cm, dotted] (3.89,-2.3) node[circle,fill,inner sep=1pt](i){} -- (4.33,-2.3) 
+node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{9}$](j){};
+
+
+
+
+\draw[->, to path={-| (\tikztotarget)}, dotted]
+  (b) edge (d) (c) edge (e) (f) edge (h) (g) edge (i);
+     \end{tikzpicture}
     
 \label{fig:numberline}
 \caption[]{A number line demonstrating the convergence of Madhava's first method for the 
-calculation of $\pi$ (V. M. Jamkar) \cite{jamkar_2018}}
+calculation of $\pi$. Adapted from (V. M. Jamkar) \cite{jamkar_2018}}
 \end{figure}
 
 
