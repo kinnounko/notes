@@ -1,7 +1,6 @@
 import time
 from mpmath import *
 import csv 
-import pandas as pd
 
 
 mp.dps = 100

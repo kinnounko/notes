@@ -1,7 +1,6 @@
 import time
 from mpmath import *
 import csv 
-import pandas as pd
 
 
 mp.dps = 100
@@ -58,8 +57,13 @@ def viete(decimals):
     return i
 
 if __name__ == "__main__":
-    decimals = [68]
+    decimals = [i for i in range(0, 65, 5)]
+    f = open(r'out.csv', 'w')
+    fieldnames = ['decimals', 'viete', 'madhava']
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writerow({'decimals':'decimals', 'viete':'viete', 
+    'madhava':'madhava'})
 
     for dec in decimals:
-        print(viete(dec))
-        print(madhava(dec))
+        writer.writerow({'decimals':dec, 'viete':viete(dec), 
+            'madhava':madhava(dec)})

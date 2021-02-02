@@ -1,34 +1,6 @@
 \section{Analysis of the results}
 \newcolumntype{C}{>{\Centering\arraybackslash\hspace{0pt}}X}
 
-\subsection{Presentation of the data}
-
-\subsubsection{Tabular presentation}
-
-The arithmetic mean of a decimal place was caluclated for 100 trials and the data points 
-in the table shown below were found (rounded to 3 s.f.):
-
-\begin{table}[h]
-    \noindent% <-- important
-    \setlength\tabcolsep{3pt} % default: 6pt
-    \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
-    \toprule
-    Decimal place & Average time for approximation using Viete's method, in milliseconds (ms) & Average time for approximation using Madhava's method method, in milliseconds (ms) \\ 
-    \midrule
-    5  & 0.760  & 0.592   \\
-    10 & 1.29  & 1.31    \\
-    15 & 2.05  & 1.9     \\
-    20 & 2.64  & 2.68    \\
-    25 & 3.09  & 3.21    \\
-    30 & 3.82  & 3.9     \\
-    35 & 4.44  & 4.55    \\
-    40 & 5.08  & 5.26    \\
-    45 & 5.71  & 5.84    \\
-    50 & 6.37  & 6.58    \\
-    55 & 7.02  & 7.27    \\
-    60 & 7.72  & 8.00   
-    \end{tabularx}
-\end{table}
 
 \pgfplotstableread{
     X Y
@@ -63,12 +35,70 @@ in the table shown below were found (rounded to 3 s.f.):
 
 }\madhavatable
 
+\subsection{Presentation of the data}
+
+\subsubsection{Tabular presentation}
+
+The arithmetic mean of a decimal place was caluclated for 100 trials and the data points 
+in the table shown below were found (rounded to 3 s.f.):
+
+\begin{table}[h]
+    \noindent% <-- important
+    \setlength\tabcolsep{3pt} % default: 6pt
+    \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
+    \toprule
+    Decimal place & Average time for approximation using Viete's method, in milliseconds (ms) & Average time for approximation using Madhava's method method, in milliseconds (ms) \\ 
+    \midrule
+    5  & 0.760  & 0.592   \\
+    10 & 1.29  & 1.31    \\
+    15 & 2.05  & 1.9     \\
+    20 & 2.64  & 2.68    \\
+    25 & 3.09  & 3.21    \\
+    30 & 3.82  & 3.9     \\
+    35 & 4.44  & 4.55    \\
+    40 & 5.08  & 5.26    \\
+    45 & 5.71  & 5.84    \\
+    50 & 6.37  & 6.58    \\
+    55 & 7.02  & 7.27    \\
+    60 & 7.72  & 8.00   
+    \end{tabularx}
+\end{table}
+
+\begin{table}[h]
+    \noindent% <-- important
+    \setlength\tabcolsep{3pt} % default: 6pt
+    \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
+    \toprule
+    Decimal place & Iterations needed, Viète's method (no unit) & Iterations needed, Madhava's method (no unit)\\
+    \midrule
+    5 & 10 & 9 \\
+    10 & 17 & 20 \\
+    15 & 27 & 29 \\
+    20 & 35 & 41 \\
+    25 & 42 & 50 \\
+    30 & 51 & 61 \\
+    35 & 59 & 71 \\
+    40 & 67 & 82 \\
+    45 & 76 & 91 \\
+    50 & 84 & 102 \\
+    55 & 92 & 112 \\
+    60 & 101 & 123
+    \end{tabularx}
+\end{table}
+
+
+The iterations needed for both methods were also measured, using the Python program 
+(see appendix), slightly modified to increment a variable \verb|i| and subsequently 
+return it, writing it in a similar manner to a \verb|.csv| file. 
+
+
+
 \subsubsection{Graphical presentation}
 
-To better show the trend in the data collected, the data 
-has been presented in a scatter chart below. The blue markers and line of best-fit 
+To better show the trend in the data collected, see below the decimal places compared 
+to the time taken per method. The blue markers and line of best-fit 
 respresent the results received from Viète's method while the red represent those 
-from Madhava's method. 
+from Madhava's method. \\
 
 
 \begin{tikzpicture}[scale=1.1]
@@ -117,6 +147,9 @@ from Madhava's method.
     \end{axis}
 \end{tikzpicture}
 
+
+Include Decimal places vs Iterations
+
 \subsection{Observations and analysis}
 
 The results gathered from this experiment show linear relationship between the amount of decimal 
@@ -125,13 +158,15 @@ the two methods show similarities but also differences. It can be firstly noted 
 method is faster than the other until the decimal 20, when the two best fit lines diverge. This 
 can be explained as due to the convergence rates of the two methods, which can be seen in (Figure 3) 
 \ref{fig:comparaison}. In the beginning of this curve representing the convergence of Viète's method, 
-it cna be seen that it does not follow an \textit{alternating} method, like the one formulated by 
+it can be seen that it does not follow an \textit{alternating} method, like the one formulated by 
 Madhava. Madhava's method is what is called an alternating series, in this case one that converges 
-to the value $\pi$ \footnote{Note: not all alternating series converge}
+to the value $\pi$, and as such it is closer to the correct value of $\pi$ at lower decimal values 
+and gradually takes longer and longer than Viète's method, which is an infinite product. This difference 
+in speeds can be attributed to the fact that 
 
 
 
-\begin{figure}
+\begin{figure}[h]
     \includegraphics[width=\linewidth]{image.png}
     \caption{Comparison of historical methods of approximating the value of $\pi$. This image demonstrates
     their convergence rates. The line labelled Madhava in dark blue is the method used in this paper. 
