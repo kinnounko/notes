@@ -35,6 +35,40 @@
 
 }\madhavatable
 
+
+\pgfplotstableread{
+    X Y
+    5 10
+    10 17
+    15 27
+    20 35
+    25 42
+    30 51
+    35 59
+    40 67
+    45 76
+    50 84
+    55 92
+    60 101
+}\vietetableiter
+
+\pgfplotstableread{
+    X Y
+    5 9
+    10 20
+    15 29
+    20 41
+    25 50
+    30 61
+    35 71
+    40 82
+    45 91
+    50 102
+    55 112
+    60 123
+}\madhavatableiter
+
+
 \subsection{Presentation of the data}
 
 \subsubsection{Tabular presentation}
@@ -96,11 +130,59 @@ return it, writing it in a similar manner to a \verb|.csv| file.
 
 \subsubsection{Graphical presentation}
 
-To better show the trend in the data collected, see below the decimal places compared 
-to the time taken per method. The blue markers and line of best-fit 
-respresent the results received from Viète's method while the red represent those 
+Shown below is a graph demonstrating the correlation between the decimal places approximated 
+and the amount of iterations needed for this specific decimal milestone. The blue markers and 
+line of best-fit respresent the results received from Viète's method while the red represent those 
 from Madhava's method. \\
 
+\begin{tikzpicture}[scale=1.1]
+    \begin{axis}[
+        title={Comparing the iterations needed for approximating the value of $\pi$},
+        xlabel={Decimal places},
+        ylabel={Iterations},
+        xmin=0, xmax=60,
+        ymin=0, ymax=130,
+        ytick={0,10,20,30,40,50,60,70,80,90,100,110,120,130},
+        xtick={0,10,20,30,40,50,60},
+        legend pos=north west,
+        ymajorgrids=true,
+        grid style=dashed,
+        scale=1.2
+    ]
+    
+    \addplot[
+        only marks,
+        color=blue,
+        mark=*,
+        ] table {\vietetableiter};
+        \legend{Viète's method}
+        
+    \addplot [thin, blue] table[
+        y={create col/linear regression={y=Y}}
+    ] % compute a linear regression from the input table
+    {\vietetableiter};
+    \addlegendentry{best fit line}
+
+
+
+    \addplot[
+        only marks,
+        color=red,
+        mark=*,
+        ] table {\madhavatableiter};
+        \addlegendentry{Madhava's method}
+        
+    \addplot [thin, red] table[
+        y={create col/linear regression={y=Y}}
+    ] % compute a linear regression from the input table
+    {\madhavatableiter};
+    \addlegendentry{best fit line}
+
+    \end{axis}
+\end{tikzpicture}
+
+To show the trend in the time data collected, see below the decimal places compared 
+to the time taken per method. The color coding here is relevant to the one aforementioned. \\
 
 \begin{tikzpicture}[scale=1.1]
     \begin{axis}[
@@ -149,22 +231,27 @@ from Madhava's method. \\
 \end{tikzpicture}
 
 
-Include Decimal places vs Iterations
+
 
 \subsection{Observations and analysis}
 
 The results gathered from this experiment show linear relationship between the amount of decimal 
-places approximated and the time required for this approximation. The two lines of best fit for 
-the two methods show similarities but also differences. It can be firstly noted that Madhava's 
-method is faster than the other until the decimal 20, when the two best fit lines diverge. This 
-can be explained as due to the convergence rates of the two methods, which can be seen in (Figure 3) 
-\ref{fig:comparaison}. In the beginning of this curve representing the convergence of Viète's method, 
-it can be seen that it does not follow an \textit{alternating} method, like the one formulated by 
-Madhava. Madhava's method is what is called an alternating series, in this case one that converges 
-to the value $\pi$, and as such it is closer to the correct value of $\pi$ at lower decimal values 
-and gradually takes longer and longer than Viète's method, which is an infinite product. This difference 
-in speeds can be attributed to the fact that 
+places approximated and the time required for this approximation, as well as between the decimal places 
+and the amount of iterations needed. The two lines of best fit for the two methods show 
+similarities but also differences.
 
+Where decimal places and iterations are compared, there is a clear difference between the two 
+methods: Madhava's method indeed takes more iterations to converge to a specific decimal of 
+the value $\pi$. However, in the second graph comparing time, it can be noted that Madhava's 
+method is marginally faster until the decimal 20, when the two methods diverge. It could be 
+assumed that this occurrence is due to differences between the types of the two methods. Madhava's 
+method is what is called an alternating series, due to its nature of alternating between values in order 
+to converge to a specific value, in this case $\pi$, while Viète's method is an infinite product. The 
+difference between these two methods is underlined in (Figure 3) \ref{fig:comparaison}. It can be 
+deduced that at lower decimal values Madhava's method is faster as Viète's method's approximation 
+accuracy increases in what looks like an exponential fashion. 
+
+\textit{More info to be added}
 
 
 \begin{figure}[h]
