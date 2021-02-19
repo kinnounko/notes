@@ -24,11 +24,11 @@ def polyfit(x, y, degree):
 
 
 df = pd.read_csv("test.csv")
-power = 1
+power = 2
 
 
 print(polyfit(df['aaa'], df['test'], power))
 
-plt.plot(np.unique(df['aaa']), np.poly1d(np.polyfit(df['aaa'], df['test'], power))(np.unique(df['aaa'])))
+plt.plot(np.unique(df['aaa']), np.poly1d(np.polyfit(df[ 'aaa'], df['test'], power))(np.unique(df['aaa'])))
 plt.scatter(df['aaa'], df['test'], marker="x")
 plt.show()
