@@ -5,13 +5,21 @@
 % \usepackage{libertine} % Use LLibertine font
 % \usepackage{libertinust1math}% Use LLibertine math font
 \usepackage{geometry} % Setting page geometry (margins)
-\usepackage{blindtext} % Lorem ipsum
 \usepackage{textcomp} % For the trademark symbol
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables for horizontal lines
 \usepackage{siunitx} % Allows for properly formatted numbers with \num{number}, units with \si{unit} and both with \si{number}{unit}
 \usepackage{microtype} % A few refinements to typography that are hardly noticeable
 \usepackage[normalem]{ulem} %Strikethrough text
 \usepackage{setspace} % Set spacing
+\usepackage[
+    natbib=true,
+    style=numeric,
+    sorting=none]{biblatex} % import biblatex
+\usepackage{pgf, tikz}
+\usetikzlibrary{arrows}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{tabularx,ragged2e}
 
 %Tables
 \usepackage{float} % image positioning
@@ -20,7 +28,7 @@
 \usepackage{tabu}
 
 %Graphs
-\usepackage{pgfplots} %Graph
+\usepackage{pgfplots, pgfplotstable} %Graph
 \pgfplotsset{compat=1.5}
 
 % Package must come last
@@ -32,6 +40,7 @@
     urlcolor=blue,
 }
 \usepackage{bookmark} % Adds metadata to PDF for bookmarking
+
 
 % Package settings & macros
 
