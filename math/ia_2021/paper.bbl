@@ -71,6 +71,30 @@
       \verb https://www.eqc.govt.nz/sites/public_files/1596-Modelling-tsunami-generated-by-underwater-landslides.pdf
       \endverb
     \endentry
+    \entry{noaa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=50f152c839e74dd189195f329559bdff}{%
+           family={Service},
+           familyi={S\bibinitperiod},
+           given={National\bibnamedelimb Geophysical\bibnamedelimb Data\bibnamedelimb Center\bibnamedelimb /\bibnamedelimb World\bibnamedelima Data},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim /\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{50f152c839e74dd189195f329559bdff}
+      \strng{fullhash}{50f152c839e74dd189195f329559bdff}
+      \strng{bibnamehash}{50f152c839e74dd189195f329559bdff}
+      \strng{authorbibnamehash}{50f152c839e74dd189195f329559bdff}
+      \strng{authornamehash}{50f152c839e74dd189195f329559bdff}
+      \strng{authorfullhash}{50f152c839e74dd189195f329559bdff}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://dx.doi.org/10.7289/V5PN93H7}
+      \field{title}{NCEIWDS Global Historical Tsunami Database}
+      \verb{doi}
+      \verb 10.7289/V5PN93H7
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
