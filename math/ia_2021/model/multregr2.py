@@ -4,6 +4,10 @@ from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
+
+
 
 
 def filter_time(df, threshold):
@@ -57,27 +61,37 @@ if __name__ == "__main__":
     # Drop all rows with a NaN value  
     filter_df = filter_df.dropna(how='any')
 
+    # Dataset split:
+    # The dataset is split into two parts, a "training" df_train dataset and 
+    # an "test" df_eval dataset. The "training" will be used for the 
+    # generation of a regression model and the "test" will 
+    # be used for the testing of this model, to calculate its accuracy. 
+    df_train, df_test = train_test_split(filter_df, test_size=0.3, random_state=42)
+
+    # For the train dataset, 
     # Set X to the independent variables (equivalent to dropping the dependent)
-    X = filter_df.drop('maximum water height (m)', 1)
-
     # Set y to our output column: maximum water height
-    y = filter_df['maximum water height (m)']
+    X_train = df_train.drop('maximum water height (m)', 1)
+    y_train = df_train['maximum water height (m)']
 
-    # The values to predict y with
-    pred = [[5.2, 225]]
+    # The test dataset, idem to the train dataset
+    X_test = df_test.drop('maximum water height (m)', 1)
+    y_test = df_test['maximum water height (m)']
 
-    # Fit the values 
+
+    # Fit the values to 
     poly = PolynomialFeatures(degree=2)
-    X_ = poly.fit_transform(X)
-    predict_ = poly.fit_transform(pred)
+    X_ = poly.fit_transform(X_train)
+    predict_ = poly.fit_transform(X_test)
 
     # Predict 
     mlr_model = LinearRegression()
-    mlr_model.fit(X_, y)
+    mlr_model.fit(X_, y_train)
     y_pred = mlr_model.predict(predict_)
-    print(y_pred)
+
+    print(r2_score(y_test, y_pred))
 
     # Print the coefficients and intercept
     theta0 = mlr_model.intercept_
     theta1, theta2, theta3, theta4, theta5, theta6 = mlr_model.coef_
-    print(theta0, theta1, theta2, theta3, theta4, theta5, theta6)
+    print("Intercept: ", theta0, "Coefficients: ", theta1, theta2, theta3, theta4, theta5, theta6)
