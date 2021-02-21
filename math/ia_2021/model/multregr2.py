@@ -66,7 +66,7 @@ if __name__ == "__main__":
     # an "test" df_eval dataset. The "training" will be used for the 
     # generation of a regression model and the "test" will 
     # be used for the testing of this model, to calculate its accuracy. 
-    df_train, df_test = train_test_split(filter_df, test_size=0.3, random_state=42)
+    df_train, df_test = train_test_split(filter_df, test_size=0.30, random_state=42)
 
     # For the train dataset, 
     # Set X to the independent variables (equivalent to dropping the dependent)
@@ -83,15 +83,17 @@ if __name__ == "__main__":
     poly = PolynomialFeatures(degree=2)
     X_ = poly.fit_transform(X_train)
     predict_ = poly.fit_transform(X_test)
+    #pre = poly.fit_transform([[9.0, 100]])
 
     # Predict 
     mlr_model = LinearRegression()
     mlr_model.fit(X_, y_train)
     y_pred = mlr_model.predict(predict_)
 
-    print(r2_score(y_test, y_pred))
+    print(y_test, y_pred)
+
+    print(mlr_model.score(predict_, y_test))
 
     # Print the coefficients and intercept
     theta0 = mlr_model.intercept_
-    theta1, theta2, theta3, theta4, theta5, theta6 = mlr_model.coef_
-    print("Intercept: ", theta0, "Coefficients: ", theta1, theta2, theta3, theta4, theta5, theta6)
+    print("Intercept: ", theta0, "Coefficients: ", mlr_model.coef_)
