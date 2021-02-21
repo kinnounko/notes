@@ -8,29 +8,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
 
-
-
 def filter_time(df, threshold):
     filter_df = df.loc[df.year > threshold].copy()
-    return filter_df
-
-
-def filter_distance(df, threshold):
-    filter_df = df.loc[df['distance from source (km)'] < threshold].copy()
     return filter_df
 
 
 def filter_doubtful(df):
     filter_df = df.loc[df['doubtful runup'] != 'y'].copy()
     return filter_df
-
-
-def calculate_mean(x):
-    x['weight'] * x['maximum water height (m)']
-
-
-def weighted_mean_height(df):
-    return df.groupby('earthquake magnitude', as_index=True).apply(lambda x: (x['weight'] * x['maximum water height (m)']).mean())
 
 
 def get_droppable(df, whitelist):
@@ -58,17 +43,26 @@ if __name__ == "__main__":
                        'distance from source (km)',
                        'maximum water height (m)']), axis=1)
 
-    # Drop all rows with a NaN value  
+    # Drop all rows with a NaN value
     filter_df = filter_df.dropna(how='any')
 
-    # Dataset split:
-    # The dataset is split into two parts, a "training" df_train dataset and 
-    # an "test" df_eval dataset. The "training" will be used for the 
-    # generation of a regression model and the "test" will 
-    # be used for the testing of this model, to calculate its accuracy. 
-    df_train, df_test = train_test_split(filter_df, test_size=0.30, random_state=42)
+    fig, (ax1, ax2) = plt.subplots(2)
+    ax1.scatter(filter_df['earthquake magnitude'], filter_df['maximum water height (m)'])
+    ax2.scatter(filter_df['distance from source (km)'], filter_df['maximum water height (m)'])
 
-    # For the train dataset, 
+    ax1.set(xlabel='earthquake magnitude', ylabel='maximum water height (m)')
+    ax2.set(xlabel='distance from source (km)', ylabel='maximum water height (m)')
+
+    plt.show()
+    # Dataset split:
+    # The dataset is split into two parts, a "training" df_train dataset and
+    # an "test" df_eval dataset. The "training" will be used for the
+    # generation of a regression model and the "test" will
+    # be used for the testing of this model, to calculate its accuracy.
+    df_train, df_test = train_test_split(
+        filter_df, test_size=0.30, random_state=42)
+
+    # For the train dataset,
     # Set X to the independent variables (equivalent to dropping the dependent)
     # Set y to our output column: maximum water height
     X_train = df_train.drop('maximum water height (m)', 1)
@@ -78,14 +72,13 @@ if __name__ == "__main__":
     X_test = df_test.drop('maximum water height (m)', 1)
     y_test = df_test['maximum water height (m)']
 
-
-    # Fit the values to 
-    poly = PolynomialFeatures(degree=2)
+    # Fit the values to
+    poly = PolynomialFeatures(degree=-2)
     X_ = poly.fit_transform(X_train)
     predict_ = poly.fit_transform(X_test)
     #pre = poly.fit_transform([[9.0, 100]])
 
-    # Predict 
+    # Predict
     mlr_model = LinearRegression()
     mlr_model.fit(X_, y_train)
     y_pred = mlr_model.predict(predict_)

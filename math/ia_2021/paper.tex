@@ -96,15 +96,21 @@ that can occur in its data. For example, reports that were recorded before the
 20th century tend to be based on written accounts, and not recorded seismic activity. 
 Furthermore, the installation of a system called the Worldwide Standardized Seismograph 
 Network in the 1960s allowed for more accurate data and for that reason any recorded 
-activity before this date will be discarded from the dataset.
+activity before this date will be discarded from the dataset. The dataset itself can 
+be accessed through two different methods; searching the database using the online 
+tool or downloading it in a somewhat obscure Google Earth format. The online tool 
+supports the download of search results in a much more human-readable \verb|.csv| format, 
+so I search for all entries after the year 1900, and downloaded the result. 
 
-\dots
+The data is cleaned of all "dubious" reports, reports before the year 1960 (see above), and 
+of all irrelevant fields such as "Injuries" or "Damage \$Mil". This preliminary data cleanup 
+is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010}, 
 
-The data must be correctly split into a training and an test dataset. The training 
+The data must be then correctly split into a training and an test dataset. The training 
 dataset will be used to generate a regression model while the test dataset will 
 be used to calculate the general accuracy of the model, by predicting values and 
 comparing those to the known value as found in the dataset. The dataset is split based on 
-a decimal number using the \verb|df.sample| method found in the Pandas library. A split 
+a decimal number using the \verb|df.sample| method found in the pandas library. A split 
 of 70\% for training and 30\% for test has been chosen. A \verb|random_state| argument is 
 set to an arbitrary value 42, as if it weren't, the dataset would be split in a different 
 manner at each execution of the program. 
@@ -136,7 +142,16 @@ $y = a + \beta_1 x + \beta_2 x^2 + e$
 
 Even though the right side of this equation is quadratic in $x$, this is still 
 linear regression as the right side is linear in $\beta$ (if we were to let 
-$x = 1$, we would be left with $y = a + \beta_1 + \beta_2 + e$, which is linear).
+$x = 1$, we would be left with $y = a + \beta_1 + \beta_2 + e$, which is linear). 
+A second degree polynomial regression would best fit our model for both independent 
+variables, as seen in the graphs below, where a theoretical regression line is drawn 
+by hand:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{modelshowcase.jpeg}
+    \label{fig:boat1}
+\end{figure}
 
 In addition, our dataset has two independent variables: the distance from a particular 
 earthquake event and the magnitude of that earthquake. 
@@ -182,7 +197,17 @@ systems are not available.
 
 This method, like any other statistical approximation, is by no means perfect 
 and for that reason should not be used in any real-world application. The results 
-procured by the program are subject to many 
+procured by the program are subject to many uncertainties, one of which is described 
+below.
+
+When attempting to predict the maximum wave height of a tsunami such as the one 
+caused by the 2011 earthquake off the Pacific coast of Tōhoku, approximately 70km 
+away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this 
+paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude 
+of the earthquake and the 70km distance. These types of errors can be attributed to the 
+fact that there are many more independent variables, such as the shape of the seafloor for 
+example, that can amplify or potentially change the height of a tsunami's wave. 
+%todo add 
 
 \printbibliography[heading=bibintoc, title=Works Cited]
 
