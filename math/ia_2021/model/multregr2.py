@@ -7,6 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
+
 def filter_time(df, threshold):
     filter_df = df.loc[df.year > threshold].copy()
     return filter_df
@@ -69,32 +70,36 @@ if __name__ == "__main__":
     predict_ = poly.fit_transform(X_test)
 
     # Predict
-    mlr_model = LinearRegression()
-    mlr_model.fit(X_, y_train)
-    y_pred = mlr_model.predict(predict_)
+    regressor = LinearRegression()
+    regressor.fit(X_, y_train)
+    y_pred = regressor.predict(predict_)
 
-    print(y_test, y_pred)
-    print(mlr_model.score(predict_, y_test))
+    #print(regressor.score(predict_, y_test))
 
     # Print the coefficients and intercept
-    theta0 = mlr_model.intercept_
-    print("Intercept: ", theta0, "Coefficients: ", mlr_model.coef_)
+    print('Coefficients: \n', regressor.coef_)
+    # The mean squared error
+    print("Mean squared error: %.2f" % np.mean((y_pred - y_test) ** 2))
+    # Explained variance score: 1 is perfect prediction
+    print('Variance score: %.2f' % regressor.score(predict_, y_test))
 
     # Code for generating 3d plot with prediction scatter
-    """
+    
     fig = plt.figure()
     plt.clf()
     ax = Axes3D(fig)
     ax = fig.gca(projection='3d')
+    ax.view_init(elev=15, azim=-122)
 
-    ax.scatter(X_test['distance from source (km)'],
-               X_test['earthquake magnitude'], y_test)
+    ax.set_title("2nd degree polynomial model")
+    ax.set_xlabel('distance from source (km)')
+    ax.set_ylabel('earthquake magnitude')
+    ax.set_zlabel('wave height (m)')
+
+    ax.scatter(X_test['distance from source (km)'].sample(frac=0.2, random_state=42),
+               X_test['earthquake magnitude'].sample(frac=0.2, random_state=42), y_test.sample(frac=0.2, random_state=42))
 
     ax.scatter(X_test['distance from source (km)'],
                X_test['earthquake magnitude'], y_pred)
 
     plt.show()
-    """
-
-    #TODO: add GeoJSON report thingy https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson
-    print(mlr_model.predict(poly.fit_transform([[4.3, 41]])))
