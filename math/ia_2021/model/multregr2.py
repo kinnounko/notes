@@ -83,8 +83,9 @@ if __name__ == "__main__":
     # Explained variance score: 1 is perfect prediction
     print('Variance score: %.2f' % regressor.score(predict_, y_test))
 
-    # Code for generating 3d plot with prediction scatter
-    
+    # Code for generating 3d plot with prediction scatter 
+    # only generates one graph, rerun with PolynomialFeatures(degree=n)
+    """
     fig = plt.figure()
     plt.clf()
     ax = Axes3D(fig)
@@ -103,3 +104,4 @@ if __name__ == "__main__":
                X_test['earthquake magnitude'], y_pred)
 
     plt.show()
+    """
