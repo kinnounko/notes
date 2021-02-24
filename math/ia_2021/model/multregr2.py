@@ -7,7 +7,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-
 def filter_time(df, threshold):
     filter_df = df.loc[df.year > threshold].copy()
     return filter_df
@@ -46,14 +45,14 @@ if __name__ == "__main__":
     # Drop all rows with a NaN value
     filter_df = filter_df.dropna(how='any')
 
+    """
     fig, (ax1, ax2) = plt.subplots(2)
     ax1.scatter(filter_df['earthquake magnitude'], filter_df['maximum water height (m)'])
     ax2.scatter(filter_df['distance from source (km)'], filter_df['maximum water height (m)'])
 
     ax1.set(xlabel='earthquake magnitude', ylabel='maximum water height (m)')
     ax2.set(xlabel='distance from source (km)', ylabel='maximum water height (m)')
-
-    plt.show()
+    """
     # Dataset split:
     # The dataset is split into two parts, a "training" df_train dataset and
     # an "test" df_eval dataset. The "training" will be used for the
@@ -73,10 +72,9 @@ if __name__ == "__main__":
     y_test = df_test['maximum water height (m)']
 
     # Fit the values to
-    poly = PolynomialFeatures(degree=-2)
+    poly = PolynomialFeatures(degree=2)
     X_ = poly.fit_transform(X_train)
     predict_ = poly.fit_transform(X_test)
-    #pre = poly.fit_transform([[9.0, 100]])
 
     # Predict
     mlr_model = LinearRegression()
@@ -84,9 +82,26 @@ if __name__ == "__main__":
     y_pred = mlr_model.predict(predict_)
 
     print(y_test, y_pred)
-
     print(mlr_model.score(predict_, y_test))
 
     # Print the coefficients and intercept
     theta0 = mlr_model.intercept_
     print("Intercept: ", theta0, "Coefficients: ", mlr_model.coef_)
+
+    # Code for generating 3d plot with prediction scatter
+    
+    fig = plt.figure()
+    plt.clf()
+    ax = Axes3D(fig)
+    ax = fig.gca(projection='3d')
+
+    ax.scatter(X_test['distance from source (km)'],
+               X_test['earthquake magnitude'], y_test)
+
+    ax.scatter(X_test['distance from source (km)'],
+               X_test['earthquake magnitude'], y_pred)
+
+    plt.show()
+    
+    
+    print(mlr_model.predict(poly.fit_transform([[4.3, 41]])))
