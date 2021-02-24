@@ -45,14 +45,6 @@ if __name__ == "__main__":
     # Drop all rows with a NaN value
     filter_df = filter_df.dropna(how='any')
 
-    """
-    fig, (ax1, ax2) = plt.subplots(2)
-    ax1.scatter(filter_df['earthquake magnitude'], filter_df['maximum water height (m)'])
-    ax2.scatter(filter_df['distance from source (km)'], filter_df['maximum water height (m)'])
-
-    ax1.set(xlabel='earthquake magnitude', ylabel='maximum water height (m)')
-    ax2.set(xlabel='distance from source (km)', ylabel='maximum water height (m)')
-    """
     # Dataset split:
     # The dataset is split into two parts, a "training" df_train dataset and
     # an "test" df_eval dataset. The "training" will be used for the
@@ -89,7 +81,7 @@ if __name__ == "__main__":
     print("Intercept: ", theta0, "Coefficients: ", mlr_model.coef_)
 
     # Code for generating 3d plot with prediction scatter
-    
+    """
     fig = plt.figure()
     plt.clf()
     ax = Axes3D(fig)
@@ -102,6 +94,7 @@ if __name__ == "__main__":
                X_test['earthquake magnitude'], y_pred)
 
     plt.show()
-    
-    
+    """
+
+    #TODO: add GeoJSON report thingy https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson
     print(mlr_model.predict(poly.fit_transform([[4.3, 41]])))
