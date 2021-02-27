@@ -110,7 +110,7 @@ activity before this date was discarded from the dataset for this paper. The dat
 be accessed through two different methods; searching the database using the online
 tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz| format. 
 The online tool supports the download of search results in a much more human-readable 
-\verb|.csv| format. For this paper, all entries after the year 1900 were searched and downloaded.
+\verb|.tsv| (tab-separated) format. For this paper, all entries after the year 1900 were searched and downloaded.
 
 The data is cleaned of data points marked as "dubious" (there is an column for this parameter), 
 reports before the year 1960 (see above), and of all irrelevant fields such as "Injuries" 
@@ -162,7 +162,7 @@ by hand:
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{modelshowcase.jpeg}
+    \includegraphics[width=0.8\textwidth]{modelshowcase.jpeg}
     \label{fig:boat1}
 \end{figure}
 
@@ -183,9 +183,9 @@ scikit-learn library to aid in creating this model.
 
 \begin{figure}[h]
     \centering
-    \subfloat[\centering Linear model]{{\includegraphics[width=5cm]{linear.png} }}
+    \subfloat[\centering Linear model]{{\includegraphics[width=7.5cm]{linear.png} }}
     \qquad
-    \subfloat[\centering Polynomial model]{{\includegraphics[width=5cm]{poly.png} }}
+    \subfloat[\centering Polynomial model]{{\includegraphics[width=7.5cm]{poly.png} }}
     \caption{2 multivariate (hence the 3 dimensions) regression models}
     \label{fig:example}
 \end{figure}
@@ -214,6 +214,8 @@ defined as:
 
 $SS_{tot} = \sum_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$, 
 or $\bar y = \frac{1}{n} \sum_{i=1}^n y_i$
+
+
 
 \section{Conclusion}
 
