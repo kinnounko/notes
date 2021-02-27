@@ -112,9 +112,11 @@ tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz|
 The online tool supports the download of search results in a much more human-readable 
 \verb|.csv| format. For this paper, all entries after the year 1900 were searched and downloaded.
 
-The data is cleaned of all "dubious" reports, reports before the year 1960 (see above), and
-of all irrelevant fields such as "Injuries" or "Damage \$Mil". This preliminary data cleanup
-is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010},
+The data is cleaned of data points marked as "dubious" (there is an column for this parameter), 
+reports before the year 1960 (see above), and of all irrelevant fields such as "Injuries" 
+or "Damage \$Mil". This preliminary data cleanup
+is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010}, 
+which is commonly used for the handling of large datasets for its efficiency. 
 
 The data was split into a training and a test dataset. The training
 dataset was used to generate a regression model while the test dataset was used 
@@ -132,12 +134,13 @@ be found in numerous use cases. Regression models consist of estimating the
 relationship between one (or more) independent variables and a dependent variable. A
 simple example of regression can be seen in the linear relationship between an independent
 variable $x_{i}$, and the dependent variable $y$. The following expression shows this relationship in what is
-called linear regression, as it models a straight line.
+called linear regression, as it models a straight line that can be used for prediction of 
+values:
 
-$y = a + \beta x + e $,
+$y =  \beta_0 a + \beta_1 x + e $,
 
-where the term $a$ represents the y-intercept of the line and $\beta$ represents the
-coefficient of $x_i$. The final term $e$ is what is known as the error or residual
+where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the
+coefficient of $x$. The final term $e$ is what is known as the error or residual
 term. It is an estimate of the amount by which the predictions differ from the real
 value.
 
@@ -159,7 +162,7 @@ by hand:
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{modelshowcase.jpeg}
+    \includegraphics[width=0.6\textwidth]{modelshowcase.jpeg}
     \label{fig:boat1}
 \end{figure}
 
@@ -190,21 +193,33 @@ scikit-learn library to aid in creating this model.
 
 \dots
 
-The model's accuracy is then calculated, with the test dataset. At first, it was considered 
-to use the \verb|accuracy_score| method from the \verb|sklearn.metrics| class was used for 
-this task. This function calculates what is called the $R^2$ value, which is a measure used to 
-evaluate the fit a model on the dataset. 
+The model's fit is then calculated, with the test dataset. The \verb|accuracy_score| method 
+from the \verb|sklearn.metrics| class was used for this task. This function calculates what 
+is called the $R^2$ value, which explains the extent at which the variance (the amount by which numbers 
+are spread from the average value) in the dependent variable can be explained by the independent 
+variable(s). An $R^2$ value of 0.6 indicates that 60\% of the model's results match those of the 
+dataset. This value is defined as: 
 
-\dots
+$R^2 = 1 - \frac{SS_{res}}{SS_{total}}$,
 
+where $SS_{res}$ is the sum of the error terms, or the residual sum of squares, in a dataset of $n$ 
+values $y_1,\dots, y_i$, with their corresponding predicted values $p_1,\dots, p_i$ defined by 
 
-\section{Uses of this research}
+$SS_{res} = \sum_{i} (y_i - p_i)^2 = \sum_{i} e_i^2$, \footnote{$\sum_i i$ would mean that all values i 
+are summed} where $e_i$ is the error term, equal to the difference of a data point $y_i$ 
+and its corresponding predicted value $p_i$.
+
+and $SS_{tot}$ is the total sum of squares, which is proportional to the variance in the data, 
+defined as:
+
+$SS_{tot} = \sum_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$, 
+or $\bar y = \frac{1}{n} \sum_{i=1}^n y_i$
+
+\section{Conclusion}
 
 The research included in this paper could be useful for many life-saving scenarios,
 notably ones in which, for example, high quality and large-scale tsunami alert
 systems are not available.
-
-\section{Conclusion}
 
 \subsection{Evaluation of the method used}
 
