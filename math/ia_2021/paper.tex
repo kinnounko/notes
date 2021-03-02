@@ -26,7 +26,7 @@
 % =========================================
 
 \begin{document}
-\doublespacing % Double spacing throughout the document
+%\doublespacing % Double spacing throughout the document
 
 
 % =========================
@@ -45,9 +45,7 @@
         \textit{Väinö-verneri Kauppila} \\
         February 2021 \\
         \vspace{4cm}
-        Word count: TBD \\
-        \textit{Note: diagrams reserve a large amount of space, and cannot be placed in
-            the appendix for the sake of clarity}
+        Word count: TBD
         \vfill
         \vspace{0.1cm}
     \end{center}
@@ -159,7 +157,7 @@ For the dataset in \ref{app:regression}, the results to these equations are:
 
 $\hat \beta_1 = \frac{1806757.14}{322280.86} = 5.60$ and $\hat \beta_0 = 2257.14 - 5.61 \cdot 512.86 = -618.01$
 
-So the regression line can be expressed as $\hat y = 5.60 x -618.01$
+So the regression line can be expressed as $\boxed{\hat y = 5.60 x -618.01}$
 
 \subsubsection{Special cases}
 
@@ -257,6 +255,15 @@ of the earthquake and the 70km distance. These types of errors can be attributed
 fact that there are many more independent variables, such as the shape of the seafloor for
 example, that can amplify or potentially change the height of a tsunami's wave.
 
+
+\section*{Notes}
+\label{sec:notes}
+\addcontentsline{toc}{section}{\nameref{sec:notes}}
+
+All figures are generated through the use of TikZ (Tantau) and the Python library 
+\verb|matplotlib|. This paper is written with the aid of the typesetting software \LaTeX. 
+On a PDF viewer, the sections in the table of contents can be clicked to access that 
+section.
 
 \printbibliography[heading=bibintoc, title=Works Cited]
 
