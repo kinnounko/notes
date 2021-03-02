@@ -45,7 +45,8 @@
         \textit{Väinö-verneri Kauppila} \\
         February 2021 \\
         \vspace{4cm}
-        Word count: TBD
+        Word count: TBD \\
+        \textit{First draft, details are missing}
         \vfill
         \vspace{0.1cm}
     \end{center}
@@ -177,7 +178,7 @@ A second degree polynomial regression would best fit our model for both independ
 variables, as seen in the graphs below, where a theoretical curve of regression is drawn
 by hand:
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{modelshowcase.jpeg}
     \label{fig:boat1}
@@ -193,12 +194,15 @@ $a_1 + \beta_1 x_1 + a_2 + \beta_2 x_2 + e$,
 
 where the terms $a_n$ are the y-intercepts of the $n$th independent variable,
 
-
 So the relationship between the two independent variables and the wave height can
 be estimated with a multivariate, polynomial regression model. We will use the Python
-scikit-learn library to aid in creating this model.
+scikit-learn library to aid in creating this model. \\
 
-\begin{figure}[h]
+(\textit{Section not done, need to do more research on how the} \verb|PolynomialFeatures| 
+\textit{function transforms a linear array to one fit for polynomial regression})
+
+
+\begin{figure}[H]
     \centering
     \subfloat[\centering Linear model]{{\includegraphics[width=7.5cm]{linear.png} }}
     \qquad
@@ -208,7 +212,7 @@ scikit-learn library to aid in creating this model.
 \end{figure}
 
 
-\dots
+\subsubsection{Calculating fit of the model}
 
 The model's fit is then calculated, with the test dataset. The \verb|accuracy_score| method
 from the \verb|sklearn.metrics| class was used for this task. This function calculates what
@@ -240,6 +244,8 @@ The research included in this paper could be useful for many life-saving scenari
 notably ones in which, for example, high quality and large-scale tsunami alert
 systems are not available.
 
+\textit{Conclusion and evaluation of the method are contradictory, to be corrected}
+
 \subsection{Evaluation of the method used}
 
 This method, like any other statistical approximation, is by no means perfect
@@ -256,6 +262,10 @@ fact that there are many more independent variables, such as the shape of the se
 example, that can amplify or potentially change the height of a tsunami's wave.
 
 
+\newpage
+\pagenumbering{roman}
+
+
 \section*{Notes}
 \label{sec:notes}
 \addcontentsline{toc}{section}{\nameref{sec:notes}}
@@ -263,7 +273,7 @@ example, that can amplify or potentially change the height of a tsunami's wave.
 All figures are generated through the use of TikZ (Tantau) and the Python library 
 \verb|matplotlib|. This paper is written with the aid of the typesetting software \LaTeX. 
 On a PDF viewer, the sections in the table of contents can be clicked to access that 
-section.
+section. Dataset not included due to large size (\textasciitilde 28000 columns).
 
 \printbibliography[heading=bibintoc, title=Works Cited]
 
