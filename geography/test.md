@@ -13,3 +13,15 @@ modified: '2021-01-20T13:48:30.186Z'
 * Are there different microclimates in different parts of Paris? 
 * Question about cultural preservation
 
+## Criteria
+
+* Map 
+* Survey 
+* Count
+
+## Theme
+
+Overall theme: urban stress
+
+**Economic decline**
+

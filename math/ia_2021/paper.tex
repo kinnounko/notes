@@ -46,8 +46,8 @@
         February 2021 \\
         \vspace{4cm}
         Word count: TBD \\
-        \textit{Note: diagrams reserve a large amount of space, and cannot be placed in 
-        the appendix for the sake of clarity}
+        \textit{Note: diagrams reserve a large amount of space, and cannot be placed in
+            the appendix for the sake of clarity}
         \vfill
         \vspace{0.1cm}
     \end{center}
@@ -146,11 +146,11 @@ $y =  \beta_0 a + \beta_1 x + e $,
 where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the
 coefficient of $x$. The final term $e$ is what is known as the error or residual
 term. It is an estimate of the amount by which the predictions differ from the real
-value. An example of linear regression can be found in Appendix \ref{app:regression}, where 
-a set of data points is presented on a scatter plot, and the regression line is found 
+value. An example of linear regression can be found in Appendix \ref{app:regression}, where
+a set of data points is presented on a scatter plot, and the regression line is found
 by finding the individual coefficients $\beta_n$ of $x$ (see equation above), like such:
 
-$\hat \beta_1 = \frac{\sum (x_i - \bar x) (y_i - \bar y)}{\sum (x_i - \bar x)^2}$, where 
+$\hat \beta_1 = \frac{\sum (x_i - \bar x) (y_i - \bar y)}{\sum (x_i - \bar x)^2}$, where
 $\hat \beta_n$ represents an estimated value and $\bar x$ represents the mean of the set $x$
 
 and the $\hat \beta_0$ value can be approximated as $\hat \beta_0 = \bar y - \hat \beta_1 \bar x$
@@ -304,42 +304,43 @@ Y values, the data points chosen are purely arbitrary.
 
 Below is the dataset plotted, along with a line of regression.
 
+\begin{center}
+    \begin{tikzpicture}[scale=1.1]
+        \begin{axis}[
+                title={Comparing X and Y},
+                xlabel={X axis},
+                ylabel={Y axis},
+                xmin=300, xmax=1000,
+                ymin=0, ymax=5500,
+                ytick={0,1000,2000,3000,4000,5000},
+                xtick={0,400,500,600,700,800,900},
+                legend pos=north west,
+                ymajorgrids=true,
+                grid style=dashed,
+                scale=1.2
+            ]
 
-\begin{tikzpicture}[scale=1.1]
-    \begin{axis}[
-            title={Comparing X and Y},
-            xlabel={X axis},
-            ylabel={Y axis},
-            xmin=300, xmax=1000,
-            ymin=0, ymax=5500,
-            ytick={0,1000,2000,3000,4000,5000},
-            xtick={0,400,500,600,700,800,900},
-            legend pos=north west,
-            ymajorgrids=true,
-            grid style=dashed,
-            scale=1.2
-        ]
+            \addplot[
+                only marks,
+                color=blue,
+                mark=*,
+            ] table {\table};
+            \legend{Datapoint}
 
-        \addplot[
-            only marks,
-            color=blue,
-            mark=*,
-        ] table {\table};
-        \legend{Datapoint}
+            \addplot [thin, blue] table[
+                    y={create col/linear regression={y=Y}}
+                ] % compute a linear regression from the input table
+                {\table};
+            \addlegendentry{
+                Linear regression: $ x =
+                    \pgfmathprintnumber{\pgfplotstableregressiona}
+                    \cdot t
+                    \pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$
+            };
 
-        \addplot [thin, blue] table[
-                y={create col/linear regression={y=Y}}
-            ] % compute a linear regression from the input table
-            {\table};
-        \addlegendentry{
-            Linear regression: $ x =
-                \pgfmathprintnumber{\pgfplotstableregressiona}
-                \cdot t
-                \pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$
-        };
-
-    \end{axis}
-\end{tikzpicture}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
 
 \subsection{Python program}
 \label{app:scripts}
