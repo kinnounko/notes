@@ -288,37 +288,6 @@
       \verb http://www.jstor.org/stable/27965770
       \endverb
     \endentry
-    \entry{jamkar_2018}{article}{}
-      \name{author}{1}{}{%
-        {{hash=a1d622d88784eec1e2125667b529150c}{%
-           family={Jamkar},
-           familyi={J\bibinitperiod},
-           given={V.\bibnamedelimi M.},
-           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{a1d622d88784eec1e2125667b529150c}
-      \strng{fullhash}{a1d622d88784eec1e2125667b529150c}
-      \strng{bibnamehash}{a1d622d88784eec1e2125667b529150c}
-      \strng{authorbibnamehash}{a1d622d88784eec1e2125667b529150c}
-      \strng{authornamehash}{a1d622d88784eec1e2125667b529150c}
-      \strng{authorfullhash}{a1d622d88784eec1e2125667b529150c}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{12}
-      \field{title}{History of pi and Indian contribution}
-      \field{volume}{3}
-      \field{year}{2018}
-      \field{pages}{264}
-      \range{pages}{1}
-      \verb{urlraw}
-      \verb https://rrjournals.com/wp-content/uploads/2018/12/263-267_RRIJM180312058.pdf
-      \endverb
-      \verb{url}
-      \verb https://rrjournals.com/wp-content/uploads/2018/12/263-267_RRIJM180312058.pdf
-      \endverb
-    \endentry
     \entry{borisgourevitch2013}{online}{}
       \name{author}{1}{}{%
         {{hash=748392646142f945237c2e7c44ee10c0}{%
@@ -333,8 +302,8 @@
       \strng{authorbibnamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authornamehash}{748392646142f945237c2e7c44ee10c0}
       \strng{authorfullhash}{748392646142f945237c2e7c44ee10c0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
@@ -349,6 +318,37 @@
       \endverb
       \verb{url}
       \verb http://www.pi314.net/fr/viete.php
+      \endverb
+    \endentry
+    \entry{jamkar_2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a1d622d88784eec1e2125667b529150c}{%
+           family={Jamkar},
+           familyi={J\bibinitperiod},
+           given={V.\bibnamedelimi M.},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1d622d88784eec1e2125667b529150c}
+      \strng{fullhash}{a1d622d88784eec1e2125667b529150c}
+      \strng{bibnamehash}{a1d622d88784eec1e2125667b529150c}
+      \strng{authorbibnamehash}{a1d622d88784eec1e2125667b529150c}
+      \strng{authornamehash}{a1d622d88784eec1e2125667b529150c}
+      \strng{authorfullhash}{a1d622d88784eec1e2125667b529150c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{12}
+      \field{title}{History of pi and Indian contribution}
+      \field{volume}{3}
+      \field{year}{2018}
+      \field{pages}{264}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://rrjournals.com/wp-content/uploads/2018/12/263-267_RRIJM180312058.pdf
+      \endverb
+      \verb{url}
+      \verb https://rrjournals.com/wp-content/uploads/2018/12/263-267_RRIJM180312058.pdf
       \endverb
     \endentry
     \entry{mpmath}{manual}{}

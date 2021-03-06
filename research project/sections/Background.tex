@@ -104,6 +104,65 @@ radius, rather than the circumference. As the value of $n$ is increased, the are
 tends toward the area of a circle. The geometric origin of this formula 
 can be found using simple right-angle trigonometry, by first finding 
 the lengths $OH$ and subsequently $BD$ in (Figure 2) \ref{fig:image1}.
+
+\begin{figure}[H]
+  \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+  \definecolor{aazzee}{rgb}{0.898039215686, 0.364705882353, 0.294117647059}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+  \definecolor{qqqqzz}{rgb}{0,0,0.6}
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+  \clip(-8.372520930232552,-8.50470697674418) rectangle (7.69259534883721,7.028316279069767);
+  \draw [shift={(-0.03355999206952884,0)},line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:1.3302325581395344) arc (0:44.77428433325932:1.3302325581395344) -- cycle;
+  \draw [line width=0.8pt,color=qqqqzz] (0,0) circle (6cm);
+  \draw [line width=1pt, color=aazzee] (4.242640687119286,4.242640687119285)-- (6,0);
+  \draw [line width=1pt, color=aazzee] (6,0)-- (4.242640687119286,-4.242640687119285);
+  \draw [line width=1pt, color=qqwuqq] (4.242640687119286,-4.242640687119285)-- (4.242640687119286,4.242640687119285);
+  \draw [line width=1pt] (-6,0)-- (6,0);
+  \draw [line width=1pt] (-4.275936263984878,-4.209081736713964)-- (4.242640687119286,4.242640687119285);
+  \draw [line width=1pt] (-4.242640687119285,4.242640687119286)-- (4.242640687119286,-4.242640687119285);
+  \draw [line width=1pt] (-0.03355999206952884,0)-- (5.121320343559643,2.1213203435596424);
+  \draw [line width=1pt, color=qqwuqq] (-4.242640687119285,4.242640687119286)-- (-4.275936263984878,-4.209081736713964);
+
+  \draw [line width=1pt, dotted, color=aazzee] (0,6)-- (4.242640687119286,4.242640687119285);
+  \draw [line width=1pt, dotted, color=aazzee] (0,6)-- (-4.242640687119286,4.242640687119285);
+
+  \draw [line width=1pt, dotted, color=aazzee] (-6,0)-- (-4.242640687119286,4.242640687119285);
+  \draw [line width=1pt, dotted, color=aazzee] (-6,0)-- (-4.242640687119286,-4.242640687119285);
+
+  \draw [line width=1pt, dotted, color=aazzee] (0,-6)-- (-4.242640687119286,-4.242640687119285);
+  \draw [line width=1pt, dotted, color=aazzee] (0,-6)-- (4.242640687119286,-4.242640687119285);
+
+  \draw [line width=1pt, dotted, color=qqwuqq] (-4.242640687119286,-4.242640687119285)-- (4.242640687119286,-4.242640687119285); 
+  \draw [line width=1pt, dotted, color=qqwuqq] (-4.242640687119286,4.242640687119285)-- (4.242640687119286,4.242640687119285); 
+
+
+  \begin{scriptsize}
+  \draw [fill=xdxdff] (4.242640687119286,4.242640687119285) circle (2.5pt);
+  \draw[color=xdxdff] (4.4772465116279085,4.623665116279071) node {$B$};
+  \draw [fill=xdxdff] (-4.242640687119285,4.242640687119286) circle (2.5pt);
+  \draw[color=xdxdff] (-4.295311627906972,4.623665116279071) node {$A$};
+  \draw [fill=xdxdff] (-4.275936263984878,-4.209081736713964) circle (2.5pt);
+  \draw[color=xdxdff] (-4.336241860465112,-4.55) node {$C$};
+  \draw [fill=xdxdff] (6,0) circle (2.5pt);
+  \draw[color=xdxdff] (6.237246511627907,0.3873860465116302) node {$E$};
+  \draw [fill=xdxdff] (4.242640687119286,-4.242640687119285) circle (2.5pt);
+  \draw[color=xdxdff] (4.3772465116279085,-4.5) node {$D$};
+  \draw[color=black] (5.3595720930232575,2.3111069767441874) node {$H'$};
+  \draw [fill=xdxdff] (5.12,2.12) circle (2.5pt);
+  \draw[color=black] (3.947479069767444,-0.615404651162788) node {$H$};
+  \draw [fill=xdxdff] (4.242640687119286,0) circle (2.5pt);
+  \draw [fill=xdxdff] (0,0) circle (2.5pt);
+  \draw[color=uuuuuu] (0.00003720930232879,-0.3464558139534907) node {$O$};
+  \draw[color=qqwuqq] (1.5325953488372117,0.3873860465116302) node {$\alpha$};
+  \end{scriptsize}
+  \end{tikzpicture}
+  \label{fig:image1}
+  \caption[]{Circle with 1 segment from a $n$-gon with point $H$ and 2 
+  segments from an $2n$-gon, one of which on point $H'$, inscribed in 
+  a circle of radius $OB$, adapted from (Boris Gourévitch) \cite{borisgourevitch2013}}
+  \end{figure}
+  
 % $$\pi = \frac{2}{\prod_{k = 0}^{\infty} U_{k}}$$    symbolic
 With the radius of the circle with center $R = OB$,
 
@@ -184,25 +243,25 @@ $\pi = \frac{2}{\prod\limits_{k=0}^\infty U_{k}}, U_{0} = \frac{1}{\sqrt{2}}, U_
 
         \draw[->, dotted] (3.14,0) -- (3.14,-3);% the x-axis
 
-        \draw[xshift=-1cm, dotted] (1,-0.7) node[circle,fill,inner sep=1pt](a){} -- (5,-0.7) 
-node[circle,fill,inner sep=1pt,label=right:$+\frac{4}{1}$](b){};
+        \draw[xshift=-1cm] (1,-0.7) node[circle,fill,inner sep=1pt](a){} -- (5,-0.7) 
+node[circle,fill,inner sep=1pt,label=right:$+\frac{4}{1} \boxed{\text{ iter. 1}}$](b){};
 
-\draw[xshift=-1cm, dotted] (3.67,-1.1) node[circle,fill,inner sep=1pt, label=left:$-\frac{4}{3}$](c){} -- (5,-1.1) 
+\draw[xshift=-1cm] (3.67,-1.1) node[circle,fill,inner sep=1pt, label=left:$\boxed{\text{iter. 2 }} -\frac{4}{3}$](c){} -- (5,-1.1) 
 node[circle,fill,inner sep=1pt](d){};
 
-\draw[xshift=-1cm, dotted] (3.67,-1.5) node[circle,fill,inner sep=1pt](e){} -- (4.46,-1.5) 
-node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{5}$](f){};
+\draw[xshift=-1cm] (3.67,-1.5) node[circle,fill,inner sep=1pt](e){} -- (4.46,-1.5) 
+node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{5} \boxed{\text{ iter. 3}}$](f){};
 
-\draw[xshift=-1cm, dotted] (3.89,-1.9) node[circle,fill,inner sep=1pt, label=left:$-\frac{4}{7}$](g){} -- (4.46,-1.9) 
+\draw[xshift=-1cm] (3.89,-1.9) node[circle,fill,inner sep=1pt, label=left:$\boxed{\text{iter. 4 }} -\frac{4}{7}$](g){} -- (4.46,-1.9) 
 node[circle,fill,inner sep=1pt](h){};
 
-\draw[xshift=-1cm, dotted] (3.89,-2.3) node[circle,fill,inner sep=1pt](i){} -- (4.33,-2.3) 
-node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{9}$](j){};
+\draw[xshift=-1cm] (3.89,-2.3) node[circle,fill,inner sep=1pt](i){} -- (4.33,-2.3) 
+node[circle,fill,inner sep=1pt, label=right:$+\frac{4}{9} \boxed{\text{ iter. 5}}$](j){};
 
 
 
 
-\draw[->, to path={-| (\tikztotarget)}, dotted]
+\draw[->, to path={-| (\tikztotarget)}]
   (b) edge (d) (c) edge (e) (f) edge (h) (g) edge (i);
      \end{tikzpicture}
     
@@ -212,45 +271,3 @@ calculation of $\pi$. Adapted from (V. M. Jamkar) \cite{jamkar_2018}}
 \end{figure}
 
 
-\begin{figure}[!ht]
-\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
-\definecolor{qqqqzz}{rgb}{0,0,0.6}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
-\clip(-8.372520930232552,-8.50470697674418) rectangle (7.69259534883721,7.028316279069767);
-\draw [shift={(-0.03355999206952884,0)},line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0:1.3302325581395344) arc (0:44.77428433325932:1.3302325581395344) -- cycle;
-\draw [line width=0.8pt,color=qqqqzz] (0,0) circle (6cm);
-\draw [line width=1pt] (4.242640687119286,4.242640687119285)-- (6,0);
-\draw [line width=1pt] (6,0)-- (4.242640687119286,-4.242640687119285);
-\draw [line width=1pt] (4.242640687119286,-4.242640687119285)-- (4.242640687119286,4.242640687119285);
-\draw [line width=1pt] (-6,0)-- (6,0);
-\draw [line width=1pt] (-4.275936263984878,-4.209081736713964)-- (4.242640687119286,4.242640687119285);
-\draw [line width=1pt] (-4.242640687119285,4.242640687119286)-- (4.242640687119286,-4.242640687119285);
-\draw [line width=1pt] (-0.03355999206952884,0)-- (5.121320343559643,2.1213203435596424);
-\draw [line width=1pt] (-4.242640687119285,4.242640687119286)-- (-4.275936263984878,-4.209081736713964);
-\begin{scriptsize}
-\draw [fill=xdxdff] (4.242640687119286,4.242640687119285) circle (2.5pt);
-\draw[color=xdxdff] (4.4772465116279085,4.623665116279071) node {$B$};
-\draw [fill=xdxdff] (-4.242640687119285,4.242640687119286) circle (2.5pt);
-\draw[color=xdxdff] (-4.295311627906972,4.623665116279071) node {$A$};
-\draw [fill=xdxdff] (-4.275936263984878,-4.209081736713964) circle (2.5pt);
-\draw[color=xdxdff] (-4.336241860465112,-4.55) node {$C$};
-\draw [fill=xdxdff] (6,0) circle (2.5pt);
-\draw[color=xdxdff] (6.237246511627907,0.3873860465116302) node {$E$};
-\draw [fill=xdxdff] (4.242640687119286,-4.242640687119285) circle (2.5pt);
-\draw[color=xdxdff] (4.3772465116279085,-4.5) node {$D$};
-\draw[color=black] (5.3595720930232575,2.3111069767441874) node {$H'$};
-\draw [fill=xdxdff] (5.12,2.12) circle (2.5pt);
-\draw[color=black] (3.947479069767444,-0.615404651162788) node {$H$};
-\draw [fill=xdxdff] (4.242640687119286,0) circle (2.5pt);
-\draw [fill=xdxdff] (0,0) circle (2.5pt);
-\draw[color=uuuuuu] (0.00003720930232879,-0.3464558139534907) node {$O$};
-\draw[color=qqwuqq] (1.5325953488372117,0.3873860465116302) node {$\alpha$};
-\end{scriptsize}
-\end{tikzpicture}
-\label{fig:image1}
-\caption[]{Circle with 1 segment from a $n$-gon with point $H$ and 2 
-segments from an $2n$-gon, one of which on point $H'$, inscribed in 
-a circle of radius $OB$, adapted from (Boris Gourévitch) \cite{borisgourevitch2013}}
-\end{figure}
