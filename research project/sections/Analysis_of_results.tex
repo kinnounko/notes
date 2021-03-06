@@ -6,32 +6,32 @@
     X Y
     5 0.7601666451
     10 1.288158894
-    15 2.050116062 
-    20 2.63982296 
+    15 2.050116062
+    20 2.63982296
     25 3.091802597
-    30 3.819538355 
+    30 3.819538355
     35 4.442822933
-    40 5.081979036 
-    45 5.706284046 
-    50 6.370962858 
-    55 7.020516396 
-    60 7.723451853   
+    40 5.081979036
+    45 5.706284046
+    50 6.370962858
+    55 7.020516396
+    60 7.723451853
 }\vietetable
 
 \pgfplotstableread{
     X Y
-    5 0.5919837952 
-    10 1.307063103  
-    15 1.902475357  
-    20 2.679748535  
-    25 3.212277889  
-    30 3.904948235  
-    35 4.547913074  
-    40 5.255579948  
-    45 5.837199688  
-    50 6.578524113  
-    55 7.270073891  
-    60 8.004565239  
+    5 0.5919837952
+    10 1.307063103
+    15 1.902475357
+    20 2.679748535
+    25 3.212277889
+    30 3.904948235
+    35 4.547913074
+    40 5.255579948
+    45 5.837199688
+    50 6.578524113
+    55 7.270073891
+    60 8.004565239
 
 }\madhavatable
 
@@ -73,29 +73,29 @@
 
 \subsubsection{Tabular presentation}
 
-The arithmetic mean of a decimal place was caluclated for 100 trials and the data points 
-in the table shown below were found (rounded to 3 significant figures). The values for the decimal place 
+The arithmetic mean of a decimal place was caluclated for 100 trials and the data points
+in the table shown below were found (rounded to 3 significant figures). The values for the decimal place
 0 have been dropped as it would not be logical to include them.
 
 \begin{table}[h]
     \noindent% <-- important
     \setlength\tabcolsep{3pt} % default: 6pt
     \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
-    \toprule
-    Decimal place & Average time for approximation using Viete's method, in milliseconds (ms) & Average time for approximation using Madhava's method method, in milliseconds (ms) \\ 
-    \midrule
-    5  & 0.760  & 0.592   \\
-    10 & 1.29  & 1.31    \\
-    15 & 2.05  & 1.9     \\
-    20 & 2.64  & 2.68    \\
-    25 & 3.09  & 3.21    \\
-    30 & 3.82  & 3.9     \\
-    35 & 4.44  & 4.55    \\
-    40 & 5.08  & 5.26    \\
-    45 & 5.71  & 5.84    \\
-    50 & 6.37  & 6.58    \\
-    55 & 7.02  & 7.27    \\
-    60 & 7.72  & 8.00   
+        \toprule
+        Decimal place & Average time for approximation using Viete's method, in milliseconds (ms) & Average time for approximation using Madhava's method method, in milliseconds (ms) \\
+        \midrule
+        5             & 0.760                                                                     & 0.592                                                                              \\
+        10            & 1.29                                                                      & 1.31                                                                               \\
+        15            & 2.05                                                                      & 1.9                                                                                \\
+        20            & 2.64                                                                      & 2.68                                                                               \\
+        25            & 3.09                                                                      & 3.21                                                                               \\
+        30            & 3.82                                                                      & 3.9                                                                                \\
+        35            & 4.44                                                                      & 4.55                                                                               \\
+        40            & 5.08                                                                      & 5.26                                                                               \\
+        45            & 5.71                                                                      & 5.84                                                                               \\
+        50            & 6.37                                                                      & 6.58                                                                               \\
+        55            & 7.02                                                                      & 7.27                                                                               \\
+        60            & 7.72                                                                      & 8.00
     \end{tabularx}
 \end{table}
 
@@ -103,129 +103,129 @@ in the table shown below were found (rounded to 3 significant figures). The valu
     \noindent% <-- important
     \setlength\tabcolsep{3pt} % default: 6pt
     \begin{tabularx}{\textwidth}{@{} l *{6}{C} @{}}
-    \toprule
-    Decimal place & Iterations needed, Viète's method (no unit) & Iterations needed, Madhava's method (no unit)\\
-    \midrule
-    5 & 10 & 9 \\
-    10 & 17 & 20 \\
-    15 & 27 & 29 \\
-    20 & 35 & 41 \\
-    25 & 42 & 50 \\
-    30 & 51 & 61 \\
-    35 & 59 & 71 \\
-    40 & 67 & 82 \\
-    45 & 76 & 91 \\
-    50 & 84 & 102 \\
-    55 & 92 & 112 \\
-    60 & 101 & 123
+        \toprule
+        Decimal place & Iterations needed, Viète's method (no unit) & Iterations needed, Madhava's method (no unit) \\
+        \midrule
+        5             & 10                                          & 9                                             \\
+        10            & 17                                          & 20                                            \\
+        15            & 27                                          & 29                                            \\
+        20            & 35                                          & 41                                            \\
+        25            & 42                                          & 50                                            \\
+        30            & 51                                          & 61                                            \\
+        35            & 59                                          & 71                                            \\
+        40            & 67                                          & 82                                            \\
+        45            & 76                                          & 91                                            \\
+        50            & 84                                          & 102                                           \\
+        55            & 92                                          & 112                                           \\
+        60            & 101                                         & 123
     \end{tabularx}
 \end{table}
 
 
-The iterations needed for both methods were also measured, using the Python program 
-(see appendix), slightly modified to increment a variable \verb|i| and subsequently 
-return it, writing it in a similar manner to a \verb|.csv| file. 
+The iterations needed for both methods were also measured, using the Python program
+(see appendix), slightly modified to increment a variable \verb|i| and subsequently
+return it, writing it in a similar manner to a \verb|.csv| file.
 
 
 
 \subsubsection{Graphical presentation}
 
-Shown below is a graph demonstrating the correlation between the decimal places approximated 
-and the amount of iterations needed for this specific decimal milestone. The blue markers and 
-line of best-fit respresent the results received from Viète's method while the red represent those 
+Shown below is a graph demonstrating the correlation between the decimal places approximated
+and the amount of iterations needed for this specific decimal milestone. The blue markers and
+line of best-fit respresent the results received from Viète's method while the red represent those
 from Madhava's method. \\
 
 \begin{tikzpicture}[scale=1.1]
     \begin{axis}[
-        title={Comparing the iterations needed for approximating the value of $\pi$},
-        xlabel={Decimal places},
-        ylabel={Iterations},
-        xmin=0, xmax=60,
-        ymin=0, ymax=130,
-        ytick={0,10,20,30,40,50,60,70,80,90,100,110,120,130},
-        xtick={0,10,20,30,40,50,60},
-        legend pos=north west,
-        ymajorgrids=true,
-        grid style=dashed,
-        scale=1.2
-    ]
-    
-    \addplot[
-        only marks,
-        color=blue,
-        mark=*,
+            title={Comparing the iterations needed for approximating the value of $\pi$},
+            xlabel={Decimal places},
+            ylabel={Iterations},
+            xmin=0, xmax=60,
+            ymin=0, ymax=130,
+            ytick={0,10,20,30,40,50,60,70,80,90,100,110,120,130},
+            xtick={0,10,20,30,40,50,60},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+            scale=1.2
+        ]
+
+        \addplot[
+            only marks,
+            color=blue,
+            mark=*,
         ] table {\vietetableiter};
         \legend{Viète's method}
-        
-    \addplot [thin, blue] table[
-        y={create col/linear regression={y=Y}}
-    ] % compute a linear regression from the input table
-    {\vietetableiter};
-    \addlegendentry{best fit line}
+
+        \addplot [thin, blue] table[
+                y={create col/linear regression={y=Y}}
+            ] % compute a linear regression from the input table
+            {\vietetableiter};
+        \addlegendentry{best fit line}
 
 
 
-    \addplot[
-        only marks,
-        color=red,
-        mark=*,
+        \addplot[
+            only marks,
+            color=red,
+            mark=*,
         ] table {\madhavatableiter};
         \addlegendentry{Madhava's method}
-        
-    \addplot [thin, red] table[
-        y={create col/linear regression={y=Y}}
-    ] % compute a linear regression from the input table
-    {\madhavatableiter};
-    \addlegendentry{best fit line}
+
+        \addplot [thin, red] table[
+                y={create col/linear regression={y=Y}}
+            ] % compute a linear regression from the input table
+            {\madhavatableiter};
+        \addlegendentry{best fit line}
 
     \end{axis}
 \end{tikzpicture}
 
-To show the trend in the time data collected, see below the decimal places compared 
+To show the trend in the time data collected, see below the decimal places compared
 to the time taken per method. The color coding here is relevant to the one aforementioned. \\
 
 \begin{tikzpicture}[scale=1.1]
     \begin{axis}[
-        title={Comparing the time taken for approximating the value of $\pi$},
-        xlabel={Decimal places},
-        ylabel={Time taken [ms]},
-        xmin=0, xmax=60,
-        ymin=0, ymax=10,
-        ytick={0,2,4,6,8,10},
-        xtick={0,10,20,30,40,50,60},
-        legend pos=north west,
-        ymajorgrids=true,
-        grid style=dashed,
-        scale=1.2
-    ]
-    
-    \addplot[
-        only marks,
-        color=blue,
-        mark=*,
+            title={Comparing the time taken for approximating the value of $\pi$},
+            xlabel={Decimal places},
+            ylabel={Time taken [ms]},
+            xmin=0, xmax=60,
+            ymin=0, ymax=10,
+            ytick={0,2,4,6,8,10},
+            xtick={0,10,20,30,40,50,60},
+            legend pos=north west,
+            ymajorgrids=true,
+            grid style=dashed,
+            scale=1.2
+        ]
+
+        \addplot[
+            only marks,
+            color=blue,
+            mark=*,
         ] table {\vietetable};
         \legend{Viète's method}
-        
-    \addplot [thin, blue] table[
-        y={create col/linear regression={y=Y}}
-    ] % compute a linear regression from the input table
-    {\vietetable};
-    \addlegendentry{best fit line}
+
+        \addplot [thin, blue] table[
+                y={create col/linear regression={y=Y}}
+            ] % compute a linear regression from the input table
+            {\vietetable};
+        \addlegendentry{best fit line}
 
 
 
-    \addplot[
-        only marks,
-        color=red,
-        mark=*,
+        \addplot[
+            only marks,
+            color=red,
+            mark=*,
         ] table {\madhavatable};
         \addlegendentry{Madhava's method}
-        
-    \addplot [thin, red] table[
-        y={create col/linear regression={y=Y}}
-    ] % compute a linear regression from the input table
-    {\madhavatable};
-    \addlegendentry{best fit line}
+
+        \addplot [thin, red] table[
+                y={create col/linear regression={y=Y}}
+            ] % compute a linear regression from the input table
+            {\madhavatable};
+        \addlegendentry{best fit line}
 
     \end{axis}
 \end{tikzpicture}
@@ -235,22 +235,22 @@ to the time taken per method. The color coding here is relevant to the one afore
 
 \subsection{Observations and analysis}
 
-The results gathered from this experiment show linear relationship between the amount of decimal 
-places approximated and the time required for this approximation, as well as between the decimal places 
-and the amount of iterations needed. The two lines of best fit for the two methods show 
+The results gathered from this experiment show linear relationship between the amount of decimal
+places approximated and the time required for this approximation, as well as between the decimal places
+and the amount of iterations needed. The two lines of best fit for the two methods show
 similarities but also differences.
 
-Where decimal places and iterations are compared, there is a clear difference between the two 
-methods: Madhava's method indeed takes more iterations to converge to a specific decimal of 
-the value $\pi$. However, in the second graph comparing time, it can be noted that Madhava's 
-method is marginally faster until the decimal 20, when the two methods diverge. It could be 
-assumed that this occurrence is due to differences between the types of the two methods. Madhava's 
-method is what is called an alternating series, due to its nature of alternating between values in order 
-to converge to a specific value, in this case $\pi$, while Viète's method is an infinite product. The 
-difference between these two methods is underlined in (Figure 3) \ref{fig:comparaison}. It can be 
-deduced that at lower decimal values Madhava's method is faster as Viète's method's approximation 
-accuracy firstly increases in what seems similar to a curve from an exponential function $f : x \to -2x^2$. 
-It can also be said that while Madhava's method alternates between values such that $m_{n} > \pi, m_{n+1} < \pi$, 
+Where decimal places and iterations are compared, there is a clear difference between the two
+methods: Madhava's method indeed takes more iterations to converge to a specific decimal of
+the value $\pi$. However, in the second graph comparing time, it can be noted that Madhava's
+method is marginally faster until the decimal 20, when the two methods diverge. It could be
+assumed that this occurrence is due to differences between the types of the two methods. Madhava's
+method is what is called an alternating series, due to its nature of alternating between values in order
+to converge to a specific value, in this case $\pi$, while Viète's method is an infinite product. The
+difference between these two methods is underlined in (Figure 3) \ref{fig:comparaison}. It can be
+deduced that at lower decimal values Madhava's method is faster as Viète's method's approximation
+accuracy firstly increases in what seems similar to a curve from an exponential function $f : x \to -2x^2$.
+It can also be said that while Madhava's method alternates between values such that $m_{n} > \pi, m_{n+1} < \pi$,
 Viète's method approaches pi in a way that the approximation is always $v < \pi$.
 
 \textit{More info to be added}
@@ -259,7 +259,7 @@ Viète's method approaches pi in a way that the approximation is always $v < \pi
 \begin{figure}[h]
     \includegraphics[width=\linewidth]{image.png}
     \caption{Comparison of historical methods of approximating the value of $\pi$. This image demonstrates
-    their convergence rates. The line labelled Madhava in dark blue is the method used in this paper. 
-    From (Wikimedia Commons) \cite{infinite_series_comparaison}}
+        their convergence rates. The line labelled Madhava in dark blue is the method used in this paper.
+        From (Wikimedia Commons) \cite{infinite_series_comparaison}}
     \label{fig:comparaison}
-  \end{figure}
+\end{figure}
