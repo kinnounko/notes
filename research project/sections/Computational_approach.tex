@@ -2,13 +2,13 @@
 
 \subsection{The variables}
 The dependent variable of this experiment is the time taken $t$ by the program
-to approximate a given number $n$ of correct decimal value of the constant $\pi$.
+to approximate a given number $n$ of correct decimal value of the constant $\pi$. 
 
 The value $n$ will be altered in order to avoid possible similar convergence rates
 at a small amount of decimal places, and multiple trials will be run to decrease
 margin of error. Other variables of the experiment will be controlled. For example, the experiment
 will be run on a same isolated system, a virtual machine, with a minimal amount of
-processes running simultaneously to avoid any possible variance in results.
+processes running simultaneously to avoid any possible variance in results. 
 
 
 \subsection{Implementing in Python}
@@ -18,11 +18,17 @@ methods aforementioned, and manage the collection of data.
 
 The program assigns the time before the execution of the method to a variable \verb|t1|
 with the \verb|time.time()| Python function. At each iteration of the method, the number of valid decimal
-places of the resultant approximation are counted and once a specified threshold is reached,
-a new \verb|t2| time variable is assigned and the time taken, defined by the difference between
-\verb|t2| and \verb|t1|, is stored. This process is repeated for all specified decimal accuracies and
+places of the resultant approximation are counted. Once a specified decimal place is reached,
+determined by a programming \verb|if| statement, that can be mathematically expressed as:
+
+$| \pi - \pi_{approx} | < 10^{-n}$, where $\pi_{approx}$ is the approximation by the method and 
+$n$ defines the number of correct decimal places desired.
+
+
+A new \verb|t2| time variable is assigned and the time taken, defined by $\verb|t2| - \verb|t1|$, is stored. This process is repeated for all specified decimal accuracies and
 for both methods. The times recorded were stored in a \verb|.csv| file for further analysis.
 
 The \verb|mpmath| library was used for the floating point operations required
 for comparison between approximated values and the constant $\pi$ that wouldn't
-have been possible using standard Python libraries. \cite{mpmath}
+have been possible using standard Python libraries, due to floating-point limitations (computing 
+term for decimal numbers). \cite{mpmath}

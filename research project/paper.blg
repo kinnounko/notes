@@ -1,21 +1,23 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[62] biber:322> INFO - === Sat Mar  6, 2021, 14:13:52
-[74] Biber.pm:415> INFO - Reading 'paper.bcf'
-[125] Biber.pm:943> INFO - Found 12 citekeys in bib section 0
-[136] Biber.pm:4256> INFO - Processing section 0
-[137] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[137] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[144] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[145] bibtex.pm:1653> INFO - LaTeX decoding ...
-[158] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[191] Utils.pm:304> WARN - month field 'Nov' in entry 'oconnor_robertson_2000' is not an integer - this will probably not sort properly.
-[208] Utils.pm:304> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
-[215] Utils.pm:304> WARN - month field 'December' in entry 'mpmath' is not an integer - this will probably not sort properly.
-[231] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[231] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[231] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[231] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[241] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[245] bbl.pm:755> INFO - Output to paper.bbl
-[245] Biber.pm:128> INFO - WARNINGS: 3
+[57] biber:322> INFO - === Sun Mar  7, 2021, 19:03:40
+[67] Biber.pm:415> INFO - Reading 'paper.bcf'
+[119] Biber.pm:943> INFO - Found 14 citekeys in bib section 0
+[129] Biber.pm:4256> INFO - Processing section 0
+[130] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[130] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[138] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[139] bibtex.pm:1653> INFO - LaTeX decoding ...
+[153] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[188] Utils.pm:304> WARN - month field 'Nov' in entry 'oconnor_robertson_2000' is not an integer - this will probably not sort properly.
+[209] Utils.pm:304> WARN - month field 'apr' in entry 'borisgourevitch2013' is not an integer - this will probably not sort properly.
+[214] Utils.pm:304> WARN - month field 'December' in entry 'mpmath' is not an integer - this will probably not sort properly.
+[220] Utils.pm:304> WARN - month field 'Feb' in entry 'murad_2021' is not an integer - this will probably not sort properly.
+[223] Utils.pm:304> WARN - month field 'Jan' in entry 'id-software_2012' is not an integer - this will probably not sort properly.
+[237] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[237] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[237] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[238] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[249] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[254] bbl.pm:755> INFO - Output to paper.bbl
+[254] Biber.pm:128> INFO - WARNINGS: 5
