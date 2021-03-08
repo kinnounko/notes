@@ -73,9 +73,7 @@
 
 \subsubsection{Tabular presentation}
 
-The arithmetic mean of a decimal place was calculated for 100 trials and the data points
-in the table shown below were found (rounded to 3 significant figures). The values for the decimal place
-0 have been dropped as it would not be logical to include them. 
+The arithmetic mean of a decimal place was calculated for 100 trials and the data points in the table shown below were found (rounded to 3 significant figures). The values for the decimal place 0 have been dropped as it would not be logical to include them. 
 
 \begin{table}[h]
     \noindent% <-- important
@@ -122,18 +120,13 @@ in the table shown below were found (rounded to 3 significant figures). The valu
 \end{table}
 
 
-The iterations needed for both methods were also measured, using the Python program
-(see appendix), slightly modified to increment a variable \verb|i| and subsequently
-return it, writing it in a similar manner to a \verb|.csv| file.
+The iterations needed for both methods were also measured, using the Python program (see appendix), slightly modified to increment a variable \verb|i| and subsequently return it, writing it in a similar manner to a \verb|.csv| file.
 
 
 
 \subsubsection{Graphical presentation}
 
-Shown below is a graph demonstrating the correlation between the decimal places approximated
-and the amount of iterations needed for this specific decimal milestone. The blue markers and
-line of best-fit respresent the results received from Viète's method while the red represent those
-from Madhava's method. \\
+Shown below is a graph demonstrating the correlation between the decimal places approximated and the amount of iterations needed for this specific decimal milestone. The blue markers and line of best-fit represent the results received from Viète's method while the red represent those from Madhava's method. 
 
 \begin{tikzpicture}[scale=1.1]
     \begin{axis}[
@@ -235,25 +228,9 @@ to the time taken per method. The color coding here is relevant to the one afore
 
 \subsection{Observations and analysis}
 
-The results gathered from this experiment show linear relationship between the amount of decimal
-places approximated and the time required for this approximation, as well as between the decimal places
-and the amount of iterations needed. The two lines of best fit for the two methods show
-similarities but also differences.
+The results gathered from this experiment show linear relationship between the amount of decimal places approximated and the time required for this approximation, as well as between the decimal places and the amount of iterations needed. The two lines of best fit for the two methods show similarities but also differences.
 
-Where decimal places and iterations are compared, there is a clear difference between the two
-methods: Madhava's method indeed takes more iterations to converge to a specific decimal of
-the value $\pi$. However, in the second graph comparing time, it can be noted that Madhava's
-method is marginally faster until the decimal 20, when the lines of the two methods stray apart. It could be
-assumed that this occurrence is due to differences between the types of the two methods. Although it 
-could be argued that this difference is only due to random error, the results in this graph 
-are those collected from the arithmetic mean over 100 trials, and so it can be assessed that this is not the case. Madhava's
-method is what is called an alternating series, due to its nature of alternating between values in order
-to converge to a specific value, in this case $\pi$, while Viète's method is an infinite product. The
-difference between these two methods is underlined in (Figure 3) \ref{fig:comparaison}. It can be
-deduced that at lower decimal values Madhava's method is faster as Viète's method's approximation
-accuracy firstly increases in what seems similar to a curve from an exponential function $f(x) = k^x$.
-It can also be said that while Madhava's method alternates between values such that $m_{n} > \pi, m_{n+1} < \pi$,
-Viète's method $\pi_v$ approximates pi in a manner such that $\pi_v < \pi$.
+Where decimal places and iterations are compared, there is a clear difference between the two methods: Madhava's method indeed takes more iterations to converge to a specific decimal of the value $\pi$. However, in the second graph comparing time, it can be noted that Madhava's method is marginally faster until the decimal 20, when the lines of the two methods stray apart. It could be assumed that this occurrence is due to differences between the types of the two methods. Although it could be argued that this difference is only due to random error, the results in this graph are those collected from the arithmetic mean over 100 trials, and so it can be assessed that this is not the case. Madhava's method is what is called an alternating series, due to its nature of alternating between values in order to converge to a specific value, in this case $\pi$, while Viète's method is an infinite product. The difference between these two methods is underlined in (Figure 3) \ref{fig:comparaison}. It can be deduced that at lower decimal values Madhava's method is faster as Viète's method's approximation accuracy firstly increases in what seems similar to a curve from an exponential function $f(x) = k^x$. It can also be said that while Madhava's method alternates between values such that $m_{n} > \pi, m_{n+1} < \pi$, Viète's method $\pi_v$ approximates pi in a manner such that $\pi_v < \pi$.
 
 \begin{figure}[h]
     \includegraphics[width=\linewidth]{image.png}

@@ -1,40 +1,14 @@
 \section{Conclusion}
 
-To conclude, even though Viète's method can seem more convoluted in practice, due to its geometric origins,
-it can be seen through the experiment conducted in this paper that this is clearly not the case
-in a computational context. His method is simplified to a point where its geometric origins are no
-longer findable from its computational implementation. And despite the assumption that could be
-made based on the types of operations needed for each method, Viète's requiring arguably more
-computationally challenging operations. These operations, such as square-root function or the product function
-used on high-precision floating point numbers, can be said to be more demanding than what could be said
-is simple summation, in the case of Madhava. 
+To conclude, even though Viète's method can seem more convoluted in practice, due to its geometric origins, it can be seen through the experiment conducted in this paper that this is clearly not the case in a computational context. His method is simplified to a point where its geometric origins are no longer findable from its computational implementation. And despite the assumption that could be made based on the types of operations needed for each method, Viète's requiring arguably more computationally challenging operations. These operations, such as square-root function or the product function used on high-precision floating point numbers, can be said to be more demanding than what could be said is simple summation, in the case of Madhava. 
 
-An example of this kind of difference in computing power 
-needed for different mathematical operations can be seen in the video-game \textit{Quake III Arena}, published in 1999. 
-The inverse square root of a number needed to be calculated, however due to performance issues, the standard 
-function could not be used. And as such, a new function for the approximation of the inverse square root of a number 
-was programmed \cite{id-software_2012}, highly more efficient than the old one, which shows that a mathematical function 
-implemented in computing can be more efficient than another. 
+An example of this kind of difference in computing power needed for different mathematical operations can be seen in the video-game \textit{Quake III Arena}, published in 1999. The inverse square root of a number needed to be calculated, however due to performance issues, the standard function could not be used. And as such, a new function for the approximation of the inverse square root of a number was programmed \cite{id-software_2012}, highly more efficient than the old one, which shows that a mathematical function implemented in computing can be more efficient than another. 
 
-Ultimately, a method 
-of approximating the constant $\pi$ computationally can be more efficient than another, and to the 
-somewhat surprising extent that this method is a geometric one --- many would think an analytical one, 
-that uses simple summation as opposed to square roots, would be more efficient. 
+Ultimately, a method of approximating the constant $\pi$ computationally can be more efficient than another, and to the somewhat surprising extent that this method is a geometric one --- many would think an analytical one, that uses simple summation as opposed to square roots, would be more efficient. 
 
 
 \subsection{Evaluation of the experimental method}
 
-The method used in this paper is not perfect, and at closer inspection and in 
-retrospect, many issues can be found. Firstly, in the computational implementation of 
-Madhava's method, the value $\sqrt{12}$ is calculated at every iteration, in order to 
-determine the number of correct decimal places, which can 
-lead to efficiency losses. Instead of this, the value could have been calculated once 
-and stored in a variable, to be referenced at every iteration. However, after running 
-the program again with the modified code, the results stayed similar. 
+The method used in this paper is not perfect, and at closer inspection and in retrospect, many issues can be found. Firstly, in the computational implementation of Madhava's method, the value $\sqrt{12}$ is calculated at every iteration, in order to determine the number of correct decimal places, which can lead to efficiency losses. Instead of this, the value could have been calculated once and stored in a variable, to be referenced at every iteration. However, after running the program again with the modified code, the results stayed similar. 
 
-Another weakness in the method used in this paper is that a higher number of trials 
-could have been used, as well as the value of $\pi$ approximated to a higher 
-number of decimal places. A higher number of decimal places was disregarded during the 
-implementation of the methods as it was noticed that values over 60 would take an indeterminately 
-long time. This should not have been overlooked, as a different kind of relationship 
-could have been made apparent that way. 
+Another weakness in the method used in this paper is that a higher number of trials could have been used, as well as the value of $\pi$ approximated to a higher number of decimal places. A higher number of decimal places was disregarded during the implementation of the methods as it was noticed that values over 60 would take an indeterminately long time. This should not have been overlooked, as a different kind of relationship could have been made apparent that way. 
