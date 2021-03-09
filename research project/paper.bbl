@@ -130,7 +130,11 @@
       \field{labeltitlesource}{title}
       \field{month}{11}
       \field{title}{Madhava of Sangamagramma}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
       \field{year}{2000}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://web.archive.org/web/20060514012903/http://www-gap.dcs.st-and.ac.uk/~history/Biographies/Madhava.html
       \endverb
@@ -460,12 +464,35 @@
       \field{journaltitle}{GitHub}
       \field{month}{1}
       \field{title}{Quake-III-Arena}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
       \field{year}{2012}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://github.com/id-Software/Quake-III-Arena/blob/master/code/game/q_math.c#L552
       \endverb
       \verb{url}
       \verb https://github.com/id-Software/Quake-III-Arena/blob/master/code/game/q_math.c#L552
+      \endverb
+    \endentry
+    \entry{beyond3d_2006}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Beyond3D}
+      \field{month}{11}
+      \field{title}{Origin of Quake3's Fast InvSqrt()}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.beyond3d.com/content/articles/8/
+      \endverb
+      \verb{url}
+      \verb https://www.beyond3d.com/content/articles/8/
       \endverb
     \endentry
   \enddatalist

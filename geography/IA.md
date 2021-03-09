@@ -38,3 +38,14 @@ Areas would be randomly chosen on a map. This removes bias but can overlook impo
 
 3. Systematic
 Areas at regular intervals (e.g. every 50 meters, every 10 minutes). A sort of compromise between stratified and random sampling. 
+
+## Maps
+
+* Border
+* Orientation 
+* Legend
+* Title
+* Scale
+
+## Full page map of your study areas 
+
