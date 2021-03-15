@@ -162,21 +162,11 @@ So the regression line can be expressed as $\boxed{ \hat y = 5.60 x -618.01}$
 
 \subsubsection{Special cases}
 
-However, the relationship between the distance between an earthquake and its tsunami
-and the wave height is not necessarily linear, especially if it is considered that the travel of
-sound (which is a wave, or the displacement of a fluid that can travel) in a fluid obeys the
-inverse square law. Therefore, a simple linear regression model cannot be
-used for this research. A second degree polynomial regression formula would be more
-appropriate, and a new $x^2$ term can be added to the previous formula. We get:
+However, the relationship between the distance between an earthquake and its tsunami and the wave height is not necessarily linear, especially if it is considered that the travel of sound (which is a wave, or the displacement of a fluid that can travel) in a fluid obeys the inverse square law. Therefore, a simple linear regression model cannot be used for this research. A second degree polynomial regression formula would be more appropriate, and a new $x^2$ term can be added to the previous formula. We get:
 
 $y = a + \beta_1 x + \beta_2 x^2 + e$
 
-Even though the right side of this equation is quadratic in $x$, this is still
-linear regression as the right side is linear in the $\beta$ terms (if we were to let
-$x = 1$, we would be left with $y = a + \beta_1 + \beta_2 + e$, which is linear).
-A second degree polynomial regression would best fit our model for both independent
-variables, as seen in the graphs below, where a theoretical curve of regression is drawn
-by hand:
+Even though the right side of this equation is quadratic in $x$, this is still linear regression as the right side is linear in the $\beta$ terms (if we were to let $x = 1$, we would be left with $y = a + \beta_1 + \beta_2 + e$, which is linear). A second degree polynomial regression would best fit our model for both independent variables, as seen in the graphs below, where a theoretical curve of regression is drawn by hand:
 
 \begin{figure}[H]
     \centering
@@ -184,22 +174,15 @@ by hand:
     \label{fig:boat1}
 \end{figure}
 
-In addition, our dataset has two independent variables: the distance from a particular
-earthquake event and the magnitude of that earthquake. Models such as the one explored
-in this paper, where multiple independent variables are present, are called multivariate
-and can be modeled by adding the terms of a new independent variable, as such
-for a linear model with two independent variables:
+In addition, our dataset has two independent variables: the distance from a particular earthquake event and the magnitude of that earthquake. Models such as the one explored in this paper, where multiple independent variables are present, are called multivariate and can be modeled by adding the terms of a new independent variable, as such for a linear model with two independent variables:
 
 $a_1 + \beta_1 x_1 + a_2 + \beta_2 x_2 + e$,
 
 where the terms $a_n$ are the y-intercepts of the $n$th independent variable,
 
-So the relationship between the two independent variables and the wave height can
-be estimated with a multivariate, polynomial regression model. We will use the Python
-scikit-learn library to aid in creating this model. \\
+So the relationship between the two independent variables and the wave height can be estimated with a multivariate, polynomial regression model. We will use the Python scikit-learn library to aid in creating this model. \\
 
-(\textit{Section not done, need to do more research on how the} \verb|PolynomialFeatures| 
-\textit{function transforms a linear array to one fit for polynomial regression})
+(\textit{Section not done, need to do more research on how the} \verb|PolynomialFeatures| \textit{function transforms a linear array to one fit for polynomial regression})
 
 
 \begin{figure}[H]
@@ -214,24 +197,16 @@ scikit-learn library to aid in creating this model. \\
 
 \subsubsection{Calculating fit of the model}
 
-The model's fit is then calculated, with the test dataset. The \verb|accuracy_score| method
-from the \verb|sklearn.metrics| class was used for this task. This function calculates what
-is called the $R^2$ value, which explains the extent at which the variance (the amount by which numbers
-are spread from the average value) in the dependent variable can be explained by the independent
-variable(s). An $R^2$ value of 0.6 indicates that 60\% of the model's results match those of the
-dataset. This value is defined as:
+The model's fit is then calculated, with the test dataset. The \verb|accuracy_score| method from the \verb|sklearn.metrics| class was used for this task. This function calculates what is called the $R^2$ value, which explains the extent at which the variance (the amount by which numbers are spread from the average value) in the dependent variable can be explained by the independent variable(s). An $R^2$ value of 0.6 indicates that 60\% of the model's results match those of the dataset. This value is defined as:
 
 $R^2 = 1 - \frac{SS_{res}}{SS_{total}}$,
 
 where $SS_{res}$ is the sum of the error terms, or the residual sum of squares, in a dataset of $n$
 values $y_1,\dots, y_i$, with their corresponding predicted values $p_1,\dots, p_i$ defined by
 
-$SS_{res} = \sum\limits_{i} e_i^2 = \sum\limits_{i} (y_i - p_i)^2$, \footnote{$\sum\limits_{i=1}^n x_i$ means that all values of
-    x are summed, beginning from $x_1$ and ending at $x_n$} where $e_i$ is the error term, equal to the difference of a data point $y_i$
-and its corresponding predicted value $p_i$.
+$SS_{res} = \sum\limits_{i} e_i^2 = \sum\limits_{i} (y_i - p_i)^2$, \footnote{$\sum\limits_{i=1}^n x_i$ means that all values of x are summed, beginning from $x_1$ and ending at $x_n$} where $e_i$ is the error term, equal to the difference of a data point $y_i$ and its corresponding predicted value $p_i$.
 
-and $SS_{tot}$ is the total sum of squares, which is proportional to the variance in the data,
-defined as:
+and $SS_{tot}$ is the total sum of squares, which is proportional to the variance in the data, defined as:
 
 $SS_{tot} = \sum\limits_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$,
 or $\bar y = \frac{1}{n} \sum\limits_{i=1}^n y_i$
@@ -248,18 +223,9 @@ systems are not available.
 
 \subsection{Evaluation of the method used}
 
-This method, like any other statistical approximation, is by no means perfect
-and for that reason should not be used in any real-world application. The results
-procured by the program are subject to many uncertainties, one of which is described
-below.
+This method, like any other statistical approximation, is by no means perfect and for that reason should not be used in any real-world application. The results procured by the program are subject to many uncertainties, one of which is described below.
 
-When attempting to predict the maximum wave height of a tsunami such as the one
-caused by the 2011 earthquake off the Pacific coast of Tōhoku, approximately 70km
-away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this
-paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude
-of the earthquake and the 70km distance. These types of errors can be attributed to the
-fact that there are many more independent variables, such as the shape of the seafloor for
-example, that can amplify or potentially change the height of a tsunami's wave.
+When attempting to predict the maximum wave height of a tsunami such as the one caused by the 2011 earthquake off the Pacific coast of Tōhoku, approximately 70km away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude of the earthquake and the 70km distance. These types of errors can be attributed to the fact that there are many more independent variables, such as the shape of the seafloor for example, that can amplify or potentially change the height of a tsunami's wave.
 
 
 \newpage
@@ -270,10 +236,7 @@ example, that can amplify or potentially change the height of a tsunami's wave.
 \label{sec:notes}
 \addcontentsline{toc}{section}{\nameref{sec:notes}}
 
-All figures are generated through the use of TikZ (Tantau) and the Python library 
-\verb|matplotlib|. This paper is written with the aid of the typesetting software \LaTeX. 
-On a PDF viewer, the sections in the table of contents can be clicked to access that 
-section. Dataset not included due to large size (\textasciitilde 28000 columns).
+All figures are generated through the use of TikZ (Tantau) and the Python library \verb|matplotlib|. This paper is written with the aid of the typesetting software \LaTeX. On a PDF viewer, the sections in the table of contents can be clicked to access that section. Dataset not included due to large size (\textasciitilde 28000 columns).
 
 \printbibliography[heading=bibintoc, title=Works Cited]
 
@@ -283,8 +246,7 @@ section. Dataset not included due to large size (\textasciitilde 28000 columns).
 \subsection{Example linear regression}
 \label{app:regression}
 
-Below is an example of a dataset with $x$ values and their corresponding
-Y values, the data points chosen are purely arbitrary.
+Below is an example of a dataset with $x$ values and their corresponding Y values, the data points chosen are purely arbitrary.
 
 \begin{center}
     \begin{tabular}{||c c||}
@@ -362,9 +324,7 @@ Below is the dataset plotted, along with a line of regression.
 \subsection{Python program}
 \label{app:scripts}
 
-Listed here is the Python program through which the dataset was cleaned and
-predictions based on the statistical model were made. Run using 64-bit Python
-version 3.9.1.
+Listed here is the Python program through which the dataset was cleaned and predictions based on the statistical model were made. Run using 64-bit Python version 3.9.1.
 
 \lstinputlisting[language=Python]{model/multregr2.py}
 
