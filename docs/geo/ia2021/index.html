@@ -1,1 +1,207 @@
-../../../geography/ia/interactive-map.html
+<html>
+
+<head>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkFpXcSMnKHZzH061lKalScszbrUMFNig" async
+        defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+
+<body style="font-family: Arial,Helvetica Neue,Helvetica,sans-serif; ">
+    <div id="container">
+        <div id="leafletmap"></div>
+
+        <div id="legend">test</div>
+    </div>
+
+    <style>
+        #container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        #leafletmap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        #legend {
+            position: absolute;
+            background-color: gray;
+            height: 200px;
+            width: 128px;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        const RED = "fc0c54";
+        const GREEN = "a8e519";
+
+        // initialize the map
+        var map = L.map('leafletmap').setView([48.856810, 2.285369], 15);
+
+        // TODO: replace reference and data + origin of map
+        // load a tile layer
+
+
+
+
+        L.tileLayer('http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
+
+        var greenIcon = new L.Icon({
+            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        // Add circle shaped marker
+        function addCircleMarker(x, y, r, color, text) {
+            L.circleMarker([x, y], {
+                color: color,
+                radius: r,
+                fillOpacity: 1.0
+            }).addTo(map)
+                .bindPopup(text);
+        }
+
+        // Add marker
+        function addMarker(x, y, message) {
+            L.marker([x, y]).addTo(map)
+                .bindPopup('Marker: ' + message)
+                .openPopup();
+        }
+
+        // Interpolate color based on score and two colors c1 and c2
+        function interpolateColor(c0, c1, f) {
+            c0 = c0.match(/.{1,2}/g).map((oct) => parseInt(oct, 16) * (1 - f))
+            c1 = c1.match(/.{1,2}/g).map((oct) => parseInt(oct, 16) * f)
+            let ci = [0, 1, 2].map(i => Math.min(Math.round(c0[i] + c1[i]), 255))
+            return ci.reduce((a, v) => ((a << 8) + v), 0).toString(16).padStart(6, "0")
+        }
+
+
+        var coords_test = {
+            "places": [
+                {
+                    "residential": [
+                        {
+                            "name": "ranelagh",
+                            "coords": "48.858017,2.270918",
+                            "quality": 77
+                        },
+                        {
+                            "name": "davioud_1",
+                            "coords": "48.854980,2.270616",
+                            "quality": 47
+                        },
+                        {
+                            "name": "davioud_2",
+                            "coords": "48.856265,2.271697",
+                            "quality": 53
+                        },
+                        {
+                            "name": "paul_doumer",
+                            "coords": "48.858251,2.275139",
+                            "quality": 35
+                        },
+                        {
+                            "name": "ranelagh_metro",
+                            "coords": "48.855498,2.270155",
+                            "quality": 31
+                        }
+                    ],
+                    "tourist": [
+                        {
+                            "name": "bir_hakeim",
+                            "coords": "48.854684,2.288770",
+                            "quality": 51
+                        },
+                        {
+                            "name": "seine_bank",
+                            "coords": "48.858636,2.289380",
+                            "quality": 69
+                        },
+                        {
+                            "name": "eiffel_tower",
+                            "coords": "48.859280,2.294463",
+                            "quality": 45
+                        },
+                        {
+                            "name": "iena_bridge",
+                            "coords": "48.859341,2.292871",
+                            "quality": 42
+                        },
+                        {
+                            "name": "ecole_militaire",
+                            "coords": "48.850426,2.306740",
+                            "quality": 54
+                        }
+                    ]
+                }
+            ]
+        }
+
+
+        for (i = 0; i < coords_test.places[0].residential.length; i++) {
+            test = "<br><img onerror='$(this).hide();' style='width:64px;height:64px;' src='https://raw.githubusercontent.com/kinnounko/notes/main/geography/ia/images/residential/"
+            a = ""
+            color = interpolateColor(RED, GREEN, coords_test.places[0].residential[i].quality / 84);
+            for (let k = 1; k < 4; k++) {
+                a += test + coords_test.places[0].residential[i].name + "/" + (k) + ".jpg'</img></a>"
+            }
+            a += "<br>Score: " + (coords_test.places[0].residential[i].quality / 84).toFixed(2) * 100 + "%";
+            addCircleMarker(coords_test.places[0].residential[i].coords.split(",")[0], coords_test.places[0].residential[i].coords.split(",")[1], 5, "#" + color, coords_test.places[0].residential[i].name + a);
+        }
+
+        for (i = 0; i < coords_test.places[0].tourist.length; i++) {
+            test = "<br><img onerror='$(this).hide();' style='width:64px;height:64px;' src='https://raw.githubusercontent.com/kinnounko/notes/main/geography/ia/images/tourist/"
+            a = ""
+            color = interpolateColor(RED, GREEN, coords_test.places[0].tourist[i].quality / 84);
+            for (let k = 1; k < 4; k++) {
+                a += test + coords_test.places[0].tourist[i].name + "/" + (k) + ".jpg'</img></a>"
+            }
+            a += "<br>Score: " + (coords_test.places[0].tourist[i].quality / 84).toFixed(2) * 100 + "%";
+            addCircleMarker(coords_test.places[0].tourist[i].coords.split(",")[0], coords_test.places[0].tourist[i].coords.split(",")[1], 5, "#" + color, coords_test.places[0].tourist[i].name + a);
+        }
+
+        /* coords_test.places.residential.forEach(element => {
+             test = "<br><img style='width:64px;height:64px;' src='images/16/"
+             a = ""
+             for (let i = 1; i < 4; i++) {
+                 a += test + k.name + "/" + i + ".jpg'</img></a>"
+             }
+             addCircleMarker(k.coords.split(",")[0], k.name.split(",")[1], 5, "#FF5555", k.name + a)
+             console.log(k);
+         });
+         */
+
+        for (i = 0; i < coords_test.places[0].residential.length; i++) {
+            console.log(coords_test.places[0].residential[i].coords);
+        }
+
+
+    </script>
+</body>
+
+</html>
