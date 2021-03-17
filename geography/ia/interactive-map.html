@@ -12,6 +12,8 @@
         crossorigin=""></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkFpXcSMnKHZzH061lKalScszbrUMFNig" async
         defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
 
 
 <body style="font-family: Arial,Helvetica Neue,Helvetica,sans-serif; ">
@@ -47,6 +49,9 @@
         }
     </style>
     <script>
+        const RED = "fc0c54";
+        const GREEN = "a8e519";
+
         // initialize the map
         var map = L.map('leafletmap').setView([48.856810, 2.285369], 15);
 
@@ -159,9 +164,9 @@
 
 
         for (i = 0; i < coords_test.places[0].residential.length; i++) {
-            test = "<br><img style='width:64px;height:64px;' src='images/residential/"
+            test = "<br><img onerror='$(this).hide();' style='width:64px;height:64px;' src='images/residential/"
             a = ""
-            color = interpolateColor("fc0c54", "a8e519", coords_test.places[0].residential[i].quality / 84);
+            color = interpolateColor(RED, GREEN, coords_test.places[0].residential[i].quality / 84);
             for (let k = 1; k < 4; k++) {
                 a += test + coords_test.places[0].residential[i].name + "/" + (k) + ".jpg'</img></a>"
             }
@@ -170,9 +175,9 @@
         }
 
         for (i = 0; i < coords_test.places[0].tourist.length; i++) {
-            test = "<br><img style='width:64px;height:64px;' src='images/tourist/"
+            test = "<br><img onerror='$(this).hide();' style='width:64px;height:64px;' src='images/tourist/"
             a = ""
-            color = interpolateColor("fc0c54", "a8e519", coords_test.places[0].tourist[i].quality / 84);
+            color = interpolateColor(RED, GREEN, coords_test.places[0].tourist[i].quality / 84);
             for (let k = 1; k < 4; k++) {
                 a += test + coords_test.places[0].tourist[i].name + "/" + (k) + ".jpg'</img></a>"
             }
