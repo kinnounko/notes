@@ -10,20 +10,18 @@
         /* Firefox */
         -ms-user-select: none;
         /* Internet Explorer/Edge */
-
     }
 
     /* Navbar container */
     .navbar {
         overflow: hidden;
-        background-color: #333;
     }
 
     /* Links inside the navbar */
     .navbar a {
         float: left;
         font-size: 16px;
-        color: white;
+        color: #666666;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -40,7 +38,7 @@
         font-size: 16px;
         border: none;
         outline: none;
-        color: white;
+        color: #666666;
         padding: 14px 16px;
         background-color: inherit;
         font-family: inherit;
@@ -52,7 +50,7 @@
     /* Add a red background color to navbar links on hover */
     .navbar a:hover,
     .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: lightblue;
     }
 
     /* Dropdown content (hidden by default) */
@@ -68,7 +66,7 @@
     /* Links inside the dropdown */
     .dropdown-content a {
         float: none;
-        color: black;
+        color: #666666;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -86,19 +84,19 @@
     }
 </style>
 
-<h1 id="title"><a href="/index.html" style="text-decoration:none;">notes</a></h1>
+<h1 id="title"><a href="/index.html" style="text-decoration:none; color:#666666">notes</a></h1>
+<i style="color: #666666"></i>
 
 <div class="navbar">
     <a href="/index.html">home</a>
-    <a href="#news">contact</a>
     <div class="dropdown">
         <button class="dropbtn">notes
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
             <a href="/2020/index.html">2020</a>
-            <a href="#">2021</a>
-            <a href="#">test</a>
+            <a href="">more to come...</a>
         </div>
     </div>
+    <a href="/contact.html">contact</a>
 </div>

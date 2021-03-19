@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+</head>
+
+<body>
+
+    <div id="nav-placeholder"></div>
+
+
+    <script>
+        $.get("../nav.html", function(data) {
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+
+    <h2>contact me</h2>
+
+    <p>email: <a href="mailto:kinnounko7@gmail.com">kinnounko7@gmail.com</p>
+
+</body>
