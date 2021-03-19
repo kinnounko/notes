@@ -1,4 +1,18 @@
 <style>
+    #title {
+        user-select: none;
+        /* supported by Chrome and Opera */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+
+    }
+
     /* Navbar container */
     .navbar {
         overflow: hidden;
@@ -72,7 +86,7 @@
     }
 </style>
 
-<h1>notes</h1>
+<h1 id="title"><a href="/">notes</a></h1>
 
 <div class="navbar">
     <a href="/index.html">home</a>
