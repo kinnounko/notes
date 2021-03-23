@@ -12,5 +12,5 @@ df = pd.merge(df1, df2, how='outer')
 json_file = df.to_json(orient='records') 
 
 #export JSON file
-with open('my_data.json', 'w') as f:
+with open('trees.json', 'w') as f:
     f.write(json_file)
