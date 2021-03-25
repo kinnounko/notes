@@ -42,3 +42,7 @@ With the rise of social media during the 2010s, many people became aware of the 
 A new generation of Internet users learned techniques from the examples presented by older users of film photography. A sort of revival of film photography has occurred in the past decade.
 
 Companies like Kodak have decided to, as such, reinstate production of film. Camera manufacturers have also restarted production of old and updated versions of their cameras. Vintage cameras are sold on websites like eBay for staggering prices, as there is now a demand for them. 
+
+Unfortunately at some point, film photography will die out. It is environmentally unfriendly, expensive, and a hassle to many as it requires a lot of time to master and produce a viewable snapshot, compared to the blazing fast digital format. 
+
+Some say film has more "soul" to it than digital pictures. This could mean many things, but I personally believe this is true. A roll of film tells a story, while a digital picture doesn't necessarily do so. 
