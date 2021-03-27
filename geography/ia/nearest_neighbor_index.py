@@ -63,34 +63,32 @@ if __name__ == "__main__":
         description='Calculate the Nearest Neighbor Index of a dataset')
 
     parser.add_argument('dataset', type=str,
-                        help='absolute path to the dataset')
+                        help='absolute path to the dataset (must be a .csv in form lat,lon)')
 
     parser.add_argument(
-        '-b', '--bounding-box', help='choose an area bounded by 2 coordinates in comma-separated form: lat1,lon1,lat2,lon2', type=lambda s: [float(item) for item in s.split(',')])
+        '-b', '--bounding_box', help='choose an area bounded by 2 coordinates in comma-separated form: lat1,lon1,lat2,lon2. If no value is supplied the entire area is chosen', type=lambda s: [float(item) for item in s.split(',')])
     parser.add_argument(
-        '-j', '--json', help='export bounded area to a json file')
+        '-j', '--json', help='export bounded area to a json file JSON')
 
     args = parser.parse_args()
-    print(args.bounded)
 
-    # DF must be in format lat, lon (comma separated)
-    # TODO: argument parsed for dataset loc
-    dataset = "/home/octo/velib.csv"
-    df = pd.read_csv(dataset)
+    #   DF must be in format lat, lon (comma separated)
+    df = pd.read_csv(args.dataset)
 
-    # We get rid of any rows with non-numeric values
+    #   We get rid of any rows with non-numeric values
     df['lat'] = pd.to_numeric(df['lat'], errors='coerce')
     df['lon'] = pd.to_numeric(df['lon'], errors='coerce')
     df = df.dropna()
 
-    # TODO: bounding box should be an argument (bottom left, top right)
-    boundingbox = [[48.84881, 2.28708], [48.86075, 2.30742]]
-
+    #   Bounding box is arguments, unless not supplied
+    if args.bounding_box is not None:
+        boundingbox = [[args.bounding_box[0], args.bounding_box[1]], [args.bounding_box[2], args.bounding_box[3]]]
+    else: 
+        boundingbox = [[df['lat'].min(), df['lon'].min()], [df['lat'].max(), df['lon'].max()]]
     bounded = box_select_coordinates(df, boundingbox)
 
     #
-    # We must put the coordinates in form [[lat, lon], [lat, lon]...]
-    # there is probably a faster way to do this, this sucks
+    #   We must put the coordinates in form [[lat, lon], [lat, lon]...]
     #
     npbounded = []
     for i in range(len(bounded)):
@@ -106,24 +104,23 @@ if __name__ == "__main__":
     nni_querytree = KDTree(npbounded)
 
     #
-    # POC: this works, the point returned is the closest.
-    # d, i = sixteenth_kdtree.query((48.85591, 2.27495), workers=-1)
-    # print("closest point:", sixteentharr[i])
+    #   We must then calculate the NNI:
+    #
+    #   Rn = D(Obs)/         where: a is the area observed, n is the number of points, D(Obs) is the mean observed distance to the nearest neighbor
+    #     0.5(sqrt(a/n))
+    #
+    #   Loop through all coordinates, finding their nearest neighbor and calculating the distance using the haversine formula
     #
 
-    #
-    # We must then calculate the NNI:
-    #
-    # Rn = D(Obs)/         where: a is the area observed, n is the number of points, D(Obs) is the mean observed distance to the nearest neighbor
-    #   0.5(sqrt(a/n))
-    #
-    # Loop through all coordinates, finding their nearest neighbor and calculating the distance using the haversine formula
-    #
+    nni = nni_value(mean_observed_distance(
+        npbounded, nni_querytree), box_area(boundingbox), len(npbounded))
 
-    print("Calculated NNI value for", args.dataset, nni_value(mean_observed_distance(
-        npbounded, nni_querytree), box_area(boundingbox), len(npbounded)))
+    print("Calculated NNI value for", args.dataset, "=", nni)
 
 
+    #
+    #   Export JSON is user has chosen to 
+    #
     if args.json is not None:
         # create JSON file
         json_file = bounded.to_json(orient='records')
