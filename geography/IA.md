@@ -47,5 +47,13 @@ Areas at regular intervals (e.g. every 50 meters, every 10 minutes). A sort of c
 * Title
 * Scale
 
-## Full page map of your study areas 
+## Core-frame model 
 
+![Core-frame model](media/coreframe.png)
+
+__Zone of assimilation__: a zone of increasing value; as opposed to a __zone of discard__. 
+
+
+### High, middle and low outlets
+
+![Types of outlets](media/outlets.png)

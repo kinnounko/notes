@@ -1,0 +1,136 @@
+% !TEX root = paper.tex
+
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage{packages}
+\addbibresource{sources.bib}
+
+% Document Settings
+\geometry{margin=1in}
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+\lhead{Väinö-verneri Kauppila} % controls the left corner of the header
+\chead{} % controls the center of the header
+\rhead{} % controls the right corner of the header
+\lfoot{} % controls the left corner of the footer
+\cfoot{} % controls the center of the footer
+\rfoot{Page~\thepage} % controls the right corner of the footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% =========================================
+%             DOCUMENT
+% =========================================
+
+\begin{document}
+%\doublespacing % Double spacing throughout the document
+
+
+% =========================
+%      TITLE PAGE
+% =========================
+
+% Suppresses headers, footers, and page numbers on title page
+\begin{titlepage}
+    \begin{center}
+        \vspace*{4cm}
+        Geography IA \\
+        \vspace{1cm}
+        Can the height of a tsunami's wave be predicted based on the distance from and
+        the magnitude of a preceding earthquake? \\
+        \vspace{1cm}
+        \textit{Väinö-verneri Kauppila} \\
+        February 2021 \\
+        \vspace{4cm}
+        Word count: TBD \\
+        \textit{First draft, details are missing}
+        \vfill
+        \vspace{0.1cm}
+    \end{center}
+\end{titlepage}
+
+% =========================
+%      DOCUMENT BODY
+% =========================
+
+\pagenumbering{roman}
+
+\begin{center}
+    \pdfbookmark{\contentsname}{Contents}
+    \tableofcontents
+    \vspace{1in}
+
+\end{center}
+
+
+% TODO: Add hyper-references to links
+% TODO: Improve listings' styling
+% TODO: Add links to Contents entries
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet
+
+\subsection{Study area}
+
+Lorem ipsum dolor sit amet
+
+\subsection{Theory}
+
+Lorem ipsum dolor sit amet
+
+\section{Method}
+
+Lorem ipsum dolor sit amet
+
+\subsection{Sampling choices}
+
+Lorem ipsum dolor sit amet
+
+\subsection{Study site choices}
+
+Lorem ipsum dolor sit amet
+
+
+\section{Analysis}
+
+Lorem
+
+\subsection{Environmental and cultural sustainability}
+Lorem ipsum dolor sit amet
+
+\subsection{Economic sustainability}
+Lorem ipsum dolor sit amet
+
+\section{Conclusion}
+
+Lorem ipsum dolor sit amet
+
+\newpage
+\pagenumbering{roman}
+
+
+\section*{Notes}
+\label{sec:notes}
+\addcontentsline{toc}{section}{\nameref{sec:notes}}
+
+All figures are generated through the use of TikZ (Tantau) and the Python library \verb|matplotlib|. This paper is written with the aid of the typesetting software \LaTeX. On a PDF viewer, the sections in the table of contents can be clicked to access that section. Dataset not included due to large size (\textasciitilde 28000 columns).
+
+\printbibliography[heading=bibintoc, title=Works Cited]
+
+\appendix
+\section{Appendix}
+\label{app}
+
+\subsection{Appendix Test}
+\label{app:test}
+
+
+\end{document}

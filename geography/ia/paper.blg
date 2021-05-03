@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'paper.blg'
+[86] biber:322> INFO - === Mon May  3, 2021, 12:00:49
+[102] Biber.pm:415> INFO - Reading 'paper.bcf'
+[184] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[191] Utils.pm:304> WARN - The file 'paper.bcf' does not contain any citations!
+[200] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[200] bbl.pm:755> INFO - Output to paper.bbl
+[201] Biber.pm:128> INFO - WARNINGS: 1
