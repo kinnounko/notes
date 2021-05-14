@@ -1,19 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[59] biber:322> INFO - === Thu May 13, 2021, 23:19:14
-[71] Biber.pm:415> INFO - Reading 'paper.bcf'
-[125] Biber.pm:943> INFO - Found 3 citekeys in bib section 0
-[137] Biber.pm:4256> INFO - Processing section 0
-[137] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[137] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[146] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[147] bibtex.pm:1653> INFO - LaTeX decoding ...
-[149] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[170] Utils.pm:304> WARN - month field 'May' in entry 'ambient_outdoor_air_pollution_2018' is not an integer - this will probably not sort properly.
-[178] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[178] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[178] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[178] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[183] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[184] bbl.pm:755> INFO - Output to paper.bbl
-[184] Biber.pm:128> INFO - WARNINGS: 1
+[58] biber:322> INFO - === Fri May 14, 2021, 23:29:56
+[68] Biber.pm:415> INFO - Reading 'paper.bcf'
+[120] Biber.pm:943> INFO - Found 8 citekeys in bib section 0
+[131] Biber.pm:4256> INFO - Processing section 0
+[131] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[132] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[140] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[141] bibtex.pm:1653> INFO - LaTeX decoding ...
+[147] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[172] Utils.pm:304> WARN - month field 'Apr' in entry 'statista_department_27_2020' is not an integer - this will probably not sort properly.
+[176] Utils.pm:304> WARN - month field 'May' in entry 'ambient_outdoor_air_pollution_2018' is not an integer - this will probably not sort properly.
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[191] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[191] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[191] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[199] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[202] bbl.pm:755> INFO - Output to paper.bbl
+[202] Biber.pm:128> INFO - WARNINGS: 2

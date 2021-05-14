@@ -2181,9 +2181,14 @@
     <bcf:datasource type="file" datatype="bibtex">sources.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">sdg_report_2020</bcf:citekey>
-    <bcf:citekey order="2">ambient_outdoor_air_pollution_2018</bcf:citekey>
-    <bcf:citekey order="3">paris_air_qual</bcf:citekey>
+    <bcf:citekey order="1">statista_department_27_2020</bcf:citekey>
+    <bcf:citekey order="2">condor_ferries</bcf:citekey>
+    <bcf:citekey order="3">sdg_report_2020</bcf:citekey>
+    <bcf:citekey order="4">ambient_outdoor_air_pollution_2018</bcf:citekey>
+    <bcf:citekey order="5">bruitparif</bcf:citekey>
+    <bcf:citekey order="6">who_noise_guidelines</bcf:citekey>
+    <bcf:citekey order="7">anne_hidalgo_2020</bcf:citekey>
+    <bcf:citekey order="8">paris_air_qual</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
