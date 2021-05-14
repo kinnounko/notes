@@ -78,79 +78,33 @@
 
 \subsection{Background}
 
-Naturally occurring disasters, such as tsunamis, are devastating for people, human settlements,
-buildings and other resources residing in risk areas. Tsunamis are caused
-by many different types of natural phenomena, such as landslides, collapse of
-seamount, or more rarely, the impact of a meteorite. This paper, however, focuses
-on one of the more common causes of tsunamis; earthquakes. Earthquakes cause around 72\%
-of tsunamis \cite{pacifictsunamimuseum}. The time between an earthquake and its tsunami is
-relatively long compared to events such as landslides \cite{sue_nokes_walters},
-leaving adequate time to prepare for impact. Predicting wave height, as discussed in this
-paper, can further help to assess the seriousness of the tsunami and provide help to
-prepare for the event.
+Naturally occurring disasters, such as tsunamis, are devastating for people, human settlements, buildings and other resources residing in risk areas. Tsunamis are caused by many different types of natural phenomena, such as landslides, collapse of seamount, or more rarely, the impact of a meteorite. This paper, however, focuses on one of the more common causes of tsunamis; earthquakes. Earthquakes cause around 72\% of tsunamis \cite{pacifictsunamimuseum}. The time between an earthquake and its tsunami is relatively long compared to events such as landslides \cite{sue_nokes_walters}, leaving adequate time to prepare for impact. Predicting wave height, as discussed in this paper, can further help to assess the seriousness of the tsunami and provide help to prepare for the event.
 
 \subsection{Personal Engagement}
 
-I have chosen to write about this subject as I have recently become interested by the
-statistics and its implications in real-life matters. This research has proved very
-interesting for me as it has made the field of statistics more concrete, because it provides
-a real world use case. Furthermore, as I enjoy programming, the research I have done
-has helped me learn about the tools and techniques used by data analysts and other professionals.
+I have chosen to write about this subject as I have recently become interested by the statistics and its implications in real-life matters. This research has proved very interesting for me as it has made the field of statistics more concrete, because it provides a real world use case. Furthermore, as I enjoy programming, the research I have done has helped me learn about the tools and techniques used by data analysts and other professionals.
 
 \section{Statistical Model}
 
 \subsection{Processing the dataset for use}
-%TODO: #2 Ask for help 
-The dataset, procured from the National Oceanic and Atmospheric Administration website \cite{noaa}, includes many tsunami
-runups, going back before the year 0. Due to this, the NOAA states uncertainties
-that can occur in its data. For example, reports that were recorded before the
-20th century tend to be based on written accounts, and not recorded seismic activity.
-Only since the 1960s, the installation of the Worldwide Standardized Seismograph
-Network system allowed for more accurate data in this paper. For that reason, any recorded
-activity before this date was discarded from the dataset for this paper. The dataset itself can
-be accessed through two different methods; searching the database using the online
-tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz| format.
-The online tool supports the download of search results in a much more human-readable
-\verb|.tsv| (tab-separated) format. For this paper, all entries after the year 1900 were searched and downloaded.
 
-The data is cleaned of data points marked as "dubious" (there is an column for this parameter),
-reports before the year 1960 (see above), and of all irrelevant fields such as "Injuries"
-or "Damage \$Mil". This preliminary data cleanup
-is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010},
-which is commonly used for the handling of large datasets for its efficiency.
+The dataset, procured from the National Oceanic and Atmospheric Administration website \cite{noaa}, includes many tsunami runups, going back before the year 0. Due to this, the NOAA states uncertainties that can occur in its data. For example, reports that were recorded before the 20th century tend to be based on written accounts, and not recorded seismic activity. Only since the 1960s, the installation of the Worldwide Standardized Seismograph Network system allowed for more accurate data in this paper. For that reason, any recorded activity before this date was discarded from the dataset for this paper. The dataset itself can be accessed through two different methods; searching the database using the online tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz| format. The online tool supports the download of search results in a much more human-readable \verb|.tsv| (tab-separated) format. For this paper, all entries after the year 1900 were searched and downloaded.
 
-The data was split into a training and a test dataset. The training
-dataset was used to generate a regression model while the test dataset was used
-to calculate the general accuracy of the model, by predicting values and
-comparing those to the known value as found in the dataset. The dataset was split based on
-a fraction using the \verb|df.sample| method found in the pandas library. A split
-of 70\% for training and 30\% for test was chosen. A \verb|random_state| argument is
-set to an arbitrary value 42, as if it weren't, the dataset would be split in a different
-manner at each execution of the program. The program can be found in Appendix \ref{app:scripts}.
+The data is cleaned of data points marked as "dubious" (there is an column for this parameter), reports before the year 1960 (see above), and of all irrelevant fields such as "Injuries" or "Damage \$Mil". This preliminary data cleanup is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010}, which is commonly used for the handling of large datasets for its efficiency.
+
+The data was split into a training and a test dataset. The training dataset was used to generate a regression model while the test dataset was used to calculate the general accuracy of the model, by predicting values and comparing those to the known value as found in the dataset. The dataset was split based on a fraction using the \verb|df.sample| method found in the pandas library. A split of 70\% for training and 30\% for test was chosen. A \verb|random_state| argument is set to an arbitrary value 42, as if it weren't, the dataset would be split in a different manner at each execution of the program. The program can be found in Appendix \ref{app:scripts}.
 
 \subsection{Regression}
 
 \subsubsection{Linear model}
 
-Regression analysis is a commonly used tool in statistics, and regression models can
-be found in numerous use cases. Regression models consist of estimating the
-relationship between one (or more) independent variables and a dependent variable. A
-simple example of regression can be seen in the linear relationship between an independent
-variable $x_{i}$, and the dependent variable $y$. The following expression shows this relationship in what is
-called linear regression, as it models a straight line that can be used for prediction of
-values:
+Regression analysis is a commonly used tool in statistics, and regression models can be found in numerous use cases. Regression models consist of estimating the relationship between one (or more) independent variables and a dependent variable. A simple example of regression can be seen in the linear relationship between an independent variable $x_{i}$, and the dependent variable $y$. The following expression shows this relationship in what is called linear regression, as it models a straight line that can be used for prediction of values:
 
 $y =  \beta_0 a + \beta_1 x + e $,
 
-where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the
-coefficient of $x$. The final term $e$ is what is known as the error or residual
-term. It is an estimate of the amount by which the predictions differ from the real
-value. An example of linear regression can be found in Appendix \ref{app:regression}, where
-a set of data points is presented on a scatter plot, and the regression line is found
-by finding the individual coefficients $\beta_n$ of $x$ (see equation above), like such:
+where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the coefficient of $x$. The final term $e$ is what is known as the error or residual term. It is an estimate of the amount by which the predictions differ from the real value. An example of linear regression can be found in Appendix \ref{app:regression}, where a set of data points is presented on a scatter plot, and the regression line is found by finding the individual coefficients $\beta_n$ of $x$ (see equation above), like such:
 
-$\hat \beta_1 = \frac{\sum (x_i - \bar x) (y_i - \bar y)}{\sum (x_i - \bar x)^2}$, where
-$\hat \beta_n$ represents an estimated value and $\bar x$ represents the mean of the set $x$
+$\hat \beta_1 = \frac{\sum (x_i - \bar x) (y_i - \bar y)}{\sum (x_i - \bar x)^2}$, where $\hat \beta_n$ represents an estimated value and $\bar x$ represents the mean of the set $x$
 
 and the $\hat \beta_0$ value can be approximated as $\hat \beta_0 = \bar y - \hat \beta_1 \bar x$
 
@@ -201,23 +155,19 @@ The model's fit is then calculated, with the test dataset. The \verb|accuracy_sc
 
 $R^2 = 1 - \frac{SS_{res}}{SS_{total}}$,
 
-where $SS_{res}$ is the sum of the error terms, or the residual sum of squares, in a dataset of $n$
-values $y_1,\dots, y_i$, with their corresponding predicted values $p_1,\dots, p_i$ defined by
+where $SS_{res}$ is the sum of the error terms, or the residual sum of squares, in a dataset of $n$ values $y_1,\dots, y_i$, with their corresponding predicted values $p_1,\dots, p_i$ defined by
 
 $SS_{res} = \sum\limits_{i} e_i^2 = \sum\limits_{i} (y_i - p_i)^2$, \footnote{$\sum\limits_{i=1}^n x_i$ means that all values of x are summed, beginning from $x_1$ and ending at $x_n$} where $e_i$ is the error term, equal to the difference of a data point $y_i$ and its corresponding predicted value $p_i$.
 
 and $SS_{tot}$ is the total sum of squares, which is proportional to the variance in the data, defined as:
 
-$SS_{tot} = \sum\limits_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$,
-or $\bar y = \frac{1}{n} \sum\limits_{i=1}^n y_i$
+$SS_{tot} = \sum\limits_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$, or $\bar y = \frac{1}{n} \sum\limits_{i=1}^n y_i$
 
 
 
 \section{Conclusion}
 
-The research included in this paper could be useful for many life-saving scenarios,
-notably ones in which, for example, high quality and large-scale tsunami alert
-systems are not available.
+The research included in this paper could be useful for many life-saving scenarios, notably ones in which, for example, high quality and large-scale tsunami alert systems are not available.
 
 \textit{Conclusion and evaluation of the method are contradictory, to be corrected}
 

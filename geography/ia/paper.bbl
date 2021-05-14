@@ -16,5 +16,52 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{sdg_report_2020}{article}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Sustainable Development Goals Report}
+      \field{title}{The Sustainable Development Goals Report 2020}
+      \field{year}{2020}
+      \field{pages}{47}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.18356/214e6642-en
+      \endverb
+    \endentry
+    \entry{ambient_outdoor_air_pollution_2018}{misc}{}
+      \list{publisher}{1}{%
+        {World Health Organization}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Ambient (outdoor) air pollution}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health
+      \endverb
+    \endentry
+    \entry{paris_air_qual}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{État de la qualité de l'air à Paris}
+      \verb{urlraw}
+      \verb https://www.paris.fr/pages/etat-des-lieux-de-la-qualite-de-l-air-a-paris-7101
+      \endverb
+      \verb{url}
+      \verb https://www.paris.fr/pages/etat-des-lieux-de-la-qualite-de-l-air-a-paris-7101
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
