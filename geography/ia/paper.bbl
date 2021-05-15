@@ -184,6 +184,34 @@
       \verb https://www.paris.fr/pages/etat-des-lieux-de-la-qualite-de-l-air-a-paris-7101
       \endverb
     \endentry
+    \entry{odbl}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Open Data Commons}
+      \field{title}{Open Data Commons Open Database License (ODbL) - Open Data Commons: legal tools for open data}
+      \verb{urlraw}
+      \verb https://opendatacommons.org/licenses/odbl/
+      \endverb
+      \verb{url}
+      \verb https://opendatacommons.org/licenses/odbl/
+      \endverb
+    \endentry
+    \entry{paris_opendata}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Paris OpenData}
+      \field{month}{5}
+      \field{title}{Les arbres}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://opendata.paris.fr/explore/dataset/les-arbres/information
+      \endverb
+      \verb{url}
+      \verb https://opendata.paris.fr/explore/dataset/les-arbres/information
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -2189,6 +2189,8 @@
     <bcf:citekey order="6">who_noise_guidelines</bcf:citekey>
     <bcf:citekey order="7">anne_hidalgo_2020</bcf:citekey>
     <bcf:citekey order="8">paris_air_qual</bcf:citekey>
+    <bcf:citekey order="9">odbl</bcf:citekey>
+    <bcf:citekey order="10">paris_opendata</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

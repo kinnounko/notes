@@ -157,7 +157,7 @@ $R^2 = 1 - \frac{SS_{res}}{SS_{total}}$,
 
 where $SS_{res}$ is the sum of the error terms, or the residual sum of squares, in a dataset of $n$ values $y_1,\dots, y_i$, with their corresponding predicted values $p_1,\dots, p_i$ defined by
 
-$SS_{res} = \sum\limits_{i} e_i^2 = \sum\limits_{i} (y_i - p_i)^2$, \footnote{$\sum\limits_{i=1}^n x_i$ means that all values of x are summed, beginning from $x_1$ and ending at $x_n$} where $e_i$ is the error term, equal to the difference of a data point $y_i$ and its corresponding predicted value $p_i$.
+$SS_{res} = \sum\limits_{i} e_i^2 = \sum\limits_{i} (y_i - p_i)^2$, \footnote{$\sum\limits_{i=1}^n x_i$ means that all values of $x$ are summed, beginning from $x_1$ and ending at $x_n$} where $e_i$ is the error term, equal to the difference between a data point $y_i$ and its corresponding predicted value $p_i$.
 
 and $SS_{tot}$ is the total sum of squares, which is proportional to the variance in the data, defined as:
 
@@ -175,7 +175,9 @@ The research included in this paper could be useful for many life-saving scenari
 
 This method, like any other statistical approximation, is by no means perfect and for that reason should not be used in any real-world application. The results procured by the program are subject to many uncertainties, one of which is described below.
 
-When attempting to predict the maximum wave height of a tsunami such as the one caused by the 2011 earthquake off the Pacific coast of Tōhoku, approximately 70km away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude of the earthquake and the 70km distance. These types of errors can be attributed to the fact that there are many more independent variables, such as the shape of the seafloor for example, that can amplify or potentially change the height of a tsunami's wave.
+When attempting to predict the maximum wave height of a tsunami such as the one caused by the 2011 earthquake off the Pacific coast of Tōhoku, Japan, approximately 70km away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude of the earthquake and the 70km distance. These types of errors can be attributed to the fact that there are many more independent variables, such as the shape of the seafloor for example, that can amplify or potentially change the height of a tsunami's wave.
+
+It has also come to my attention that using the $R^2$ value for a non-linear relationship is not suitable, as it does not follow the same characteristics. 
 
 
 \newpage
