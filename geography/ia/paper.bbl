@@ -172,21 +172,9 @@
       \verb https://annehidalgo2020.com/question/comment-paris-peut-etre-une-ville-encore-plus-vegetale/
       \endverb
     \endentry
-    \entry{paris_air_qual}{misc}{}
+    \entry{odbl}{misc}{}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labeltitlesource}{title}
-      \field{title}{État de la qualité de l'air à Paris}
-      \verb{urlraw}
-      \verb https://www.paris.fr/pages/etat-des-lieux-de-la-qualite-de-l-air-a-paris-7101
-      \endverb
-      \verb{url}
-      \verb https://www.paris.fr/pages/etat-des-lieux-de-la-qualite-de-l-air-a-paris-7101
-      \endverb
-    \endentry
-    \entry{odbl}{misc}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Open Data Commons}
       \field{title}{Open Data Commons Open Database License (ODbL) - Open Data Commons: legal tools for open data}
@@ -198,8 +186,8 @@
       \endverb
     \endentry
     \entry{paris_opendata}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Paris OpenData}
       \field{month}{5}
