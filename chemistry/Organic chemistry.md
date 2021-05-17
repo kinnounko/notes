@@ -88,3 +88,73 @@ $\text{2,2-dimethylbutane}$
 CCC(C)(C)C
 ```
 
+Name this compound:
+
+```smiles
+C C C(C) C(C)(C) C C
+```
+
+$\color{red}\text{3,3,4-trimethylhexane}$
+
+Name this compound 
+
+```smiles
+C C C C(CC)(C) C C 
+```
+
+$\color{red}\text{3-Ethyl-3-methylhexane}$
+
+## Saturated and unsaturated carbon atoms
+
+Alcohols (R-OH) contain a hydroxyl group (OH)
+
+```smiles
+CCO
+```
+
+It is a part of the functional group of *hydroxyls*
+
+## Naming alcohols
+
+
+Alocohols are names alkan-$x$-ol
+
+| Name        | Molecular formula | 
+| ----------- | ----------------- | 
+| methanol    | $\ce{CH2OH}$      |      
+| ethanol     | $\ce{C2H6O}$      |   
+| propan-1-ol | $\ce{C3H8O}$      |   
+
+When $x$ is not 1 in the alcohol, the numbering is chosen to give a lower number to the OH group than to an alkyl group. 
+
+For example: 
+$\text{5-methylhexan-3-ol}$
+
+Name this compound:
+```smiles
+CCC(C(C)C)O
+```
+
+$\red{\text{2-methylpentan-3-ol}}$
+
+## Naming unsaturated hydrocarbons
+
+```smiles
+CCC(=C)C
+```
+
+$\red{\text{2-methylbut-1-ene}}$
+
+## Combustion of hydrocarbons
+
+Draw a balanced equation for the combustion of ethane. 
+
+$\ce{2C2H6 + 7O2 ->[{heat}] 4H2O + 6CO2 }$
+
+## Incomplete combustion 
+
+Incomplete combustion produces carbon monoxide and soot (C)
+
+$\ce{2C2H6 + 5O2 ->[{heat}] 4CO + 6H2O }$
+
+$\ce{2C2H6 + 3O2 ->[{heat}] 4C + 6H2O }$
