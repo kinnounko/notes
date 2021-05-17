@@ -207,6 +207,35 @@
       \verb https://web.archive.org/web/20110418144715/http://www.yomiuri.co.jp/science/news/20110415-OYT1T00389.htm
       \endverb
     \endentry
+    \entry{frost_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=28febaf5a5af05b79f525b52dbd36b42}{%
+           family={Frost},
+           familyi={F\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{28febaf5a5af05b79f525b52dbd36b42}
+      \strng{fullhash}{28febaf5a5af05b79f525b52dbd36b42}
+      \strng{bibnamehash}{28febaf5a5af05b79f525b52dbd36b42}
+      \strng{authorbibnamehash}{28febaf5a5af05b79f525b52dbd36b42}
+      \strng{authornamehash}{28febaf5a5af05b79f525b52dbd36b42}
+      \strng{authorfullhash}{28febaf5a5af05b79f525b52dbd36b42}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics By Jim}
+      \field{month}{11}
+      \field{title}{R-squared Is Not Valid for Nonlinear Regression}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-regression/
+      \endverb
+      \verb{url}
+      \verb https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-regression/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

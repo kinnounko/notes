@@ -81,7 +81,7 @@ if __name__ == "__main__":
     # The mean squared error
     print("Mean squared error: %.2f" % np.mean((y_pred - y_test) ** 2))
     # Explained variance score: 1 is perfect prediction
-    print('Variance score: %.2f' % regressor.score(predict_, y_test))
+    print('R^2: %.2f' % regressor.score(predict_, y_test))
 
     # Code for generating 3d plot with prediction scatter 
     # only generates one graph, rerun with PolynomialFeatures(degree=n)

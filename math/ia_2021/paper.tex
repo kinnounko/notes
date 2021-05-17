@@ -21,6 +21,17 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+\pgfplotstableread{
+    X Y
+    368 1700
+    340 1500
+    665 2800
+    954 5000
+    331 1300
+    556 2200
+    376 1300
+}\table
+
 % =========================================
 %             DOCUMENT
 % =========================================
@@ -45,8 +56,7 @@
         \textit{Väinö-verneri Kauppila} \\
         February 2021 \\
         \vspace{4cm}
-        Word count: TBD \\
-        \textit{First draft, details are missing}
+        \input{wordcount.txt} \\
         \vfill
         \vspace{0.1cm}
     \end{center}
@@ -88,7 +98,7 @@ I have chosen to write about this subject as I have recently become interested b
 
 \subsection{Processing the dataset for use}
 
-The dataset, procured from the National Oceanic and Atmospheric Administration website \cite{noaa}, includes many tsunami runups, going back before the year 0. Due to this, the NOAA states uncertainties that can occur in its data. For example, reports that were recorded before the 20th century tend to be based on written accounts, and not recorded seismic activity. Only since the 1960s, the installation of the Worldwide Standardized Seismograph Network system allowed for more accurate data in this paper. For that reason, any recorded activity before this date was discarded from the dataset for this paper. The dataset itself can be accessed through two different methods; searching the database using the online tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz| format. The online tool supports the download of search results in a much more human-readable \verb|.tsv| (tab-separated) format. For this paper, all entries after the year 1900 were searched and downloaded.
+The dataset, procured from the National Oceanic and Atmospheric Administration website \cite{noaa}, includes many tsunami runups, going back to the year 2000 BC. Due to this, the NOAA states uncertainties that can occur in its data. For example, reports that were recorded before the 20th century tend to be based on written accounts, and not recorded seismic activity. Only since the 1960s, the installation of the Worldwide Standardized Seismograph Network system allowed for more accurate data in this paper. For that reason, any recorded activity before this date was discarded from the dataset for this paper. The dataset itself can be accessed through two different methods; searching the database using the online tool or downloading it in a somewhat obscure compressed Google Earth \verb|.kmz| format. The online tool supports the download of search results in a much more human-readable \verb|.tsv| (tab-separated) format. For this paper, all entries after the year 1900 were searched and downloaded.
 
 The data is cleaned of data points marked as "dubious" (there is an column for this parameter), reports before the year 1960 (see above), and of all irrelevant fields such as "Injuries" or "Damage \$Mil". This preliminary data cleanup is done through the use of the pandas Python library \cite{reback2020pandas}\cite{mckinney-proc-scipy-2010}, which is commonly used for the handling of large datasets for its efficiency.
 
@@ -100,9 +110,51 @@ The data was split into a training and a test dataset. The training dataset was 
 
 Regression analysis is a commonly used tool in statistics, and regression models can be found in numerous use cases. Regression models consist of estimating the relationship between one (or more) independent variables and a dependent variable. A simple example of regression can be seen in the linear relationship between an independent variable $x_{i}$, and the dependent variable $y$. The following expression shows this relationship in what is called linear regression, as it models a straight line that can be used for prediction of values:
 
-$y =  \beta_0 a + \beta_1 x + e $,
+$y =  \beta_0 x + \beta_1 x + e $,
 
-where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the coefficient of $x$. The final term $e$ is what is known as the error or residual term. It is an estimate of the amount by which the predictions differ from the real value. An example of linear regression can be found in Appendix \ref{app:regression}, where a set of data points is presented on a scatter plot, and the regression line is found by finding the individual coefficients $\beta_n$ of $x$ (see equation above), like such:
+where the term $\beta_0$ represents the y-intercept of the line and $\beta$ represents the coefficient of $x$. The final term $e$ is what is known as the error or residual term. It is an estimate of the amount by which the predictions differ from the real value. An example of linear regression can be found in Appendix \ref{app:regression}. The set of data points is presented here on a scatter plot (along with its line of regression, explained in the following paragraph):
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.1]
+        \begin{axis}[
+                title={Comparing X and Y},
+                xlabel={X axis},
+                ylabel={Y axis},
+                xmin=300, xmax=1000,
+                ymin=0, ymax=5500,
+                ytick={0,1000,2000,3000,4000,5000},
+                xtick={0,400,500,600,700,800,900},
+                legend pos=north west,
+                ymajorgrids=true,
+                grid style=dashed,
+                scale=1.2
+            ]
+
+            \addplot[
+                only marks,
+                color=blue,
+                mark=*,
+            ] table {\table};
+            \legend{Datapoint}
+
+            \addplot [thin, blue] table[
+                    y={create col/linear regression={y=Y}}
+                ] % compute a linear regression from the input table
+                {\table};
+            \addlegendentry{
+                Linear regression: $ x =
+                    \pgfmathprintnumber{\pgfplotstableregressiona}
+                    \cdot t
+                    \pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$
+            };
+
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+
+
+The regression line is found by finding the individual coefficients $\beta_n$ of $x$ (see equation above), like such:
 
 $\hat \beta_1 = \frac{\sum (x_i - \bar x) (y_i - \bar y)}{\sum (x_i - \bar x)^2}$, where $\hat \beta_n$ represents an estimated value and $\bar x$ represents the mean of the set $x$
 
@@ -134,9 +186,10 @@ $a_1 + \beta_1 x_1 + a_2 + \beta_2 x_2 + e$,
 
 where the terms $a_n$ are the y-intercepts of the $n$th independent variable,
 
-So the relationship between the two independent variables and the wave height can be estimated with a multivariate, polynomial regression model. We will use the Python scikit-learn library to aid in creating this model. \\
+So the relationship between the two independent variables and the wave height can be estimated with a multivariate, polynomial regression model. The Python scikit-learn library was used to aid in creating this model. The model itself can be found in Appendix \ref{app:scripts}.
 
-(\textit{Section not done, need to do more research on how the} \verb|PolynomialFeatures| \textit{function transforms a linear array to one fit for polynomial regression})
+
+
 
 
 \begin{figure}[H]
@@ -163,13 +216,15 @@ and $SS_{tot}$ is the total sum of squares, which is proportional to the varianc
 
 $SS_{tot} = \sum\limits_{i} (y_i - \bar y)^2$, where $\bar y$ is the mean of the data $y_1,\dots, y_i$, or $\bar y = \frac{1}{n} \sum\limits_{i=1}^n y_i$
 
+This function is implemented in the sklearn library, and when used on our model, we get the result of $R^2 = 0.36$ (rounded to 2 s.f.).
+
+This result is not optimal, as it means that only $\frac{1}{3}$ of the data from our model fits the test dataset. However, the $R^2$ value does not explain anything about causation, which is obviously present in this data, as it could be said that logically the distance from a wave is proportional to its observed height.
 
 
 \section{Conclusion}
 
-The research included in this paper could be useful for many life-saving scenarios, notably ones in which, for example, high quality and large-scale tsunami alert systems are not available.
+The research included in this paper would not be very useful for life-saving scenarios, because of its low $R^2$ value. However, further research by professionals on this subject could potentially reveal relationships between these variables and as such create better models. A low score such as the one in this paper can be due to many things, but mainly I think this was due to the fit of the model. An exponential regression model would fit better.  
 
-\textit{Conclusion and evaluation of the method are contradictory, to be corrected}
 
 \subsection{Evaluation of the method used}
 
@@ -177,7 +232,7 @@ This method, like any other statistical approximation, is by no means perfect an
 
 When attempting to predict the maximum wave height of a tsunami such as the one caused by the 2011 earthquake off the Pacific coast of Tōhoku, Japan, approximately 70km away from shore, which produced a 38.9m wave \cite{yomiuri_2011}. The model in this paper approximates this same event as only a 8m wave, when supplied the 9.0 magnitude of the earthquake and the 70km distance. These types of errors can be attributed to the fact that there are many more independent variables, such as the shape of the seafloor for example, that can amplify or potentially change the height of a tsunami's wave.
 
-It has also come to my attention that using the $R^2$ value for a non-linear relationship is not suitable, as it does not follow the same characteristics. 
+It has also come to my attention that using the $R^2$ value for a non-linear relationship is not suitable, as it assumes the relationship is linear \cite{frost_2018}.
 
 
 \newpage
@@ -222,56 +277,7 @@ Below is an example of a dataset with $x$ values and their corresponding Y value
     \end{tabular}
 \end{center}
 
-\pgfplotstableread{
-    X Y
-    368 1700
-    340 1500
-    665 2800
-    954 5000
-    331 1300
-    556 2200
-    376 1300
-}\table
 
-Below is the dataset plotted, along with a line of regression.
-
-\begin{center}
-    \begin{tikzpicture}[scale=1.1]
-        \begin{axis}[
-                title={Comparing X and Y},
-                xlabel={X axis},
-                ylabel={Y axis},
-                xmin=300, xmax=1000,
-                ymin=0, ymax=5500,
-                ytick={0,1000,2000,3000,4000,5000},
-                xtick={0,400,500,600,700,800,900},
-                legend pos=north west,
-                ymajorgrids=true,
-                grid style=dashed,
-                scale=1.2
-            ]
-
-            \addplot[
-                only marks,
-                color=blue,
-                mark=*,
-            ] table {\table};
-            \legend{Datapoint}
-
-            \addplot [thin, blue] table[
-                    y={create col/linear regression={y=Y}}
-                ] % compute a linear regression from the input table
-                {\table};
-            \addlegendentry{
-                Linear regression: $ x =
-                    \pgfmathprintnumber{\pgfplotstableregressiona}
-                    \cdot t
-                    \pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$
-            };
-
-        \end{axis}
-    \end{tikzpicture}
-\end{center}
 
 \subsection{Python program}
 \label{app:scripts}
