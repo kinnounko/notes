@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "/bin/python",
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.tex$",
+                "isAsync": true,
+                "cmd": "texcount -merge ${file} | grep 'Words in text' | sed 's/Words in text/Word count/' > wordcount.txt"
+            }
+        ]
+    }
+}
