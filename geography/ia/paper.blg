@@ -1,21 +1,21 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'paper.blg'
-[101] biber:322> INFO - === Mon May 17, 2021, 10:31:43
-[117] Biber.pm:415> INFO - Reading 'paper.bcf'
-[201] Biber.pm:943> INFO - Found 9 citekeys in bib section 0
-[220] Biber.pm:4256> INFO - Processing section 0
-[220] Utils.pm:75> INFO - Globbing data source 'sources.bib'
-[220] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
-[232] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[233] bibtex.pm:1653> INFO - LaTeX decoding ...
-[244] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
-[280] Utils.pm:304> WARN - month field 'Apr' in entry 'statista_department_27_2020' is not an integer - this will probably not sort properly.
-[286] Utils.pm:304> WARN - month field 'May' in entry 'ambient_outdoor_air_pollution_2018' is not an integer - this will probably not sort properly.
-[297] Utils.pm:304> WARN - month field 'May' in entry 'paris_opendata' is not an integer - this will probably not sort properly.
-[312] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[313] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[313] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[313] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[325] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
-[328] bbl.pm:755> INFO - Output to paper.bbl
-[329] Biber.pm:128> INFO - WARNINGS: 3
+[60] biber:322> INFO - === Wed May 26, 2021, 17:55:58
+[71] Biber.pm:415> INFO - Reading 'paper.bcf'
+[124] Biber.pm:943> INFO - Found 9 citekeys in bib section 0
+[135] Biber.pm:4256> INFO - Processing section 0
+[135] Utils.pm:75> INFO - Globbing data source 'sources.bib'
+[135] Utils.pm:91> INFO - Globbed data source 'sources.bib' to sources.bib
+[143] Biber.pm:4455> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[144] bibtex.pm:1653> INFO - LaTeX decoding ...
+[151] bibtex.pm:1471> INFO - Found BibTeX data source 'sources.bib'
+[176] Utils.pm:304> WARN - month field 'Apr' in entry 'statista_department_27_2020' is not an integer - this will probably not sort properly.
+[180] Utils.pm:304> WARN - month field 'May' in entry 'ambient_outdoor_air_pollution_2018' is not an integer - this will probably not sort properly.
+[188] Utils.pm:304> WARN - month field 'May' in entry 'paris_opendata' is not an integer - this will probably not sort properly.
+[202] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[202] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[202] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[202] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[213] bbl.pm:652> INFO - Writing 'paper.bbl' with encoding 'UTF-8'
+[217] bbl.pm:755> INFO - Output to paper.bbl
+[217] Biber.pm:128> INFO - WARNINGS: 3

@@ -67,8 +67,11 @@ if __name__ == "__main__":
 
     parser.add_argument(
         '-b', '--bounding_box', help='choose an area bounded by 2 coordinates in comma-separated form: lat1,lon1,lat2,lon2. If no value is supplied the entire area is chosen', type=lambda s: [float(item) for item in s.split(',')])
+
     parser.add_argument(
         '-j', '--json', help='export bounded area to a json file JSON')
+
+    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', help='verbose output (show number of points etc)')
 
     args = parser.parse_args()
 
@@ -116,6 +119,8 @@ if __name__ == "__main__":
         npbounded, nni_querytree), box_area(boundingbox), len(npbounded))
 
     print("Calculated NNI value for", args.dataset, "=", nni)
+    if args.verbose is True: 
+        print("n: ", len(npbounded))
 
 
     #
