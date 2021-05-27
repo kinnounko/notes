@@ -153,9 +153,44 @@ The sites in the two areas were chosen using a method of stratified sampling. Co
 
 The sites were visited to conduct a so-called "bipolar survey", which consisted of rating the site based on multiple criteria. This process was done by selecting a single person from our group to visit one of the sites, and complete a bipolar semantic survey. They would grade several different aspects of the site (such as general cleanliness, noise, amount of cars), and take a set of 3 images of the site.\footnote{Images taken for our study can be found at \url{https://github.com/kinnounko/notes/tree/main/geography/ia/images}} Our surveys were conducted during the week of the 10th of March, 2021 in the afternoon each time. The weather was overcast and moderately cold.
 
-Our results for the bipolar survey are shown in Appendix \ref{app:bipolar}
 
-When tallied, the total scores for each site can be expressed as a fraction over 84, as shown in Figures 4, 5.
+\subsubsection{Statistical evaluations}
+
+In order to either support or disprove our third hypothesis, it is important to study how trees are scattered in Paris, which reveals how dispersed green spaces are from one another. A statistical test called the Nearest Neighbor Index (NNI) test can provide a reasonable answer to this: if the index is similar for both sites, it can easily be said then that our hypothesis is supported. This value also reveals information about the distribution of trees: clustered, random or in a regular pattern, as seen in Figure 4 below. These values will be presented and analysed in the later section \ref{sec:analysis}. Data \& Analysis.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\linewidth]{media/nni1.png}
+    \includegraphics[width=0.2\linewidth]{media/nni2.png}
+    \includegraphics[width=0.2\linewidth]{media/nni3.png}
+    \caption{The NNI measures the spacial distribution of data. From a value of 0, representing a clustered pattern, to 1 (random) and to 2.15 (uniform pattern)}
+\end{figure}
+
+As individually counting trees in these areas would be a tedious task, we used the Paris OpenData platform (licensed under the permissive ODbL license\footcite{odbl}), owned by the government. The fact that this kind of database platform exists, shows a certain level of transparency on the government's part.
+
+We used the trees dataset procured from the library, which contains the exact coordinates of trees in the city. \footcite{paris_opendata} There are also other information such as species of the tree and such, however these are cleaned from the dataset for our purposes.
+
+A script, written in Python was tasked to calculate the NNI value, because with a dataset of over 20,000 data points this would not be possible by hand. We go through each point, and find its nearest neighbor. In order to calculate distances between these two points, we use the Haversine Formula, as the two points would be in the form of coordinates. With this information the NNI can be calculated with the simple formula
+
+$$Rn = \frac{2 \bar D}{\sqrt{\frac{a}{n}}}$$
+
+where $Rn$ is the NNI index value, $\bar D$ is the mean observed distance to the nearest neighbor, $a$ is the area of the zone and $n$ is the total number of data points.
+
+\subsubsection{Questionnaire}
+
+We also collected data from a questionnaire sent out to many people. This questionnaire contained the two questions \textit{"Do you believe that the Passy area has more green spaces than the area around the Eiffel tower? (Not including the champ de mars)"} and \textit{"How much litter is in the Passy area compared to around the Eiffel tower?"}. The data collected from this survey is listed in Section \ref{sec:data}. We surveyed our year, which has people that live in and frequent these two areas.
+
+% NEW SECTION
+
+\section{Data \& Analysis}
+\label{sec:analysis}
+
+Once our data collected, we can analyse certain patterns or appearances that do not follow a general trend. Our data is shown below in Subsection \ref{sec:data}.
+
+\subsection{Data collected}
+\label{sec:data}
+
+Our results for the bipolar survey are shown in Appendix \ref{app:bipolar} (not shown here due to large size). When tallied, the total scores for each site can be expressed as a fraction over 84, as shown in Figures 5, 6.
 
 \begin{figure}[H]
     \begin{center}
@@ -199,18 +234,18 @@ When tallied, the total scores for each site can be expressed as a fraction over
     \caption{Total Bipolar Semantic scores for the XVI\textsuperscript{th}}
 \end{figure}
 
-When plotted on a map, these totals can be shown with a gradient of colors.
+When plotted on a map, these totals can be shown as percentages ($\frac{s}{84} \cdot 100$, where $s$ is the total score) with a gradient of colors, as seen below in Figures 7, 8:
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{media/7eColors.png}
-    \caption{Each site in the VVI\textsuperscript{th}, with its respective total score expressed as a percentage for clarity, and a color assigned based on the gradient in Figure 8.}
+    \caption{Each site in the VVI\textsuperscript{th}, with its respective total score expressed as a percentage for clarity, and a color assigned based on the gradient in Figure 9.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{media/16eColors.png}
-    \caption{Each site in the XVI\textsuperscript{th}, with a percentage. Color assigned with gradient in Figure 8.}
+    \caption{Each site in the XVI\textsuperscript{th}, with a percentage. Color assigned with gradient in Figure 9.}
 \end{figure}
 
 
@@ -220,39 +255,51 @@ When plotted on a map, these totals can be shown with a gradient of colors.
     \caption{Gradient from red (hex color \#FF0000) for 0\%, to green (hex color \#00FF00) for 100\%. }
 \end{figure}
 
+As for images collected during our inspections of the sites, for the sake of keeping the file size of this paper down, I will not attach the images collected and they will be available for download or viewing at the URL \url{https://github.com/kinnounko/notes/tree/main/geography/ia}.
 
-\subsubsection{Statistical evaluations}
-
-In order to either support or disprove our third hypothesis, it is important to study how trees are scattered in Paris, which reveals how dispersed green spaces are from one another. A statistical test called the Nearest Neighbor Index (NNI) test can provide a reasonable answer to this: if the index is similar for both sites, it can easily be said then that our hypothesis is supported. This value also reveals information about the distribution of trees: clustered, random or in a regular pattern, as seen in Figure 5 below. These values will be analysed in the later section \ref{sec:analysis} Analysis.
+The dataset collected from the questionnaire is shown in the tables in Figures 10, 11.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.2\linewidth]{media/nni1.png}
-    \includegraphics[width=0.2\linewidth]{media/nni2.png}
-    \includegraphics[width=0.2\linewidth]{media/nni3.png}
-    \caption{The NNI measures the spacial distribution of data. From a value of 0, representing a clustered pattern, to 1 (random) and to 2.15 (uniform pattern)}
+    \begin{center}
+        \begin{tabular}{||c c||}
+            \hline
+            Answer             & Number of people that agree \\ [0.5ex]
+            \hline\hline
+            Significantly Less & 4                           \\
+            \hline
+            Less               & 8                           \\
+            \hline
+            About the same     & 8                           \\
+            \hline
+            More               & 10                          \\
+            \hline
+            Significantly more & 0                           \\ [1ex]
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{\textit{Do you believe that the Passy area has more green spaces than the area around the Eiffel tower? (Not including the champ de mars)}}
 \end{figure}
 
-As individually counting trees in these areas would be a tedious task, we used the Paris OpenData platform (licensed under the permissive ODbL license\footcite{odbl}), owned by the government. The fact that this kind of database platform exists, shows a certain level of transparency on the government's part.
-
-We used the trees dataset procured from the library, which contains the exact coordinates of trees in the city. \footcite{paris_opendata} There are also other information such as species of the tree and such, however these are cleaned from the dataset for our purposes.
-
-A script, written in Python was tasked to calculate the NNI value, because with a dataset of over 20,000 data points this would not be possible by hand. We go through each point, and find its nearest neighbor. In order to calculate distances between these two points, we use the Haversine Formula, as the two points would be in the form of coordinates. With this information the NNI can be calculated with the simple formula
-
-$$Rn = \frac{2 \bar D}{\sqrt{\frac{a}{n}}}$$
-
-where $Rn$ is the NNI index value, $\bar D$ is the mean observed distance to the nearest neighbor, $a$ is the area of the zone and $n$ is the total number of data points.
-
-
-
-% NEW SECTION
-
-\section{Data \& Analysis}
-\label{sec:analysis}
-
-Once our data collected, we can analyse certain patterns that appear 
-
-\subsection{Data collected}
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{||c c||}
+            \hline
+            Answer             & Number of people that agree \\ [0.5ex]
+            \hline\hline
+            Significantly Less & 3                           \\
+            \hline
+            Less               & 10                           \\
+            \hline
+            About the same     & 12                           \\
+            \hline
+            More               & 5                          \\
+            \hline
+            Significantly more & 0                           \\ [1ex]
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{\textit{How much litter is in the Passy area compared to around the Eiffel tower?}}
+\end{figure}
 
 \subsection{Analysis}
 
@@ -265,8 +312,8 @@ There are some processes in our paper that would be done differently if done now
 
 \begin{itemize}
 
-    \item The computer program does not seem to take into account an area of greenery in the VII\textsuperscript{th}, which can change the NNI value found for the VII\textsuperscript{th}. This area includes parks and such, however the map (generated also with the computer program) does not show trees in this location. This should have been investigated, however due to constraints related to time, I could not. 
-    \item 
+    \item The computer program does not seem to take into account an area of greenery in the VII\textsuperscript{th}, which can change the NNI value found for the VII\textsuperscript{th}. This area includes parks and such, however the map (generated also with the computer program) does not show trees in this location. This should have been investigated, however due to constraints related to time, I could not.
+    \item
 
 \end{itemize}
 
