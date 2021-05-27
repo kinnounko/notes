@@ -2190,6 +2190,8 @@
     <bcf:citekey order="7">anne_hidalgo_2020</bcf:citekey>
     <bcf:citekey order="8">odbl</bcf:citekey>
     <bcf:citekey order="9">paris_opendata</bcf:citekey>
+    <bcf:citekey order="10">bentley_kdtree</bcf:citekey>
+    <bcf:citekey order="11">bruitparif</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

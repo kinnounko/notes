@@ -170,7 +170,7 @@ As individually counting trees in these areas would be a tedious task, we used t
 
 We used the trees dataset procured from the library, which contains the exact coordinates of trees in the city. \footcite{paris_opendata} There are also other information such as species of the tree and such, however these are cleaned from the dataset for our purposes.
 
-A script, written in Python was tasked to calculate the NNI value, because with a dataset of over 20,000 data points this would not be possible by hand. We go through each point, and find its nearest neighbor. In order to calculate distances between these two points, we use the Haversine Formula, as the two points would be in the form of coordinates. With this information the NNI can be calculated with the simple formula
+A script, written in Python was tasked to calculate the NNI value, because with a dataset of over 20,000 data points this would not be possible by hand. We go through each point, and find its nearest neighbor, using an efficient complex data structure called a $k$d-tree.\footnote{$k$-dimensional tree. In this case, this "tree" is 2-dimensional. More information at: \cite{bentley_kdtree}}  In order to calculate distances between these two points, we use the Haversine Formula, as the two points would be in the form of coordinates. With this information the NNI can be calculated with the simple formula
 
 $$Rn = \frac{2 \bar D}{\sqrt{\frac{a}{n}}}$$
 
@@ -289,11 +289,11 @@ The dataset collected from the questionnaire (mentioned in Section \ref{sec:ques
             \hline\hline
             Significantly Less & 3                           \\
             \hline
-            Less               & 10                           \\
+            Less               & 10                          \\
             \hline
-            About the same     & 12                           \\
+            About the same     & 12                          \\
             \hline
-            More               & 5                          \\
+            More               & 5                           \\
             \hline
             Significantly more & 0                           \\ [1ex]
             \hline
@@ -312,21 +312,94 @@ This data can be shown in the form of a bar graph (Figure 12), in order to visua
 
 \subsection{Analysis}
 
+\subsubsection{Bipolar survey}
 
+The results from our bipolar semantic survey seem to suggest a few things. Firstly, for the VII\textsuperscript{th}, the mean of the data series seems to be an overall environmental percentage value of $62.5\%$. We can notice an outlier in this data: the Seine river bank, with a score of $82\%$. This higher score is due to the nature of this site: no cars, low vandalism and no odor (due to its proximity to a body of water). In general however, it seems that the more tourist-heavy areas are more prone to lower scores, such as the foot of the Eiffel Tower and the Iena Bridge.
+
+In the XVI\textsuperscript{th}, the results differ from the ones in the touristic area. Again, the mean of the data series is $58\%$, considerably lower than that of the touristic area. This does include the obvious outlier however, the Ranelagh garden at $92\%$. Considering the sites with higher car counts and noise levels (such as Avenue Mozart) are in this residential area, this does indeed agree with our 2\textsuperscript{nd} hypothesis.
+
+In general, it can be said with this information that statistically, our bipolar semantic survey agrees with the 1\textsuperscript{st} and 2\textsuperscript{nd} hypotheses made at the beginning of our paper: the residential area does indeed show higher levels of noise and a lower environmental score.
+
+\subsubsection{Nearest Neighbor Index}
+
+We must analyse the NNI values from the Nearest Neighbor statistical test in order to either prove or disprove the 3\textsuperscript{rd} hypothesis we made. With the \verb|arbres| dataset downloaded, we can use the \verb|nearest_neighbor_index.py| \footnote{The program can be found at \url{https://github.com/kinnounko/notes/blob/main/geography/ia/nearest_neighbor_index.py} or Appendix \ref{app:program}} program in order to calculate the NNI values of the XVI\textsuperscript{th} and the VII\textsuperscript{th}. We must use the following syntax:
+
+\begin{lstlisting}[breaklines]
+    python nearest_neighbor_index.py -b x1,y1,x2,y2 /folder/dataset.csv
+\end{lstlisting}
+
+Or in practice, for the XVI\textsuperscript{th}:
+\begin{lstlisting}[breaklines]
+    python nearest_neighbor_index.py -b 48.85373,2.26728,48.86042,2.27865 /home/octo/trees.csv
+\end{lstlisting}
+
+And for the VII\textsuperscript{th}:
+\begin{lstlisting}[breaklines]
+    python nearest_neighbor_index.py -b 48.84881,2.28708,48.86075,2.30742 /home/octo/trees.csv
+\end{lstlisting}
+
+This will output the NNI values for the XVI\textsuperscript{th} and the VII\textsuperscript{th}, respectively. They are shown in the table below in Figure 13.
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{||c c||}
+            \hline
+            Area                    & NNI value (no unit, rounded to 3 s.f.) \\ [0.5ex]
+            \hline\hline
+            XVI\textsuperscript{th} & 0.610                       \\
+            \hline
+            VII\textsuperscript{th} & 0.534                       \\ [1ex]
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Computed NNI values}
+\end{figure}
+
+This information allows us to reach a conclusion about the similarity of the dispersion of trees in the two areas: both values are between the "Clustered" value of 0.00 and the "Random" value of 1.00, and as such are both dispersed spatially in a clustered-random manner. We are however not interested in their manner of dispersion but the similarity between the two values. And as it can be seen, these values are very similar. 
+
+In fact, if we observe the graph below in Figure 14, we can see that our NNI values express very "significant element of clustering", as our datasets have a number of points of 1277 and 5231 (values that are not included in the $x$-axis of this graph due to their large size): 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{media/certaintynn.png}
+    \caption{A graph showing the certainty of a NNI value result}
+\end{figure}
+
+And as such, to conclude, the 3\textsuperscript{rd} hypothesis of our research is confirmed (at least for the two study areas). We can with confidence say that trees, and as a result green spaces, are evenly spread in the two areas. They also exhibit signs of clustering, which signifies the presence of these trees in groups, or parks. As the mayor has stated, it does seem that green spaces are available to everyone.  
+
+\subsubsection{Questionnaire}
+
+As seen in Figure 12, our questionnaire brought some mixed opinions. Many believed that the XVI\textsuperscript{th} has more green spaces surrounding it, as shown by the negatively skewed bar chart. People also believed that the residential area in the VII\textsuperscript{th} was less littered than the touristic one, as shown by again a negatively skewed graph. 
+
+This information does go against our hypotheses, but as this is an opinionated survey and because I believe some people have not visited one of the sites, I will not allocate much weight to these results and rather rely on empirical evidence.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
+With this information analysed, we can reach a sensible conclusion. Paris as a city is generally not very favorable environmentally: with high air and noise pollution in residential areas and other issues, the most habited places of the city are not very nice to be in. However touristic areas do show a small but noticeably higher level of cleanliness.
+
+There is however a visible effort in order to fix some of these more unfavorable areas. It could be for press-related issues, with the upcoming 2024 Paris Olympics, or by pressure from international organizations with their pollution guidelines, but there is a noticeable effort being done: promises of parks for everyone by the mayor seem to have been fulfilled and are valid, and more regulations are being put into place as evidenced by the 88-page manifesto-like government sponsored brochure. \footcite{bruitparif} These improvements are not uniform in the city, and personally they seem to be focused in touristic and publicized areas. Throughout my time in Paris, I have seen many improvements to environmental quality, albeit predominately in these touristic areas, and zero to no effort in residential areas such as the one I live in. In order to promote environmental sustainability in this city, there must be some action taken in residential areas, and not only in tourist-frequented ones. 
+
+
 \subsection{Evaluation}
 
-There are some processes in our paper that would be done differently if done now. To list the ones I managed to find at the time of writing:
+There are some processes in our paper that would be done differently if done now. To list the ones I have managed to find at the time of writing:
 
 \begin{itemize}
 
-    \item The computer program does not seem to take into account an area of greenery in the VII\textsuperscript{th}, which can change the NNI value found for the VII\textsuperscript{th}. This area includes parks and such, however the map (generated also with the computer program) does not show trees in this location. This should have been investigated, however due to constraints related to time, I could not.
-    \item
+    \item The computer program does not seem to take into account an area of greenery in the VII\textsuperscript{th}, which can change the NNI value found for the VII\textsuperscript{th}. This area includes parks and such, however the map (generated also with the computer program) does not show trees in this location. This should have been investigated, however due to constraints related to time, I could not. I suspect this was due to a preliminary cleanup of the data. I do not think this error has affected the outcome of our research by a lot, as with these parks the value would be around the same, as they also show signs of clustering.
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\linewidth]{media/boundingerror.png}
+              \caption{A map showing the trees in the dataset used for the VII\textsuperscript{th}, along with some parks in the bottom left quadrant, missing their trees.}
+          \end{figure}
+
+    \item Our research was done during a time of lock-down due to the SARS-COVID-19 pandemic in France. Due to travel restrictions, international --- even national tourist counts were considerably down. This causes many discrepancies in the data as, well, we are in fact studying a touristic area.
 
 \end{itemize}
+
+To conclude the evaluation, it can be said that despite some disparity in our data, our experimental method was correct, computational issues aside. Once the SARS-COVID-19 pandemic over, this research could be repeated once again for more accurate results.
 
 \newpage
 \pagenumbering{roman}
@@ -338,7 +411,7 @@ There are some processes in our paper that would be done differently if done now
 
 This paper is written with the aid of the typesetting software \LaTeX. On a PDF viewer, the sections in the table of contents can be clicked to access that section.
 
-All media and information related to this IA can be found on the URL \url{https://github.com/kinnounko/notes/tree/main/geography/ia}. This includes images, the \LaTeX{} source code to this paper, and the Python program used to calculate the NNI value.
+All media and information related to this IA can be found on the URL \url{https://github.com/kinnounko/notes/tree/main/geography/ia}. This includes images, the \LaTeX{} source code to this paper, and the Python program used to calculate the NNI value (also found in Appendix \ref{app:program}).
 
 \printbibliography
 
@@ -366,5 +439,9 @@ VII\textsuperscript{th} touristic area:
 \includegraphics[width=0.5\linewidth]{media/bipolar/eiffel.png}
 \includegraphics[width=0.5\linewidth]{media/bipolar/iena.png}
 \includegraphics[width=0.5\linewidth]{media/bipolar/seinebank.png}
+
+\subsection{NNI computation program}
+\label{app:program}
+\lstinputlisting[breaklines]{nearest_neighbor_index.py}
 
 \end{document}

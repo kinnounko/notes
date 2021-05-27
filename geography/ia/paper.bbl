@@ -200,6 +200,36 @@
       \verb https://opendata.paris.fr/explore/dataset/les-arbres/information
       \endverb
     \endentry
+    \entry{bentley_kdtree}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4b6fead9f42c5326a5949595d86dcd6a}{%
+           family={Bentley},
+           familyi={B\bibinitperiod},
+           given={Jon\bibnamedelima Louis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \strng{fullhash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \strng{bibnamehash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \strng{authorbibnamehash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \strng{authornamehash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \strng{authorfullhash}{4b6fead9f42c5326a5949595d86dcd6a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stanford University}
+      \field{title}{Multidimensional Binary Search Trees Used for Associative Searching}
+      \field{year}{1975}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb http://web.mit.edu/bookwyrm/Public/p509-bentley.pdf
+      \endverb
+      \verb{url}
+      \verb http://web.mit.edu/bookwyrm/Public/p509-bentley.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
