@@ -158,3 +158,23 @@ Incomplete combustion produces carbon monoxide and soot (C)
 $\ce{2C2H6 + 5O2 ->[{heat}] 4CO + 6H2O }$
 
 $\ce{2C2H6 + 3O2 ->[{heat}] 4C + 6H2O }$
+
+
+## Exothermic and Endothermic reactions
+
+In an exothermic reaction, heat is released
+In an endothermic reaction, heat is taken from the surroundings
+
+## Enthalpy
+
+Enthalpy, H is the term used for the amount of heat energy contained in a substance 
+
+
+(revise pls )
+
+## Questions
+
+The H-Cl bond enthalpy is 431 kJ mol-1. Write an equation to represent this: 
+
+HCl (g) -> H (g) + Cl (g) $\delta H = +431 kJ mol^{-1}$
+
